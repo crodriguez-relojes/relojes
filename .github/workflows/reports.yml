@@ -2,8 +2,8 @@ name: Reportes semanal y mensual
 
 on:
   schedule:
-    - cron: "0 13 * * 1"    # lunes 08:00 Colombia -> reporte semanal
-    - cron: "30 13 1 * *"   # dia 1 de cada mes    -> analisis mensual
+    - cron: "23 13 * * 1"   # lunes 08:23 Colombia -> reporte semanal
+    - cron: "47 13 1 * *"   # dia 1 de cada mes    -> analisis mensual
   workflow_dispatch:
     inputs:
       tipo:
@@ -31,7 +31,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "value=${{ inputs.tipo }}" >> $GITHUB_OUTPUT
-          elif [ "${{ github.event.schedule }}" = "30 13 1 * *" ]; then
+          elif [ "${{ github.event.schedule }}" = "47 13 1 * *" ]; then
             echo "value=monthly" >> $GITHUB_OUTPUT
           else
             echo "value=weekly" >> $GITHUB_OUTPUT

@@ -2,8 +2,11 @@ name: Monitoreo diario de precios
 
 on:
   schedule:
-    # 12:15 UTC = 07:15 Colombia. Minuto no redondo: GitHub encola menos.
-    - cron: "15 12 * * *"
+    # 12:37 UTC = 07:37 Colombia.
+    # GitHub retrasa (y a veces descarta) las corridas programadas cuando hay
+    # mucha carga. Los minutos redondos y los cuartos de hora son los peores:
+    # 37 es un minuto poco concurrido. Aun asi, esperar retrasos es normal.
+    - cron: "37 12 * * *"
   workflow_dispatch:        # boton para correrlo a mano
 
 permissions:
