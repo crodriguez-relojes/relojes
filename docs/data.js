@@ -1,10 +1,10 @@
 /* Generado automaticamente por: python -m src.main site — no editar a mano */
 window.RADAR_DATA = {
  "demo": false,
- "generated_at": "21/07/2026 08:55",
+ "generated_at": "21/07/2026 09:20",
  "currency_symbol": "$",
  "days_tracked": 1,
- "form_url": "",
+ "form_url": "https://docs.google.com/forms/d/e/1FAIpQLScsAHXrfNiu9z2OcQXF5wt-Rlc_yNwIxbiXjlQUrDPyGvlyAQ/viewform",
  "items": [
   {
    "asin": "B017SN1OI8",
@@ -299,6 +299,43 @@ window.RADAR_DATA = {
     [
      "2026-07-21",
      97.99
+    ]
+   ]
+  },
+  {
+   "asin": "B08YZF4NP4",
+   "name": "Guess Men's GW0G Series| Analog Trend Watch| Polycarbonate Case| Silicone Bracelet | 50M W",
+   "url": "https://www.amazon.com/dp/B08YZF4NP4",
+   "category": "",
+   "image": "https://m.media-amazon.com/images/I/71hK6p0EvPL._AC_SX320_.jpg",
+   "variant": "Black/Black/Silver",
+   "price": 103.52,
+   "prev_price": null,
+   "target_price": 90.0,
+   "min_7d": 103.52,
+   "min_7d_date": "2026-07-21",
+   "min_30d": 103.52,
+   "min_30d_date": "2026-07-21",
+   "min_all": 103.52,
+   "min_all_date": "2026-07-21",
+   "max_all": 103.52,
+   "median_all": 103.52,
+   "pct_vs_prev": null,
+   "pct_vs_min_all": 0.0,
+   "discount_vs_typical": 0.0,
+   "weekly_change": null,
+   "volatility_pct": 0.0,
+   "trend": "sin datos suficientes",
+   "best_weekday": "-",
+   "history_days": 1,
+   "at_all_time_low": false,
+   "triggered": [],
+   "score": 9,
+   "recommendation": "ESPERAR",
+   "history": [
+    [
+     "2026-07-21",
+     103.52
     ]
    ]
   }

@@ -31,6 +31,29 @@ MAX_NUEVOS_POR_CORRIDA = 25
 
 PRECIO_RE = re.compile(r"^\s*\$?\s*([0-9]+(?:[.,][0-9]{1,2})?)\s*$")
 
+# Los links que se comparten desde la app de Amazon no traen el ASIN:
+# hay que seguir la redireccion para averiguar a que producto apuntan.
+CORTOS = ("a.co/", "amzn.to/", "amzn.eu/", "amzn.asia/")
+
+
+def _resolver_corto(url: str) -> str:
+    """Sigue la redireccion de un link corto y devuelve el URL final."""
+    try:
+        resp = requests.get(url, timeout=20, allow_redirects=True,
+                            headers={"User-Agent": "Mozilla/5.0"})
+        return resp.url
+    except Exception:  # noqa: BLE001
+        return url
+
+
+def _asin_de(celda: str) -> str | None:
+    asin = extract_asin(celda)
+    if asin:
+        return asin
+    if celda.startswith("http") and any(c in celda for c in CORTOS):
+        return extract_asin(_resolver_corto(celda))
+    return None
+
 
 def _precio(texto: str) -> float | None:
     m = PRECIO_RE.match(texto or "")
@@ -78,7 +101,7 @@ def sincronizar(url: str | None = None) -> int:
             if not celda:
                 continue
             if asin is None:
-                asin = extract_asin(celda)
+                asin = _asin_de(celda)
                 if asin:
                     continue
             if objetivo is None:
