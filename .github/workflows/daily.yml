@@ -1,13 +1,16 @@
 name: Monitoreo diario de precios
 
+# SIN horario automatico, a proposito.
+#
+# Amazon bloquea las IP de los runners de GitHub (rangos de datacenter):
+# el 21/07/2026 fallaron 7 de 8 consultas incluso con pausas de 10-28s,
+# porque el bloqueo es por procedencia y no por ritmo. El monitoreo diario
+# corre ahora desde el PC del usuario (IP residencial) via el Programador
+# de tareas de Windows, con correr_diario.bat.
+#
+# Este workflow queda solo como respaldo manual.
 on:
-  schedule:
-    # 12:37 UTC = 07:37 Colombia.
-    # GitHub retrasa (y a veces descarta) las corridas programadas cuando hay
-    # mucha carga. Los minutos redondos y los cuartos de hora son los peores:
-    # 37 es un minuto poco concurrido. Aun asi, esperar retrasos es normal.
-    - cron: "37 12 * * *"
-  workflow_dispatch:        # boton para correrlo a mano
+  workflow_dispatch:
 
 permissions:
   contents: write           # necesario para versionar el historico

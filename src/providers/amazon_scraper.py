@@ -65,6 +65,9 @@ OVERVIEW_KEYS = ("color", "band color", "band material", "case material",
 # Token de tamano dentro del URL de imagen de Amazon (._AC_SX679_.jpg)
 IMG_SIZE_RE = re.compile(r"\._[A-Z0-9_,]+_\.(jpg|png|webp)$", re.I)
 
+# Amazon declara la moneda del precio en el JSON incrustado de la pagina
+CURRENCY_RE = re.compile(r'"currencyCode"\s*:\s*"([A-Z]{3})"')
+
 
 def thumb(url: str, px: int = 320) -> str:
     """Pide a Amazon una version mas liviana de la misma foto."""
@@ -105,6 +108,12 @@ class AmazonScraper(PriceProvider):
         self.market = CFG["marketplace"]
         self.session = requests.Session()
         self.bloqueos = 0        # cuantas veces Amazon nos freno en esta corrida
+        # Amazon decide la moneda por la IP: desde Colombia sirve COP y desde
+        # un datacenter de EEUU sirve USD. Mezclar monedas en el historial lo
+        # arruina, asi que se fija la preferencia por cookie.
+        self.session.cookies.set("i18n-prefs", self.market["currency"],
+                                 domain=".amazon.com")
+        self.session.cookies.set("lc-main", "en_US", domain=".amazon.com")
 
     def _headers(self) -> dict:
         return {
@@ -239,6 +248,16 @@ class AmazonScraper(PriceProvider):
             return Quote(asin=asin, price=None, currency=currency, title=title,
                          image=image, variant=variant,
                          error="sin stock" if out_of_stock else "precio no encontrado")
+
+        # Guardar un precio en otra moneda corrompe el historial entero: los
+        # minimos y los porcentajes se calculan sobre una serie que asume una
+        # sola unidad. Ante la duda, mejor no guardar nada.
+        m = CURRENCY_RE.search(html)
+        if m and m.group(1) != currency:
+            return Quote(asin=asin, price=None, currency=m.group(1), title=title,
+                         image=image, variant=variant,
+                         error=f"Amazon respondio en {m.group(1)}, se esperaba "
+                               f"{currency}: precio descartado")
 
         return Quote(asin=asin, price=price, currency=currency,
                      in_stock=not out_of_stock, title=title, seller=seller,
