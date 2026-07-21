@@ -34,6 +34,10 @@ jobs:
           ALERT_TO: ${{ secrets.ALERT_TO }}
           MAIL_FROM: ${{ secrets.MAIL_FROM }}
           PRICE_PROVIDER: ${{ vars.PRICE_PROVIDER || 'amazon_scraper' }}
+          # URL publico de la hoja de respuestas del formulario de Google.
+          # No es un secreto: se configura en Settings > Variables.
+          FORM_CSV_URL: ${{ vars.FORM_CSV_URL }}
+          FORM_URL: ${{ vars.FORM_URL }}
           KEEPA_API_KEY: ${{ secrets.KEEPA_API_KEY }}
         run: python -m src.main track
 

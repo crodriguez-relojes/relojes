@@ -18,6 +18,7 @@ from datetime import date, datetime
 from tabulate import tabulate
 
 from . import analyze as an
+from . import ingest
 from .config import CFG, DATA_DIR, WATCHES_CSV
 from .db import (already_alerted, canonical_url, connect, extract_asin, history,
                  log_run, mark_alerted, read_watches, record_price, sync_products,
@@ -55,6 +56,12 @@ def _analyses(conn, only_active: bool = True) -> list[an.Analysis]:
 def cmd_track(args) -> int:
     """Monitoreo diario: scrapea, guarda, analiza y alerta."""
     conn = connect()
+
+    # Relojes que otras personas sugirieron por el formulario de Google
+    agregados = ingest.sincronizar()
+    if agregados:
+        print(f"{agregados} reloj(es) nuevos llegaron por el formulario\n")
+
     products = read_watches()
     sync_products(conn, products)
     active = [p for p in products if p.active]

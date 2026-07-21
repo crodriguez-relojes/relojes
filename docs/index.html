@@ -134,6 +134,7 @@ footer{margin-top:26px;font-size:11.5px;color:var(--ink-3);line-height:1.6}
       <div class="stamp" id="stamp"></div>
     </div>
     <div class="hbtns">
+      <a class="btn" id="formBtn" href="#" style="text-decoration:none;display:none">+ Sugerir un reloj</a>
       <a class="btn" href="cargar.html" style="text-decoration:none">+ Cargar links</a>
       <button class="btn" id="theme" title="Cambiar tema">Tema claro</button>
       <button class="btn" id="toggleSpark" aria-pressed="true" title="Mostrar u ocultar las mini-gráficas">Gráficas</button>
@@ -454,6 +455,11 @@ try{
 
 /* ---------- arranque ---------- */
 $("#stamp").textContent = "Última actualización: " + (D.generated_at || "—");
+if(D.form_url){
+  const b = $("#formBtn");
+  b.href = D.form_url; b.target = "_blank"; b.rel = "noopener";
+  b.style.display = "inline-block";
+}
 if(D.demo){
   $("#banner").innerHTML = `<div class="demo-banner"><strong>Datos de demostración.</strong>
     Esta página se llena sola con tus relojes reales cuando cargues tus links en

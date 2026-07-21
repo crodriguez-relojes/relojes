@@ -11,7 +11,7 @@ import sqlite3
 from datetime import datetime
 
 from . import analyze as an
-from .config import CFG, ROOT
+from .config import CFG, ROOT, env
 from .db import history
 
 DOCS_DIR = ROOT / "docs"
@@ -77,6 +77,8 @@ def build(conn: sqlite3.Connection, analyses: list[an.Analysis]) -> str:
         "generated_at": datetime.now().strftime("%d/%m/%Y %H:%M"),
         "currency_symbol": CFG["marketplace"]["currency_symbol"],
         "days_tracked": days_tracked,
+        # Link al formulario de Google, para el boton "Sugerir un reloj"
+        "form_url": env("FORM_URL", ""),
         "items": items,
     }
 
