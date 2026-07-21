@@ -218,7 +218,8 @@ function renderTiles(){
   const low = priced.filter(x => x.at_all_time_low).length;
   const saving = priced.reduce((s,x) => s + Math.max(0,(x.median_all||x.price)-x.price), 0);
   const tiles = [
-    {label:"Relojes monitoreados", value:it.length, sub:(D.days_tracked||0)+" días de historial"},
+    {label:"Relojes monitoreados", value:it.length,
+     sub:(D.days_tracked||0) + (D.days_tracked === 1 ? " día" : " días") + " de historial"},
     {label:"En zona de compra",    value:buy, sub:"puntaje ≥ 60", color:"var(--good)"},
     {label:"En mínimo histórico",  value:low, sub:"precio nunca visto más bajo", color:"var(--warning)"},
     {label:"Ahorro si compras hoy",value:money(saving), sub:"vs precio habitual de cada uno"}
