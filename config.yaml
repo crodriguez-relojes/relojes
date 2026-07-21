@@ -33,6 +33,14 @@ alerts:
   daily_drop_pct: 5.0       # umbral de esa caida (%)
   target_price: true        # precio por debajo del target_price de watches.csv
 
+  # Descuento que anuncia Amazon contra su precio de lista.
+  # OJO: el precio de lista lo fija el vendedor y se infla a proposito, asi
+  # que un 50% aqui no significa que el reloj este barato de verdad. Sirve
+  # como argumento de venta, no como senal de compra: por eso pesa poco en
+  # el puntaje y nunca alcanza por si solo para un COMPRAR AHORA.
+  amazon_discount: true
+  amazon_discount_pct: 50.0
+
   # Tolerancia: un precio cuenta como "minimo" si esta dentro de este % del minimo.
   # Evita perder alertas por diferencias de centavos.
   tie_tolerance_pct: 0.5

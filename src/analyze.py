@@ -15,15 +15,19 @@ RULE_LABELS = {
     "min_7d": "Minimo de 7 dias",
     "target_price": "Bajo tu precio objetivo",
     "daily_drop": "Caida fuerte en 24h",
+    "amazon_discount": "Oferta fuerte en Amazon",
 }
 
-# Peso de cada regla en el puntaje de recomendacion (0-100)
+# Peso de cada regla en el puntaje de recomendacion (0-100).
+# amazon_discount pesa poco a proposito: el precio de lista lo infla el
+# vendedor, asi que mide el marketing y no lo barato que esta el reloj.
 RULE_WEIGHTS = {
     "min_all_time": 45,
     "min_30d": 25,
     "min_7d": 12,
     "target_price": 30,
     "daily_drop": 15,
+    "amazon_discount": 10,
 }
 
 
@@ -44,6 +48,8 @@ class Analysis:
     avg_30d: float | None = None
     median_all: float | None = None
     target_price: float | None = None
+    list_price: float | None = None
+    amazon_discount: float | None = None
     history_days: int = 0
     volatility_pct: float = 0.0
     triggered: list[str] = field(default_factory=list)
@@ -96,6 +102,14 @@ def analyze(conn: sqlite3.Connection, asin: str, name: str, url: str,
                  target_price=target_price, error=error)
     a.history_days = len(all_rows)
 
+    # Oferta vigente segun Amazon (ya quedo guardada por record_price)
+    fila = conn.execute(
+        """SELECT list_price, discount_pct FROM price_history
+           WHERE asin=? AND price IS NOT NULL
+           ORDER BY day DESC LIMIT 1""", (asin,)).fetchone()
+    if fila:
+        a.list_price, a.amazon_discount = fila["list_price"], fila["discount_pct"]
+
     if all_rows:
         prices_all = [p for _, p in all_rows]
         a.min_all, a.min_all_date = _min_with_date(all_rows)
@@ -140,6 +154,9 @@ def analyze(conn: sqlite3.Connection, asin: str, name: str, url: str,
         a.triggered.append("daily_drop")
     if acfg["target_price"] and target_price and price <= target_price:
         a.triggered.append("target_price")
+    if (acfg.get("amazon_discount") and a.amazon_discount
+            and a.amazon_discount >= acfg.get("amazon_discount_pct", 50)):
+        a.triggered.append("amazon_discount")
 
     # ------------------------------------------------ puntaje 0-100
     score = sum(RULE_WEIGHTS.get(r, 0) for r in a.triggered)
@@ -172,7 +189,8 @@ def analyze(conn: sqlite3.Connection, asin: str, name: str, url: str,
 
 def alert_reason(a: Analysis) -> str:
     """Texto legible del motivo principal de la alerta."""
-    for rule in ("min_all_time", "target_price", "min_30d", "daily_drop", "min_7d"):
+    for rule in ("min_all_time", "target_price", "min_30d", "daily_drop",
+                 "min_7d", "amazon_discount"):
         if rule in a.triggered:
             return RULE_LABELS[rule]
     return "Movimiento de precio"
