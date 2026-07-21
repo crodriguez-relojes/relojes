@@ -34,7 +34,12 @@ def _now() -> str:
 
 
 def _analyses(conn, only_active: bool = True) -> list[an.Analysis]:
-    """Analiza todos los productos usando el ultimo precio conocido."""
+    """Analiza todos los productos usando el ultimo precio conocido.
+
+    Sincroniza primero con watches.csv: asi un reloj agregado hoy ya aparece
+    en el reporte de hoy, aunque todavia no tenga ni un precio registrado.
+    """
+    sync_products(conn, read_watches())
     sql = "SELECT * FROM products" + (" WHERE active=1" if only_active else "")
     out = []
     for row in conn.execute(sql):
