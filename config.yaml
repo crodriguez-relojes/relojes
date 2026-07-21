@@ -11,12 +11,16 @@ marketplace:
   accept_language: en-US,en;q=0.9
 
 scraping:
-  # Segundos de espera aleatoria entre producto y producto (anti-bloqueo)
-  delay_min_seconds: 3
-  delay_max_seconds: 9
+  # Segundos de espera aleatoria entre producto y producto (anti-bloqueo).
+  # Subidos tras un bloqueo masivo el 21/07/2026: con 3-9s Amazon corto 7 de 8
+  # consultas. Ir despacio es gratis; que te bloqueen cuesta el dia entero.
+  delay_min_seconds: 10
+  delay_max_seconds: 28
   # Reintentos por producto antes de darlo por fallido
   max_retries: 3
   timeout_seconds: 25
+  # Pausa larga antes de reintentar cuando Amazon responde 503 / CAPTCHA
+  cooldown_on_block_seconds: 90
 
 # ---------------------------------------------------------------------
 # Reglas que disparan una alerta por correo

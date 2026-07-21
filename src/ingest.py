@@ -71,7 +71,9 @@ def sincronizar(url: str | None = None) -> int:
         asin = None
         objetivo = None
         quien = ""
-        for celda in fila:
+        # La columna 0 de Google Forms es siempre la marca de tiempo: se salta
+        # para que no acabe interpretada como el nombre de quien sugirio.
+        for celda in fila[1:]:
             celda = (celda or "").strip()
             if not celda:
                 continue

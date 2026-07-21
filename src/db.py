@@ -206,12 +206,18 @@ def sync_products(conn: sqlite3.Connection, products: list[Product]) -> None:
 def record_price(conn: sqlite3.Connection, asin: str, price: float | None,
                  currency: str, in_stock: bool, seller: str = "") -> None:
     conn.execute(
+        # COALESCE: una consulta fallida (price NULL) NUNCA pisa un precio que
+        # ya se habia capturado bien ese mismo dia. Un bloqueo temporal de
+        # Amazon no debe destruir un dato correcto.
         """INSERT INTO price_history (asin,day,price,currency,in_stock,seller,captured_at)
            VALUES (?,?,?,?,?,?,?)
            ON CONFLICT(asin,day) DO UPDATE SET
-               price=excluded.price, currency=excluded.currency,
-               in_stock=excluded.in_stock, seller=excluded.seller,
-               captured_at=excluded.captured_at""",
+               price      = COALESCE(excluded.price, price),
+               currency   = COALESCE(excluded.currency, currency),
+               in_stock   = CASE WHEN excluded.price IS NULL
+                                 THEN in_stock ELSE excluded.in_stock END,
+               seller     = COALESCE(NULLIF(excluded.seller,''), seller),
+               captured_at= excluded.captured_at""",
         (asin, date.today().isoformat(), price, currency, int(in_stock), seller,
          datetime.now().isoformat(timespec="seconds")),
     )

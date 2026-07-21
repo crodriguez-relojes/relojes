@@ -104,6 +104,7 @@ class AmazonScraper(PriceProvider):
         self.cfg = CFG["scraping"]
         self.market = CFG["marketplace"]
         self.session = requests.Session()
+        self.bloqueos = 0        # cuantas veces Amazon nos freno en esta corrida
 
     def _headers(self) -> dict:
         return {
@@ -120,13 +121,17 @@ class AmazonScraper(PriceProvider):
         }
 
     @retry(stop=stop_after_attempt(3),
-           wait=wait_exponential(multiplier=4, min=4, max=40),
+           wait=wait_exponential(multiplier=8, min=8, max=120),
            reraise=True)
     def _get(self, url: str) -> str:
         resp = self.session.get(
             url, headers=self._headers(), timeout=self.cfg["timeout_seconds"]
         )
         if resp.status_code in (429, 503):
+            # Amazon esta frenando: esperar de verdad antes de que tenacity
+            # vuelva a intentar, o los reintentos solo empeoran el bloqueo.
+            self.bloqueos += 1
+            time.sleep(self.cfg.get("cooldown_on_block_seconds", 90))
             raise RuntimeError(f"Amazon respondio {resp.status_code} (rate limit)")
         resp.raise_for_status()
         return resp.text
@@ -140,6 +145,9 @@ class AmazonScraper(PriceProvider):
                          error=f"red: {exc}")
 
         if any(marker in html for marker in BLOCK_MARKERS):
+            # Seguir consultando al mismo ritmo solo profundiza el bloqueo
+            self.bloqueos += 1
+            time.sleep(self.cfg.get("cooldown_on_block_seconds", 90))
             return Quote(asin=asin, price=None, currency=currency,
                          error="bloqueado por CAPTCHA de Amazon")
 
