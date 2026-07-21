@@ -1,0 +1,14 @@
+# Secretos: jamas subir
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Exportaciones temporales
+data/historico_precios.csv
+
+# NOTA: data/prices.db y reports/*.html SI se versionan a proposito.
+# Ese es tu historico de precios y tu archivo de reportes.

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radar de Relojes — Inteligencia de compras</title>
+<style>
+/* ===================== Tokens ===================== */
+:root{
+  color-scheme: dark;
+  --surface-1:#1a1a19; --plane:#0d0d0d;
+  --ink-1:#ffffff; --ink-2:#c3c2b7; --ink-3:#898781;
+  --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+  --series:#3987e5; --series-soft:rgba(57,135,229,.16);
+  --good:#0ca30c; --warning:#fab219; --serious:#ec835a; --critical:#d03b3b;
+  --up:#d03b3b; --down:#0ca30c;
+  --radius:12px;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+:root[data-theme="light"]{
+  color-scheme: light;
+  --surface-1:#fcfcfb; --plane:#f9f9f7;
+  --ink-1:#0b0b0b; --ink-2:#52514e; --ink-3:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+  --series:#2a78d6; --series-soft:rgba(42,120,214,.14);
+  --down:#006300;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--plane);color:var(--ink-1);font-size:14px;line-height:1.5}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 18px 60px}
+
+/* ===================== Header ===================== */
+header{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;justify-content:space-between;margin-bottom:22px}
+.brand-kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+h1{margin:2px 0 0;font-size:24px;font-weight:700;letter-spacing:-.01em}
+.stamp{font-size:12px;color:var(--ink-3);margin-top:3px}
+.hbtns{display:flex;gap:8px}
+button,select,input{font:inherit;color:inherit}
+.btn{background:var(--surface-1);border:1px solid var(--border);color:var(--ink-2);
+  border-radius:8px;padding:8px 12px;cursor:pointer;font-size:13px}
+.btn:hover{border-color:var(--ink-3)}
+.btn[aria-pressed="true"]{background:var(--series);border-color:var(--series);color:#fff}
+
+/* ===================== Stat tiles ===================== */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:22px}
+.tile{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius);padding:15px 16px}
+.tile .label{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.tile .value{font-size:28px;font-weight:700;margin-top:5px;letter-spacing:-.02em}
+.tile .sub{font-size:12px;color:var(--ink-3);margin-top:2px}
+
+/* ===================== Controls ===================== */
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.controls input[type=search]{background:var(--surface-1);border:1px solid var(--border);
+  border-radius:8px;padding:9px 12px;min-width:230px;flex:1 1 230px}
+.controls select{background:var(--surface-1);border:1px solid var(--border);border-radius:8px;padding:9px 10px}
+.chip{background:transparent;border:1px solid var(--border);border-radius:999px;
+  padding:7px 13px;font-size:12.5px;cursor:pointer;color:var(--ink-2);display:inline-flex;align-items:center;gap:6px}
+.chip[aria-pressed="true"]{background:var(--surface-1);border-color:var(--ink-3);color:var(--ink-1);font-weight:600}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+
+/* ===================== Table ===================== */
+.panel{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+table{width:100%;border-collapse:collapse}
+thead th{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);
+  font-weight:600;text-align:right;padding:11px 12px;border-bottom:1px solid var(--grid);white-space:nowrap;cursor:pointer;user-select:none}
+thead th:first-child{text-align:left}
+thead th:hover{color:var(--ink-1)}
+tbody td{padding:11px 12px;border-bottom:1px solid var(--grid);text-align:right;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody td:first-child{text-align:left;white-space:normal}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--series-soft)}
+tbody tr:last-child td{border-bottom:none}
+.name{font-weight:600;color:var(--ink-1);max-width:290px;display:block;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.meta{font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;
+  padding:3px 9px;border-radius:999px;letter-spacing:.04em;white-space:nowrap}
+.price{font-weight:700}
+.delta-down{color:var(--down)} .delta-up{color:var(--up)}
+.spark{display:block}
+.empty{padding:40px;text-align:center;color:var(--ink-3)}
+
+/* ===================== Detail ===================== */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.62);display:none;z-index:40;
+  align-items:flex-start;justify-content:center;padding:26px 14px;overflow:auto}
+.overlay.open{display:flex}
+.detail{background:var(--surface-1);border:1px solid var(--border);border-radius:14px;
+  max-width:760px;width:100%;padding:22px}
+.detail-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+.detail h2{margin:0;font-size:18px;line-height:1.3}
+.close{background:none;border:none;color:var(--ink-3);font-size:24px;cursor:pointer;line-height:1;padding:0 4px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:18px 0}
+.stat{background:var(--plane);border:1px solid var(--border);border-radius:10px;padding:11px 12px}
+.stat .k{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.stat .v{font-size:17px;font-weight:700;margin-top:3px;font-variant-numeric:tabular-nums}
+.stat .d{font-size:11px;color:var(--ink-3)}
+.chart-wrap{position:relative;margin-top:6px}
+.tooltip{position:absolute;pointer-events:none;background:var(--surface-1);
+  border:1px solid var(--axis);border-radius:8px;padding:7px 10px;font-size:12px;
+  box-shadow:0 6px 22px rgba(0,0,0,.35);opacity:0;transition:opacity .1s;white-space:nowrap;z-index:2}
+.tooltip .tp{font-weight:700;font-size:14px}
+.tooltip .td{color:var(--ink-3);font-size:11px}
+.cta{display:inline-block;margin-top:14px;background:var(--series);color:#fff;text-decoration:none;
+  font-weight:700;font-size:13px;padding:11px 18px;border-radius:9px}
+.rules{margin-top:14px;font-size:12.5px;color:var(--ink-2)}
+.rules li{margin:3px 0}
+footer{margin-top:26px;font-size:11.5px;color:var(--ink-3);line-height:1.6}
+.demo-banner{background:rgba(250,178,25,.12);border:1px solid var(--warning);
+  border-radius:10px;padding:11px 14px;font-size:12.5px;color:var(--ink-2);margin-bottom:18px}
+@media(max-width:720px){
+  .hide-sm{display:none}
+  h1{font-size:20px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="brand-kicker">Radar de Relojes</div>
+      <h1>Inteligencia de compras</h1>
+      <div class="stamp" id="stamp"></div>
+    </div>
+    <div class="hbtns">
+      <a class="btn" href="cargar.html" style="text-decoration:none">+ Cargar links</a>
+      <button class="btn" id="theme" title="Cambiar tema">Tema claro</button>
+      <button class="btn" id="toggleSpark" aria-pressed="true" title="Mostrar u ocultar las mini-gráficas">Gráficas</button>
+    </div>
+  </header>
+
+  <div id="banner"></div>
+
+  <section class="tiles" id="tiles"></section>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Buscar reloj…" aria-label="Buscar reloj">
+    <button class="chip" data-rec="all" aria-pressed="true">Todos</button>
+    <button class="chip" data-rec="COMPRAR AHORA" aria-pressed="false"><span class="dot" style="background:var(--good)"></span>Comprar</button>
+    <button class="chip" data-rec="MONITOREAR" aria-pressed="false"><span class="dot" style="background:var(--warning)"></span>Monitorear</button>
+    <button class="chip" data-rec="ESPERAR" aria-pressed="false"><span class="dot" style="background:var(--ink-3)"></span>Esperar</button>
+    <select id="sort" aria-label="Ordenar por">
+      <option value="score">Ordenar: oportunidad</option>
+      <option value="price">Ordenar: precio</option>
+      <option value="name">Ordenar: nombre</option>
+      <option value="weekly">Ordenar: variación semanal</option>
+      <option value="vsmin">Ordenar: cercanía al mínimo</option>
+    </select>
+  </div>
+
+  <div class="panel">
+    <table id="tbl">
+      <thead><tr>
+        <th data-k="name">Reloj</th>
+        <th data-k="price">Actual</th>
+        <th data-k="weekly" class="hide-sm">7 días</th>
+        <th class="hide-sm" style="cursor:default">Historial 30d</th>
+        <th data-k="min_all" class="hide-sm">Mín. hist.</th>
+        <th data-k="vsmin">vs mín.</th>
+        <th data-k="score">Veredicto</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="empty" id="empty" style="display:none"></div>
+  </div>
+
+  <footer>
+    Los precios se capturan una vez al día y pueden cambiar sin aviso: confirma en Amazon antes de pagar.<br>
+    Veredicto = puntaje 0-100 sobre mínimos históricos, tu precio objetivo y el descuento frente al precio habitual.
+  </footer>
+</div>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+  <div class="detail" id="detail"></div>
+</div>
+
+<script src="data.js"></script>
+<script>
+(() => {
+const D = window.RADAR_DATA || {items:[], generated_at:"", currency_symbol:"$"};
+const SYM = D.currency_symbol || "$";
+const $ = s => document.querySelector(s);
+const money = v => v==null ? "—" : SYM + v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = v => v==null ? "—" : (v>=0?"+":"") + v.toFixed(1) + "%";
+const esc = s => String(s??"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+const REC = {
+  "COMPRAR AHORA":      {color:"var(--good)",     icon:"▲"},
+  "MONITOREAR":         {color:"var(--warning)",  icon:"◆"},
+  "ESPERAR":            {color:"var(--ink-3)",    icon:"■"},
+  "REVISAR MANUALMENTE":{color:"var(--serious)",  icon:"!"}
+};
+const badge = r => {
+  const c = REC[r] || REC["ESPERAR"];
+  return `<span class="badge" style="background:color-mix(in srgb, ${c.color} 16%, transparent);color:${c.color}">
+    <span aria-hidden="true">${c.icon}</span>${esc(r)}</span>`;
+};
+
+/* ---------- estado ---------- */
+let state = {q:"", rec:"all", sort:"score", spark:true};
+
+/* ---------- tiles ---------- */
+function renderTiles(){
+  const it = D.items, priced = it.filter(x => x.price != null);
+  const buy = priced.filter(x => x.recommendation === "COMPRAR AHORA").length;
+  const low = priced.filter(x => x.at_all_time_low).length;
+  const saving = priced.reduce((s,x) => s + Math.max(0,(x.median_all||x.price)-x.price), 0);
+  const tiles = [
+    {label:"Relojes monitoreados", value:it.length, sub:(D.days_tracked||0)+" días de historial"},
+    {label:"En zona de compra",    value:buy, sub:"puntaje ≥ 60", color:"var(--good)"},
+    {label:"En mínimo histórico",  value:low, sub:"precio nunca visto más bajo", color:"var(--warning)"},
+    {label:"Ahorro si compras hoy",value:money(saving), sub:"vs precio habitual de cada uno"}
+  ];
+  $("#tiles").innerHTML = tiles.map(t => `<div class="tile">
+    <div class="label">${t.label}</div>
+    <div class="value"${t.color?` style="color:${t.color}"`:""}>${t.value}</div>
+    <div class="sub">${t.sub}</div></div>`).join("");
+}
+
+/* ---------- sparkline: una sola serie, línea 2px, sin ejes ---------- */
+function sparkline(hist, w=110, h=30){
+  const pts = (hist||[]).slice(-30);
+  if(pts.length < 2) return `<span class="meta">sin datos</span>`;
+  const ys = pts.map(p => p[1]);
+  const lo = Math.min(...ys), hi = Math.max(...ys), span = (hi-lo) || 1;
+  const pad = 3.5;
+  const X = i => pad + i*(w-2*pad)/(pts.length-1);
+  const Y = v => h-pad - (v-lo)/span*(h-2*pad);
+  const line = ys.map((v,i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(" ");
+  const area = `${pad},${h-pad} ${line} ${(w-pad).toFixed(1)},${h-pad}`;
+  const lastX = X(pts.length-1), lastY = Y(ys[ys.length-1]);
+  const loI = ys.indexOf(lo);
+  return `<svg class="spark" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img"
+    aria-label="Precios de los últimos ${pts.length} días, de ${money(ys[0])} a ${money(ys[ys.length-1])}">
+    <polygon points="${area}" fill="var(--series-soft)"/>
+    <polyline points="${line}" fill="none" stroke="var(--series)" stroke-width="2"
+      stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="${X(loI).toFixed(1)}" cy="${Y(lo).toFixed(1)}" r="2.5" fill="var(--good)"/>
+    <circle cx="${lastX.toFixed(1)}" cy="${lastY.toFixed(1)}" r="3.5" fill="var(--series)"
+      stroke="var(--surface-1)" stroke-width="2"/>
+  </svg>`;
+}
+
+/* ---------- tabla ---------- */
+function visible(){
+  const q = state.q.toLowerCase();
+  let rows = D.items.filter(x =>
+    (state.rec === "all" || x.recommendation === state.rec) &&
+    (!q || (x.name+" "+(x.category||"")).toLowerCase().includes(q)));
+  const key = {
+    score:  x => -(x.score ?? -1),
+    price:  x => x.price ?? Infinity,
+    name:    x => x.name.toLowerCase(),
+    weekly:  x => x.weekly_change ?? 0,
+    vsmin:   x => x.pct_vs_min_all ?? Infinity,
+    min_all: x => x.min_all ?? Infinity
+  }[state.sort] || (x => -(x.score ?? -1));
+  return rows.sort((a,b) => { const ka=key(a), kb=key(b); return ka<kb?-1:ka>kb?1:0; });
+}
+
+function renderRows(){
+  const rows = visible();
+  const emptyEl = $("#empty");
+  emptyEl.style.display = rows.length ? "none" : "block";
+  emptyEl.innerHTML = D.items.length
+    ? "Ningún reloj coincide con el filtro."
+    : `Todavía no hay relojes cargados.<br><br>
+       <a class="cta" href="cargar.html" style="margin:0">Cargar mis links →</a>`;
+  $("#rows").innerHTML = rows.map((x,i) => `
+    <tr data-i="${D.items.indexOf(x)}" tabindex="0">
+      <td>
+        <span class="name">${esc(x.name)}</span>
+        <span class="meta">${esc(x.category||"")}${x.target_price?` · objetivo ${money(x.target_price)}`:""}</span>
+      </td>
+      <td class="price">${money(x.price)}</td>
+      <td class="hide-sm ${(x.weekly_change??0)<0?"delta-down":(x.weekly_change?"delta-up":"")}">${pct(x.weekly_change)}</td>
+      <td class="hide-sm">${state.spark ? sparkline(x.history) : ""}</td>
+      <td class="hide-sm" style="color:var(--ink-3)">${money(x.min_all)}</td>
+      <td>${x.pct_vs_min_all==null ? "—" : (x.pct_vs_min_all<=0.5
+            ? `<span style="color:var(--good);font-weight:700">en el mínimo</span>`
+            : "+"+x.pct_vs_min_all.toFixed(0)+"%")}</td>
+      <td>${badge(x.recommendation)}</td>
+    </tr>`).join("");
+}
+
+/* ---------- gráfica de detalle con crosshair ---------- */
+function bigChart(hist){
+  const W=700, H=230, L=52, R=14, T=16, B=28;
+  const pts = hist||[];
+  if(pts.length < 2) return `<div class="meta" style="padding:24px 0">Aún no hay suficientes días de historial para graficar. Se llena solo, un punto por día.</div>`;
+  const ys = pts.map(p=>p[1]);
+  const lo = Math.min(...ys), hi = Math.max(...ys), span = (hi-lo)||1;
+  const y0 = lo - span*0.12, y1 = hi + span*0.12, ySpan = y1-y0;
+  const X = i => L + i*(W-L-R)/(pts.length-1);
+  const Y = v => T + (1-(v-y0)/ySpan)*(H-T-B);
+  const line = ys.map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(" ");
+  const area = `${L},${H-B} ${line} ${(W-R).toFixed(1)},${H-B}`;
+  const ticks = [y0+ySpan*0.05, (y0+y1)/2, y1-ySpan*0.05];
+  const grid = ticks.map(v=>`
+    <line x1="${L}" x2="${W-R}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" stroke="var(--grid)" stroke-width="1"/>
+    <text x="${L-8}" y="${(Y(v)+4).toFixed(1)}" text-anchor="end" font-size="10.5" fill="var(--ink-3)">${SYM}${v.toFixed(0)}</text>`).join("");
+  const loI = ys.indexOf(lo);
+  const dates = [0, Math.floor(pts.length/2), pts.length-1].map(i=>`
+    <text x="${X(i).toFixed(1)}" y="${H-8}" text-anchor="${i===0?"start":i===pts.length-1?"end":"middle"}"
+      font-size="10.5" fill="var(--ink-3)">${pts[i][0].slice(5)}</text>`).join("");
+  const data = pts.map((p,i)=>`${X(i).toFixed(1)}|${Y(p[1]).toFixed(1)}|${p[0]}|${p[1]}`).join(";");
+  return `<div class="chart-wrap">
+    <div class="tooltip" id="tt"></div>
+    <svg id="bigsvg" viewBox="0 0 ${W} ${H}" width="100%" data-pts="${data}" data-l="${L}" data-r="${R}" data-w="${W}"
+         role="img" aria-label="Evolución del precio">
+      ${grid}
+      <polygon points="${area}" fill="var(--series-soft)"/>
+      <polyline points="${line}" fill="none" stroke="var(--series)" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="${X(loI).toFixed(1)}" cy="${Y(lo).toFixed(1)}" r="4" fill="var(--good)" stroke="var(--surface-1)" stroke-width="2"/>
+      <text x="${X(loI).toFixed(1)}" y="${(Y(lo)+17).toFixed(1)}" text-anchor="middle" font-size="10.5"
+        font-weight="700" fill="var(--good)">mín ${money(lo)}</text>
+      <line id="cross" x1="0" x2="0" y1="${T}" y2="${H-B}" stroke="var(--axis)" stroke-width="1" opacity="0"/>
+      <circle id="cdot" r="4.5" fill="var(--series)" stroke="var(--surface-1)" stroke-width="2" opacity="0"/>
+      ${dates}
+    </svg></div>`;
+}
+
+function wireChart(){
+  const svg = document.getElementById("bigsvg"); if(!svg) return;
+  const tt = document.getElementById("tt"), cross = document.getElementById("cross"), dot = document.getElementById("cdot");
+  const pts = svg.dataset.pts.split(";").map(s => { const [x,y,d,v]=s.split("|"); return {x:+x,y:+y,d,v:+v}; });
+  const W = +svg.dataset.w;
+  const move = e => {
+    const r = svg.getBoundingClientRect();
+    const cx = (e.clientX - r.left) / r.width * W;
+    let best = pts[0];
+    for(const p of pts) if(Math.abs(p.x-cx) < Math.abs(best.x-cx)) best = p;
+    cross.setAttribute("x1",best.x); cross.setAttribute("x2",best.x); cross.setAttribute("opacity","1");
+    dot.setAttribute("cx",best.x); dot.setAttribute("cy",best.y); dot.setAttribute("opacity","1");
+    tt.style.opacity = "1";
+    tt.innerHTML = `<div class="tp">${money(best.v)}</div><div class="td">${best.d}</div>`;
+    const px = best.x / W * r.width;
+    tt.style.left = Math.min(Math.max(px - tt.offsetWidth/2, 0), r.width - tt.offsetWidth) + "px";
+    tt.style.top = (best.y / 230 * r.height - tt.offsetHeight - 10) + "px";
+  };
+  svg.addEventListener("pointermove", move);
+  svg.addEventListener("pointerleave", () => {
+    tt.style.opacity="0"; cross.setAttribute("opacity","0"); dot.setAttribute("opacity","0");
+  });
+}
+
+/* ---------- detalle ---------- */
+const RULE_TXT = {
+  min_all_time:"Está en su precio más bajo registrado",
+  min_30d:"Es el más barato de los últimos 30 días",
+  min_7d:"Es el más barato de los últimos 7 días",
+  target_price:"Está por debajo de tu precio objetivo",
+  daily_drop:"Cayó más de 5% respecto de ayer"
+};
+
+function openDetail(i){
+  const x = D.items[i]; if(!x) return;
+  const c = (REC[x.recommendation]||REC["ESPERAR"]).color;
+  const stats = [
+    ["Precio actual", money(x.price), x.pct_vs_prev!=null ? pct(x.pct_vs_prev)+" vs ayer" : ""],
+    ["Mínimo 7 días", money(x.min_7d), x.min_7d_date||""],
+    ["Mínimo 30 días", money(x.min_30d), x.min_30d_date||""],
+    ["Mínimo histórico", money(x.min_all), x.min_all_date||""],
+    ["Precio habitual", money(x.median_all), "mediana histórica"],
+    ["Descuento", pct(x.discount_vs_typical), "vs precio habitual"],
+    ["Volatilidad", (x.volatility_pct??0).toFixed(1)+"%", "variación típica"],
+    ["Tendencia 30d", x.trend||"—", x.best_weekday && x.best_weekday!=="-" ? "más barato en "+x.best_weekday : ""]
+  ];
+  $("#detail").innerHTML = `
+    <div class="detail-head">
+      <div>
+        <h2 id="dTitle">${esc(x.name)}</h2>
+        <div style="margin-top:8px">${badge(x.recommendation)}
+          <span class="meta">puntaje ${x.score}/100 · ${x.history_days} días de historial</span></div>
+      </div>
+      <button class="close" id="closeBtn" aria-label="Cerrar">&times;</button>
+    </div>
+    ${bigChart(x.history)}
+    <div class="stats">${stats.map(s=>`<div class="stat">
+      <div class="k">${s[0]}</div><div class="v">${s[1]}</div><div class="d">${s[2]}</div></div>`).join("")}</div>
+    ${(x.triggered||[]).length ? `<div class="rules"><strong>Por qué se activó la alerta</strong>
+      <ul>${x.triggered.map(r=>`<li>${RULE_TXT[r]||r}</li>`).join("")}</ul></div>` : ""}
+    <a class="cta" href="${esc(x.url)}" target="_blank" rel="noopener"
+       style="background:${c};color:${x.recommendation==="ESPERAR"?"var(--surface-1)":"#fff"}">Ver en Amazon →</a>`;
+  $("#overlay").classList.add("open");
+  wireChart();
+  $("#closeBtn").onclick = closeDetail;
+}
+const closeDetail = () => $("#overlay").classList.remove("open");
+
+/* ---------- eventos ---------- */
+$("#overlay").addEventListener("click", e => { if(e.target.id==="overlay") closeDetail(); });
+document.addEventListener("keydown", e => { if(e.key==="Escape") closeDetail(); });
+$("#rows").addEventListener("click", e => {
+  const tr = e.target.closest("tr"); if(tr) openDetail(+tr.dataset.i);
+});
+$("#rows").addEventListener("keydown", e => {
+  if(e.key==="Enter"){ const tr=e.target.closest("tr"); if(tr) openDetail(+tr.dataset.i); }
+});
+$("#q").addEventListener("input", e => { state.q = e.target.value; renderRows(); });
+$("#sort").addEventListener("change", e => { state.sort = e.target.value; renderRows(); });
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".chip").forEach(o => o.setAttribute("aria-pressed", String(o===b)));
+  state.rec = b.dataset.rec; renderRows();
+}));
+document.querySelectorAll("thead th[data-k]").forEach(th => th.addEventListener("click", () => {
+  state.sort = th.dataset.k; $("#sort").value = th.dataset.k; renderRows();
+}));
+$("#toggleSpark").addEventListener("click", e => {
+  state.spark = !state.spark;
+  e.target.setAttribute("aria-pressed", String(state.spark));
+  renderRows();
+});
+$("#theme").addEventListener("click", e => {
+  const light = document.documentElement.dataset.theme === "light";
+  document.documentElement.dataset.theme = light ? "dark" : "light";
+  e.target.textContent = light ? "Tema claro" : "Tema oscuro";
+  try{ localStorage.setItem("radarTheme", document.documentElement.dataset.theme); }catch{}
+});
+try{
+  const t = localStorage.getItem("radarTheme");
+  if(t){ document.documentElement.dataset.theme = t; $("#theme").textContent = t==="light" ? "Tema oscuro" : "Tema claro"; }
+}catch{}
+
+/* ---------- arranque ---------- */
+$("#stamp").textContent = "Última actualización: " + (D.generated_at || "—");
+if(D.demo){
+  $("#banner").innerHTML = `<div class="demo-banner"><strong>Datos de demostración.</strong>
+    Esta página se llena sola con tus relojes reales cuando cargues tus links en
+    <code>data/watches.csv</code> y corra el monitoreo diario.</div>`;
+}
+renderTiles();
+renderRows();
+})();
+</script>
+</body>
+</html>

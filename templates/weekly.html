@@ -1,0 +1,82 @@
+{% extends "_base.html" %}
+{% block title %}Reporte semanal · {{ week_label }}{% endblock %}
+{% block content %}
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:22px;">
+<tr>
+  <td style="background:#1d2129;border:1px solid #2c323d;border-radius:10px;padding:14px;text-align:center;">
+    <div style="font-size:24px;font-weight:800;color:#f2f4f8;">{{ total }}</div>
+    <div style="font-size:11px;color:#7b8494;text-transform:uppercase;letter-spacing:.1em;">Monitoreados</div></td>
+  <td width="10"></td>
+  <td style="background:#1d2129;border:1px solid #2c323d;border-radius:10px;padding:14px;text-align:center;">
+    <div style="font-size:24px;font-weight:800;color:#3ddc84;">{{ buy_now }}</div>
+    <div style="font-size:11px;color:#7b8494;text-transform:uppercase;letter-spacing:.1em;">Comprar ahora</div></td>
+  <td width="10"></td>
+  <td style="background:#1d2129;border:1px solid #2c323d;border-radius:10px;padding:14px;text-align:center;">
+    <div style="font-size:24px;font-weight:800;color:#f5c451;">{{ at_low }}</div>
+    <div style="font-size:11px;color:#7b8494;text-transform:uppercase;letter-spacing:.1em;">En minimo hist.</div></td>
+</tr>
+</table>
+
+<div style="font-size:13px;font-weight:700;color:#f2f4f8;text-transform:uppercase;letter-spacing:.1em;margin:0 0 10px;">Top oportunidades</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:13px;margin-bottom:26px;">
+  <tr style="color:#7b8494;font-size:11px;text-transform:uppercase;letter-spacing:.08em;">
+    <th align="left" style="padding:8px 6px;border-bottom:1px solid #2c323d;">Reloj</th>
+    <th align="right" style="padding:8px 6px;border-bottom:1px solid #2c323d;">Actual</th>
+    <th align="right" style="padding:8px 6px;border-bottom:1px solid #2c323d;">Min hist.</th>
+    <th align="right" style="padding:8px 6px;border-bottom:1px solid #2c323d;">Score</th>
+  </tr>
+  {% for a in top %}
+  <tr>
+    <td style="padding:9px 6px;border-bottom:1px solid #23272f;color:#e6eaf1;">
+      <a href="{{ a.url }}" style="color:#e6eaf1;text-decoration:none;">{{ a.name[:52] }}</a>
+      <div style="font-size:11px;color:{{ '#3ddc84' if a.recommendation == 'COMPRAR AHORA' else '#7b8494' }};">{{ a.recommendation }}</div></td>
+    <td align="right" style="padding:9px 6px;border-bottom:1px solid #23272f;font-weight:700;">{{ a.price|money }}</td>
+    <td align="right" style="padding:9px 6px;border-bottom:1px solid #23272f;color:#7b8494;">{{ a.min_all|money }}</td>
+    <td align="right" style="padding:9px 6px;border-bottom:1px solid #23272f;font-weight:700;color:#3ddc84;">{{ a.score }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<td width="49%">
+  <div style="font-size:12px;font-weight:700;color:#3ddc84;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">Mas bajaron</div>
+  {% for a in droppers %}
+  <div style="padding:7px 0;border-bottom:1px solid #23272f;font-size:12px;color:#c9d0dc;">
+    {{ a.name[:34] }}<br><span style="color:#3ddc84;font-weight:700;">{{ a.weekly_change|pct }}</span>
+    <span style="color:#7b8494;">&rarr; {{ a.price|money }}</span></div>
+  {% else %}<div style="font-size:12px;color:#7b8494;">Sin bajadas esta semana.</div>{% endfor %}
+</td>
+<td width="2%"></td>
+<td width="49%">
+  <div style="font-size:12px;font-weight:700;color:#ff6b6b;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;">Mas subieron</div>
+  {% for a in risers %}
+  <div style="padding:7px 0;border-bottom:1px solid #23272f;font-size:12px;color:#c9d0dc;">
+    {{ a.name[:34] }}<br><span style="color:#ff6b6b;font-weight:700;">{{ a.weekly_change|pct }}</span>
+    <span style="color:#7b8494;">&rarr; {{ a.price|money }}</span></div>
+  {% else %}<div style="font-size:12px;color:#7b8494;">Sin subidas esta semana.</div>{% endfor %}
+</td>
+</tr></table>
+
+<div style="font-size:13px;font-weight:700;color:#f2f4f8;text-transform:uppercase;letter-spacing:.1em;margin:26px 0 10px;">Tabla completa</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:12px;">
+  <tr style="color:#7b8494;font-size:10px;text-transform:uppercase;letter-spacing:.06em;">
+    <th align="left" style="padding:6px 4px;border-bottom:1px solid #2c323d;">Reloj</th>
+    <th align="right" style="padding:6px 4px;border-bottom:1px solid #2c323d;">Actual</th>
+    <th align="right" style="padding:6px 4px;border-bottom:1px solid #2c323d;">Min 7d</th>
+    <th align="right" style="padding:6px 4px;border-bottom:1px solid #2c323d;">Min hist.</th>
+    <th align="right" style="padding:6px 4px;border-bottom:1px solid #2c323d;">Var sem.</th>
+  </tr>
+  {% for a in all_items %}
+  <tr>
+    <td style="padding:7px 4px;border-bottom:1px solid #23272f;color:#c9d0dc;">
+      <a href="{{ a.url }}" style="color:#c9d0dc;text-decoration:none;">{{ a.name[:44] }}</a></td>
+    <td align="right" style="padding:7px 4px;border-bottom:1px solid #23272f;">{{ a.price|money }}</td>
+    <td align="right" style="padding:7px 4px;border-bottom:1px solid #23272f;color:#7b8494;">{{ a.min_7d|money }}</td>
+    <td align="right" style="padding:7px 4px;border-bottom:1px solid #23272f;color:#7b8494;">{{ a.min_all|money }}</td>
+    <td align="right" style="padding:7px 4px;border-bottom:1px solid #23272f;color:{{ '#3ddc84' if (a.weekly_change or 0) < 0 else '#ff6b6b' }};">{{ a.weekly_change|pct }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+# =====================================================================
+# Configuracion central del sistema de inteligencia de compras
+# Todo lo ajustable vive aqui. No hace falta tocar el codigo.
+# =====================================================================
+
+marketplace:
+  domain: amazon.com
+  currency: USD
+  currency_symbol: $
+  # Cabeceras de idioma/region que se envian a Amazon
+  accept_language: en-US,en;q=0.9
+
+scraping:
+  # Segundos de espera aleatoria entre producto y producto (anti-bloqueo)
+  delay_min_seconds: 3
+  delay_max_seconds: 9
+  # Reintentos por producto antes de darlo por fallido
+  max_retries: 3
+  timeout_seconds: 25
+
+# ---------------------------------------------------------------------
+# Reglas que disparan una alerta por correo
+# ---------------------------------------------------------------------
+alerts:
+  min_7d: true              # precio actual = minimo de los ultimos 7 dias
+  min_30d: true             # precio actual = minimo de los ultimos 30 dias
+  min_all_time: true        # precio actual = minimo historico
+  daily_drop: true          # caida fuerte respecto de ayer
+  daily_drop_pct: 5.0       # umbral de esa caida (%)
+  target_price: true        # precio por debajo del target_price de watches.csv
+
+  # Tolerancia: un precio cuenta como "minimo" si esta dentro de este % del minimo.
+  # Evita perder alertas por diferencias de centavos.
+  tie_tolerance_pct: 0.5
+
+  # No repetir la misma alerta para el mismo reloj en N dias.
+  cooldown_days: 3
+
+  # Ignorar variaciones ridiculas (ruido de Amazon)
+  min_abs_change_usd: 0.50
+
+# ---------------------------------------------------------------------
+# Motor de recomendacion (COMPRAR AHORA / MONITOREAR / ESPERAR)
+# ---------------------------------------------------------------------
+recommendation:
+  # Puntaje minimo para cada veredicto
+  buy_now_score: 60
+  monitor_score: 30
+  # Dias minimos de historia antes de confiar en "minimo historico"
+  min_history_days_for_alltime: 14
+
+# ---------------------------------------------------------------------
+# Correo (las credenciales van en .env, NUNCA aqui)
+# ---------------------------------------------------------------------
+email:
+  enabled: true
+  subject_prefix: "[Relojes]"
+
+  # Servidor de salida. Descomenta el que uses.
+  #   Gmail  -> exige contrasena de aplicacion (y por tanto 2FA activado)
+  #   Brevo  -> te da usuario y clave SMTP al registrarte, sin 2FA de por medio
+  #   Resend -> el usuario es literalmente "resend"; la clave es la API key
+  smtp_host: smtp.gmail.com
+  smtp_port: 587
+  # smtp_host: smtp-relay.brevo.com
+  # smtp_port: 587
+  # smtp_host: smtp.resend.com
+  # smtp_port: 587
+
+reports:
+  top_opportunities: 10
+  timezone: America/Bogota

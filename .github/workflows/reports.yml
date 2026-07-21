@@ -1,0 +1,54 @@
+name: Reportes semanal y mensual
+
+on:
+  schedule:
+    - cron: "0 13 * * 1"    # lunes 08:00 Colombia -> reporte semanal
+    - cron: "30 13 1 * *"   # dia 1 de cada mes    -> analisis mensual
+  workflow_dispatch:
+    inputs:
+      tipo:
+        description: Reporte a generar
+        type: choice
+        options: [weekly, monthly]
+        default: weekly
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Decidir tipo de reporte
+        id: tipo
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "value=${{ inputs.tipo }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "30 13 1 * *" ]; then
+            echo "value=monthly" >> $GITHUB_OUTPUT
+          else
+            echo "value=weekly" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Generar y enviar
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+        run: python -m src.main ${{ steps.tipo.outputs.value }}
+
+      - name: Guardar reporte
+        run: |
+          git config user.name "radar-relojes"
+          git config user.email "actions@github.com"
+          git add reports/ || true
+          git diff --staged --quiet || git commit -m "reporte ${{ steps.tipo.outputs.value }}"
+          git push
