@@ -57,7 +57,11 @@ VARIANT_SELECTORS = [
     "#variation_style_name .selection",
     "#variation_band_material_type .selection",
     "#variation_size_name .selection",
+    "#twister .selection",
 ]
+# Tabla "Product overview" que Amazon muestra bajo el titulo
+OVERVIEW_KEYS = ("color", "band color", "band material", "case material",
+                 "dial color", "material", "style", "strap color")
 # Token de tamano dentro del URL de imagen de Amazon (._AC_SX679_.jpg)
 IMG_SIZE_RE = re.compile(r"\._[A-Z0-9_,]+_\.(jpg|png|webp)$", re.I)
 
@@ -176,6 +180,26 @@ class AmazonScraper(PriceProvider):
                 txt = node.get_text(" ", strip=True)
                 if txt and txt.lower() not in ("select", "seleccionar"):
                     partes.append(txt)
+        # Plan B: la tabla "Product overview" (Color, Band Material...)
+        if not partes:
+            for row in soup.select("#productOverview_feature_div tr"):
+                celdas = row.find_all(["td", "th"])
+                if len(celdas) < 2:
+                    continue
+                clave = celdas[0].get_text(" ", strip=True).lower()
+                valor = celdas[1].get_text(" ", strip=True)
+                if any(k in clave for k in OVERVIEW_KEYS) and valor:
+                    partes.append(valor)
+
+        # Plan C: el "twister" que Amazon incrusta como JSON en la pagina.
+        # Mapea cada ASIN hermano con los valores que lo distinguen:
+        #   "B017SN1OI8":["Brown","Leather"]
+        if not partes:
+            m = re.search(rf'"{re.escape(asin)}"\s*:\s*\[([^\]]*)\]', html)
+            if m:
+                partes = [v.strip(' "') for v in m.group(1).split(",")
+                          if v.strip(' "') and len(v.strip(' "')) < 40]
+
         variant = " / ".join(dict.fromkeys(partes))[:70]
 
         price = None
