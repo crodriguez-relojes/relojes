@@ -14,6 +14,8 @@ class Quote:
     seller: str = ""
     image: str = ""            # URL de la foto principal
     variant: str = ""          # color / material / estilo elegido
+    list_price: float | None = None   # el precio tachado ("List Price")
+    discount_pct: float | None = None # el % de descuento que muestra Amazon
     error: str = ""
 
     @property

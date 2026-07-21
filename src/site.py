@@ -18,6 +18,11 @@ DOCS_DIR = ROOT / "docs"
 
 
 def _item(conn: sqlite3.Connection, a: an.Analysis) -> dict:
+    # Precio de lista y descuento del ultimo dia con dato
+    fila = conn.execute(
+        """SELECT list_price, discount_pct FROM price_history
+           WHERE asin=? AND price IS NOT NULL
+           ORDER BY day DESC LIMIT 1""", (a.asin,)).fetchone()
     return {
         "asin": a.asin,
         "name": a.name,
@@ -33,6 +38,8 @@ def _item(conn: sqlite3.Connection, a: an.Analysis) -> dict:
         "min_all": a.min_all, "min_all_date": a.min_all_date,
         "max_all": a.max_all,
         "median_all": a.median_all,
+        "list_price": fila["list_price"] if fila else None,
+        "amazon_discount": fila["discount_pct"] if fila else None,
         "pct_vs_prev": a.pct_vs_prev,
         "pct_vs_min_all": a.pct_vs_min_all,
         "discount_vs_typical": a.discount_vs_typical,

@@ -81,6 +81,8 @@ tbody tr:last-child td{border-bottom:none}
   color:var(--ink-3);font-size:17px}
 .namecell{display:flex;gap:11px;align-items:center}
 .variant{font-size:11.5px;color:var(--series);margin-top:2px;font-weight:600}
+.off{font-size:11.5px;font-weight:700;color:var(--good);margin-top:2px}
+.tachado{color:var(--ink-3);font-weight:400;text-decoration:line-through}
 .hero{width:100%;max-width:200px;object-fit:contain;background:#fff;
   border-radius:10px;border:1px solid var(--border);padding:6px}
 .meta{font-size:11.5px;color:var(--ink-3);margin-top:2px}
@@ -294,7 +296,11 @@ function renderRows(){
           </div>
         </div>
       </td>
-      <td class="price">${money(x.price)}</td>
+      <td class="price">
+        ${money(x.price)}
+        ${x.amazon_discount ? `<div class="off">-${Math.round(x.amazon_discount)}%${
+             x.list_price ? ` <span class="tachado">${money(x.list_price)}</span>` : ""}</div>` : ""}
+      </td>
       <td class="hide-sm ${(x.weekly_change??0)<0?"delta-down":(x.weekly_change?"delta-up":"")}">${pct(x.weekly_change)}</td>
       <td class="hide-sm">${state.spark ? sparkline(x.history) : ""}</td>
       <td class="hide-sm" style="color:var(--ink-3)">${money(x.min_all)}</td>
@@ -386,6 +392,8 @@ function openDetail(i){
   const c = (REC[x.recommendation]||REC["ESPERAR"]).color;
   const stats = [
     ["Precio actual", money(x.price), x.pct_vs_prev!=null ? pct(x.pct_vs_prev)+" vs ayer" : ""],
+    ["Descuento Amazon", x.amazon_discount ? "-"+Math.round(x.amazon_discount)+"%" : "—",
+     x.list_price ? "precio de lista "+money(x.list_price) : "sin oferta activa"],
     ["Mínimo 7 días", money(x.min_7d), x.min_7d_date||""],
     ["Mínimo 30 días", money(x.min_30d), x.min_30d_date||""],
     ["Mínimo histórico", money(x.min_all), x.min_all_date||""],

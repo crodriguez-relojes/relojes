@@ -68,6 +68,23 @@ IMG_SIZE_RE = re.compile(r"\._[A-Z0-9_,]+_\.(jpg|png|webp)$", re.I)
 # Amazon declara la moneda del precio en el JSON incrustado de la pagina
 CURRENCY_RE = re.compile(r'"currencyCode"\s*:\s*"([A-Z]{3})"')
 
+# El precio tachado contra el que Amazon calcula su porcentaje de descuento
+LIST_PRICE_SELECTORS = [
+    "#corePriceDisplay_desktop_feature_div span.a-price.a-text-price span.a-offscreen",
+    "#corePrice_feature_div span.a-price.a-text-price span.a-offscreen",
+    ".basisPrice span.a-offscreen",
+    "#listPrice",
+    "span.priceBlockStrikePriceString",
+    "#price span.a-text-price span.a-offscreen",
+]
+DISCOUNT_SELECTORS = [
+    "#corePriceDisplay_desktop_feature_div span.savingsPercentage",
+    "#corePrice_feature_div span.savingsPercentage",
+    "span.savingPriceOverride",
+    "span.savingsPercentage",
+]
+DESCUENTO_RE = re.compile(r"(\d{1,3})\s*%")
+
 
 def thumb(url: str, px: int = 320) -> str:
     """Pide a Amazon una version mas liviana de la misma foto."""
@@ -231,6 +248,29 @@ class AmazonScraper(PriceProvider):
             if m:
                 price = _parse_price(m.group(1))
 
+        # --- precio de lista y % de descuento que anuncia Amazon ----------
+        list_price = None
+        for sel in LIST_PRICE_SELECTORS:
+            node = soup.select_one(sel)
+            if node:
+                candidato = _parse_price(node.get_text())
+                # Solo cuenta si de verdad es mayor que lo que se paga hoy
+                if candidato and price and candidato > price:
+                    list_price = candidato
+                    break
+
+        discount_pct = None
+        for sel in DISCOUNT_SELECTORS:
+            node = soup.select_one(sel)
+            if node:
+                m = DESCUENTO_RE.search(node.get_text())
+                if m:
+                    discount_pct = float(m.group(1))
+                    break
+        # Si Amazon no publica la etiqueta pero si el precio tachado, se calcula
+        if discount_pct is None and list_price and price:
+            discount_pct = round((list_price - price) / list_price * 100, 1)
+
         availability = ""
         avail_node = soup.select_one("#availability")
         if avail_node:
@@ -261,7 +301,8 @@ class AmazonScraper(PriceProvider):
 
         return Quote(asin=asin, price=price, currency=currency,
                      in_stock=not out_of_stock, title=title, seller=seller,
-                     image=image, variant=variant)
+                     image=image, variant=variant,
+                     list_price=list_price, discount_pct=discount_pct)
 
     def polite_pause(self) -> None:
         time.sleep(random.uniform(self.cfg["delay_min_seconds"],

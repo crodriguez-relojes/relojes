@@ -47,6 +47,13 @@
       <tr><td style="padding:5px 0;color:#7b8494;">Minimo historico</td>
           <td align="right" style="padding:5px 0;font-weight:700;color:{{ '#3ddc84' if a.is_all_time_low else '#c9d0dc' }};">
             {{ a.min_all|money }}{% if a.min_all_date %} <span style="color:#5f6875;font-weight:400;">({{ a.min_all_date }})</span>{% endif %}</td></tr>
+      {% if a.amazon_discount %}
+      <tr><td style="padding:5px 0;color:#7b8494;">Descuento que anuncia Amazon</td>
+          <td align="right" style="padding:5px 0;font-weight:700;color:#3ddc84;">
+            -{{ a.amazon_discount|round|int }}%
+            {% if a.list_price %}<span style="color:#5f6875;font-weight:400;text-decoration:line-through;">{{ a.list_price|money }}</span>{% endif %}
+          </td></tr>
+      {% endif %}
       <tr><td style="padding:5px 0;color:#7b8494;">Descuento vs precio habitual</td>
           <td align="right" style="padding:5px 0;font-weight:700;">{{ a.discount_vs_typical|pct }}</td></tr>
       {% if a.target_price %}

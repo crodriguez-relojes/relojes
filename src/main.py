@@ -95,9 +95,16 @@ def cmd_track(args) -> int:
 
         if quote.ok:
             record_price(conn, p.asin, quote.price, quote.currency,
-                         quote.in_stock, quote.seller)
+                         quote.in_stock, quote.seller,
+                         quote.list_price, quote.discount_pct)
             ok += 1
-            print(f"    {SYMBOL}{quote.price:,.2f}")
+            linea = f"    {SYMBOL}{quote.price:,.2f}"
+            if quote.discount_pct:
+                linea += f"  (-{quote.discount_pct:.0f}% segun Amazon"
+                if quote.list_price:
+                    linea += f", antes {SYMBOL}{quote.list_price:,.2f}"
+                linea += ")"
+            print(linea)
         else:
             record_price(conn, p.asin, None, quote.currency, False, "")
             fail += 1
@@ -106,6 +113,7 @@ def cmd_track(args) -> int:
         a = an.analyze(conn, p.asin, p.name, p.url, quote.price,
                        p.target_price, quote.error)
         a.image, a.variant = quote.image, quote.variant
+        a.amazon_discount, a.list_price = quote.discount_pct, quote.list_price
         analyses.append(a)
         if a.triggered:
             print(f"    -> {a.recommendation} ({', '.join(a.triggered)})")

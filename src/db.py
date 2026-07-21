@@ -84,6 +84,8 @@ def canonical_url(asin: str, domain: str = "amazon.com") -> str:
 MIGRATIONS = [
     ("products", "image_url", "TEXT"),
     ("products", "variant", "TEXT"),
+    ("price_history", "list_price", "REAL"),
+    ("price_history", "discount_pct", "REAL"),
 ]
 
 
@@ -204,22 +206,28 @@ def sync_products(conn: sqlite3.Connection, products: list[Product]) -> None:
 # ---------------------------------------------------------------- historico
 
 def record_price(conn: sqlite3.Connection, asin: str, price: float | None,
-                 currency: str, in_stock: bool, seller: str = "") -> None:
+                 currency: str, in_stock: bool, seller: str = "",
+                 list_price: float | None = None,
+                 discount_pct: float | None = None) -> None:
     conn.execute(
         # COALESCE: una consulta fallida (price NULL) NUNCA pisa un precio que
         # ya se habia capturado bien ese mismo dia. Un bloqueo temporal de
         # Amazon no debe destruir un dato correcto.
-        """INSERT INTO price_history (asin,day,price,currency,in_stock,seller,captured_at)
-           VALUES (?,?,?,?,?,?,?)
+        """INSERT INTO price_history
+               (asin,day,price,currency,in_stock,seller,captured_at,
+                list_price,discount_pct)
+           VALUES (?,?,?,?,?,?,?,?,?)
            ON CONFLICT(asin,day) DO UPDATE SET
                price      = COALESCE(excluded.price, price),
                currency   = COALESCE(excluded.currency, currency),
                in_stock   = CASE WHEN excluded.price IS NULL
                                  THEN in_stock ELSE excluded.in_stock END,
                seller     = COALESCE(NULLIF(excluded.seller,''), seller),
+               list_price = COALESCE(excluded.list_price, list_price),
+               discount_pct = COALESCE(excluded.discount_pct, discount_pct),
                captured_at= excluded.captured_at""",
         (asin, date.today().isoformat(), price, currency, int(in_stock), seller,
-         datetime.now().isoformat(timespec="seconds")),
+         datetime.now().isoformat(timespec="seconds"), list_price, discount_pct),
     )
     conn.commit()
 
