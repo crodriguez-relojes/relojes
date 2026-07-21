@@ -21,7 +21,7 @@ from . import analyze as an
 from .config import CFG, DATA_DIR, WATCHES_CSV
 from .db import (already_alerted, canonical_url, connect, extract_asin, history,
                  log_run, mark_alerted, read_watches, record_price, sync_products,
-                 update_csv_names)
+                 update_csv_names, update_media)
 from .notify import render, save_copy, send_email
 from .providers import get_provider
 from .site import build as build_site
@@ -74,6 +74,10 @@ def cmd_track(args) -> int:
         print(f"[{i}/{len(active)}] {p.name[:50]}")
         quote = provider.fetch(p.asin, p.url)
 
+        update_media(conn, p.asin, quote.image, quote.variant)
+        if quote.variant:
+            print(f"    variante: {quote.variant}")
+
         # Si pegaste solo el link, el nombre se completa solo la primera vez
         if quote.title and p.name == p.asin:
             p.name = quote.title[:90]
@@ -94,6 +98,7 @@ def cmd_track(args) -> int:
 
         a = an.analyze(conn, p.asin, p.name, p.url, quote.price,
                        p.target_price, quote.error)
+        a.image, a.variant = quote.image, quote.variant
         analyses.append(a)
         if a.triggered:
             print(f"    -> {a.recommendation} ({', '.join(a.triggered)})")

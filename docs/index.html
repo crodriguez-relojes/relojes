@@ -74,6 +74,15 @@ tbody tr:hover{background:var(--series-soft)}
 tbody tr:last-child td{border-bottom:none}
 .name{font-weight:600;color:var(--ink-1);max-width:290px;display:block;
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.thumb{width:52px;height:52px;object-fit:contain;background:#fff;border-radius:8px;
+  border:1px solid var(--border);flex:0 0 auto}
+.thumb-ph{width:52px;height:52px;border-radius:8px;border:1px dashed var(--border);
+  flex:0 0 auto;display:flex;align-items:center;justify-content:center;
+  color:var(--ink-3);font-size:17px}
+.namecell{display:flex;gap:11px;align-items:center}
+.variant{font-size:11.5px;color:var(--series);margin-top:2px;font-weight:600}
+.hero{width:100%;max-width:200px;object-fit:contain;background:#fff;
+  border-radius:10px;border:1px solid var(--border);padding:6px}
 .meta{font-size:11.5px;color:var(--ink-3);margin-top:2px}
 .badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;
   padding:3px 9px;border-radius:999px;letter-spacing:.04em;white-space:nowrap}
@@ -271,8 +280,17 @@ function renderRows(){
   $("#rows").innerHTML = rows.map((x,i) => `
     <tr data-i="${D.items.indexOf(x)}" tabindex="0">
       <td>
-        <span class="name">${esc(x.name)}</span>
-        <span class="meta">${esc(x.category||"")}${x.target_price?` · objetivo ${money(x.target_price)}`:""}</span>
+        <div class="namecell">
+          ${x.image
+            ? `<img class="thumb" src="${esc(x.image)}" alt="" loading="lazy"
+                 onerror="this.outerHTML='<div class=&quot;thumb-ph&quot;>⌚</div>'">`
+            : `<div class="thumb-ph">⌚</div>`}
+          <div style="min-width:0">
+            <span class="name">${esc(x.name)}</span>
+            ${x.variant ? `<div class="variant">${esc(x.variant)}</div>` : ""}
+            <span class="meta">${esc(x.category||"")}${x.target_price?` · objetivo ${money(x.target_price)}`:""}</span>
+          </div>
+        </div>
       </td>
       <td class="price">${money(x.price)}</td>
       <td class="hide-sm ${(x.weekly_change??0)<0?"delta-down":(x.weekly_change?"delta-up":"")}">${pct(x.weekly_change)}</td>
@@ -370,10 +388,14 @@ function openDetail(i){
   ];
   $("#detail").innerHTML = `
     <div class="detail-head">
-      <div>
-        <h2 id="dTitle">${esc(x.name)}</h2>
-        <div style="margin-top:8px">${badge(x.recommendation)}
-          <span class="meta">puntaje ${x.score}/100 · ${x.history_days} días de historial</span></div>
+      <div style="display:flex;gap:16px;align-items:flex-start;min-width:0">
+        ${x.image ? `<img class="hero" style="max-width:120px" src="${esc(x.image)}" alt="">` : ""}
+        <div style="min-width:0">
+          <h2 id="dTitle">${esc(x.name)}</h2>
+          ${x.variant ? `<div class="variant" style="font-size:13px;margin-top:4px">${esc(x.variant)}</div>` : ""}
+          <div style="margin-top:8px">${badge(x.recommendation)}
+            <span class="meta">puntaje ${x.score}/100 · ${x.history_days} días de historial</span></div>
+        </div>
       </div>
       <button class="close" id="closeBtn" aria-label="Cerrar">&times;</button>
     </div>

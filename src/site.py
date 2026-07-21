@@ -23,6 +23,8 @@ def _item(conn: sqlite3.Connection, a: an.Analysis) -> dict:
         "name": a.name,
         "url": a.url,
         "category": "",
+        "image": "",
+        "variant": "",
         "price": a.price,
         "prev_price": a.prev_price,
         "target_price": a.target_price,
@@ -50,14 +52,19 @@ def _item(conn: sqlite3.Connection, a: an.Analysis) -> dict:
 
 def build(conn: sqlite3.Connection, analyses: list[an.Analysis]) -> str:
     """Escribe docs/data.js y devuelve la ruta."""
-    categories = {
-        r["asin"]: r["category"] or ""
-        for r in conn.execute("SELECT asin, category FROM products")
+    meta = {
+        r["asin"]: r
+        for r in conn.execute(
+            "SELECT asin, category, image_url, variant FROM products")
     }
     items = []
     for a in analyses:
         it = _item(conn, a)
-        it["category"] = categories.get(a.asin, "")
+        m = meta.get(a.asin)
+        if m:
+            it["category"] = m["category"] or ""
+            it["image"] = m["image_url"] or ""
+            it["variant"] = m["variant"] or ""
         items.append(it)
     items.sort(key=lambda x: -(x["score"] or 0))
 

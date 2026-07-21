@@ -12,6 +12,8 @@ class Quote:
     in_stock: bool = False
     title: str = ""
     seller: str = ""
+    image: str = ""            # URL de la foto principal
+    variant: str = ""          # color / material / estilo elegido
     error: str = ""
 
     @property

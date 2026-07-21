@@ -23,7 +23,9 @@ CREATE TABLE IF NOT EXISTS products (
     category    TEXT,
     notes       TEXT,
     active      INTEGER NOT NULL DEFAULT 1,
-    first_seen  TEXT NOT NULL
+    first_seen  TEXT NOT NULL,
+    image_url   TEXT,
+    variant     TEXT
 );
 
 CREATE TABLE IF NOT EXISTS price_history (
@@ -78,12 +80,43 @@ def canonical_url(asin: str, domain: str = "amazon.com") -> str:
     return f"https://www.{domain}/dp/{asin}"
 
 
+# Columnas agregadas despues de la version inicial. Se aplican sin borrar datos.
+MIGRATIONS = [
+    ("products", "image_url", "TEXT"),
+    ("products", "variant", "TEXT"),
+]
+
+
+def _migrate(conn: sqlite3.Connection) -> None:
+    for table, column, coltype in MIGRATIONS:
+        cols = {r["name"] for r in conn.execute(f"PRAGMA table_info({table})")}
+        if column not in cols:
+            conn.execute(f"ALTER TABLE {table} ADD COLUMN {column} {coltype}")
+    conn.commit()
+
+
 def connect() -> sqlite3.Connection:
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     conn.executescript(SCHEMA)
+    _migrate(conn)
     return conn
+
+
+def update_media(conn: sqlite3.Connection, asin: str,
+                 image: str, variant: str) -> None:
+    """Guarda foto y variante. No pisa un valor bueno con uno vacio."""
+    if not image and not variant:
+        return
+    conn.execute(
+        """UPDATE products SET
+               image_url = COALESCE(NULLIF(?,''), image_url),
+               variant   = COALESCE(NULLIF(?,''), variant)
+           WHERE asin = ?""",
+        (image, variant, asin),
+    )
+    conn.commit()
 
 
 # ---------------------------------------------------------------- watches.csv

@@ -43,6 +43,31 @@ TITLE_SELECTORS = ["#productTitle", "span#productTitle", "h1#title"]
 PRICE_RE = re.compile(r"[\d][\d,\.]*")
 FALLBACK_RE = re.compile(r'"priceAmount"\s*:\s*([0-9]+\.?[0-9]*)')
 
+# La foto principal. Amazon la publica en varios sitios; se prueban en orden.
+IMAGE_SELECTORS = [
+    "#landingImage",
+    "#imgBlkFront",
+    "#main-image",
+    "#imgTagWrapperId img",
+    "div#imageBlock img",
+]
+# Filas de variante: color, material de la correa, estilo...
+VARIANT_SELECTORS = [
+    "#variation_color_name .selection",
+    "#variation_style_name .selection",
+    "#variation_band_material_type .selection",
+    "#variation_size_name .selection",
+]
+# Token de tamano dentro del URL de imagen de Amazon (._AC_SX679_.jpg)
+IMG_SIZE_RE = re.compile(r"\._[A-Z0-9_,]+_\.(jpg|png|webp)$", re.I)
+
+
+def thumb(url: str, px: int = 320) -> str:
+    """Pide a Amazon una version mas liviana de la misma foto."""
+    if not url:
+        return ""
+    return IMG_SIZE_RE.sub(rf"._AC_SX{px}_.\1", url)
+
 BLOCK_MARKERS = (
     "api-services-support@amazon.com",
     "Type the characters you see in this image",
@@ -123,6 +148,36 @@ class AmazonScraper(PriceProvider):
                 title = node.get_text(strip=True)
                 break
 
+        # --- foto principal -------------------------------------------
+        image = ""
+        for sel in IMAGE_SELECTORS:
+            node = soup.select_one(sel)
+            if not node:
+                continue
+            # data-old-hires trae la version grande; si no, la primera del set
+            image = node.get("data-old-hires") or node.get("src") or ""
+            if not image and node.get("data-a-dynamic-image"):
+                m = re.search(r'"(https://[^"]+)"', node["data-a-dynamic-image"])
+                image = m.group(1) if m else ""
+            if image.startswith("http"):
+                break
+            image = ""
+        if not image:
+            og = soup.select_one('meta[property="og:image"]')
+            if og and og.get("content", "").startswith("http"):
+                image = og["content"]
+        image = thumb(image)
+
+        # --- variante (lo que diferencia dos ASIN del mismo modelo) ----
+        partes = []
+        for sel in VARIANT_SELECTORS:
+            node = soup.select_one(sel)
+            if node:
+                txt = node.get_text(" ", strip=True)
+                if txt and txt.lower() not in ("select", "seleccionar"):
+                    partes.append(txt)
+        variant = " / ".join(dict.fromkeys(partes))[:70]
+
         price = None
         for sel in PRICE_SELECTORS:
             node = soup.select_one(sel)
@@ -150,10 +205,12 @@ class AmazonScraper(PriceProvider):
 
         if price is None:
             return Quote(asin=asin, price=None, currency=currency, title=title,
+                         image=image, variant=variant,
                          error="sin stock" if out_of_stock else "precio no encontrado")
 
         return Quote(asin=asin, price=price, currency=currency,
-                     in_stock=not out_of_stock, title=title, seller=seller)
+                     in_stock=not out_of_stock, title=title, seller=seller,
+                     image=image, variant=variant)
 
     def polite_pause(self) -> None:
         time.sleep(random.uniform(self.cfg["delay_min_seconds"],
