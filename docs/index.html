@@ -296,9 +296,15 @@ function renderRows(){
       <td class="hide-sm ${(x.weekly_change??0)<0?"delta-down":(x.weekly_change?"delta-up":"")}">${pct(x.weekly_change)}</td>
       <td class="hide-sm">${state.spark ? sparkline(x.history) : ""}</td>
       <td class="hide-sm" style="color:var(--ink-3)">${money(x.min_all)}</td>
-      <td>${x.pct_vs_min_all==null ? "—" : (x.pct_vs_min_all<=0.5
-            ? `<span style="color:var(--good);font-weight:700">en el mínimo</span>`
-            : "+"+x.pct_vs_min_all.toFixed(0)+"%")}</td>
+      <td>${
+        x.pct_vs_min_all == null ? "—"
+        : x.history_days < 3
+          // Con 1 o 2 dias de datos todo precio es su propio minimo: decirlo
+          // seria una falsa senal de oportunidad.
+          ? `<span style="color:var(--ink-3)" title="Faltan ${3-x.history_days} día(s) de historial">calibrando</span>`
+        : x.pct_vs_min_all <= 0.5
+          ? `<span style="color:var(--good);font-weight:700">en el mínimo</span>`
+        : "+"+x.pct_vs_min_all.toFixed(0)+"%"}</td>
       <td>${badge(x.recommendation)}</td>
     </tr>`).join("");
 }
