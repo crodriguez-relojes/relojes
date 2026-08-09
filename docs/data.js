@@ -1,7 +1,7 @@
 /* Generado automaticamente por: python -m src.main site — no editar a mano */
 window.RADAR_DATA = {
  "demo": false,
- "generated_at": "09/08/2026 00:18",
+ "generated_at": "09/08/2026 07:48",
  "currency_symbol": "$",
  "days_tracked": 17,
  "form_url": "https://docs.google.com/forms/d/e/1FAIpQLScsAHXrfNiu9z2OcQXF5wt-Rlc_yNwIxbiXjlQUrDPyGvlyAQ/viewform",
@@ -1303,7 +1303,7 @@ window.RADAR_DATA = {
    "category": "",
    "image": "https://m.media-amazon.com/images/I/818ddFf1NxL._AC_SX320_.jpg",
    "variant": "Silver-Tone Bracelet & Black Dial",
-   "price": 191.72,
+   "price": 191.78,
    "prev_price": 191.72,
    "target_price": 100.0,
    "min_7d": 191.72,
@@ -1316,11 +1316,11 @@ window.RADAR_DATA = {
    "median_all": 193.995,
    "list_price": null,
    "amazon_discount": null,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 0.0,
-   "discount_vs_typical": 1.1727106368720872,
-   "weekly_change": -2.1587139576422505,
-   "volatility_pct": 1.0724045245876674,
+   "pct_vs_prev": 0.031295639474234443,
+   "pct_vs_min_all": 0.031295639474234443,
+   "discount_vs_typical": 1.1417820046908442,
+   "weekly_change": -2.12809390150548,
+   "volatility_pct": 1.0692108946830325,
    "trend": "bajando (-2.3%/sem)",
    "best_weekday": "-",
    "history_days": 10,
@@ -1370,7 +1370,7 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-09",
-     191.72
+     191.78
     ]
    ]
   },
@@ -2060,7 +2060,7 @@ window.RADAR_DATA = {
    "category": "",
    "image": "https://m.media-amazon.com/images/I/81-K8IkjzVL._AC_SX320_.jpg",
    "variant": "Brown Leather Strap & Ivory Dial",
-   "price": 195.95,
+   "price": 195.25,
    "prev_price": 195.95,
    "target_price": 120.0,
    "min_7d": 189.01,
@@ -2072,13 +2072,13 @@ window.RADAR_DATA = {
    "max_all": 196.17,
    "median_all": 189.01,
    "list_price": 450.0,
-   "amazon_discount": 56.0,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 3.6772486772486714,
-   "discount_vs_typical": -3.6717633987619696,
-   "weekly_change": 3.6717633987619696,
-   "volatility_pct": 1.6959723294176368,
-   "trend": "subiendo (+2.8%/sem)",
+   "amazon_discount": 57.0,
+   "pct_vs_prev": -0.35723398826230607,
+   "pct_vs_min_all": 3.3068783068783065,
+   "discount_vs_typical": -3.30141262367071,
+   "weekly_change": 3.30141262367071,
+   "volatility_pct": 1.655279961355049,
+   "trend": "subiendo (+2.7%/sem)",
    "best_weekday": "-",
    "history_days": 12,
    "at_all_time_low": false,
@@ -2134,7 +2134,7 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-09",
-     195.95
+     195.25
     ]
    ]
   },
@@ -3273,7 +3273,7 @@ window.RADAR_DATA = {
    "category": "",
    "image": "https://m.media-amazon.com/images/I/5160gcTAWRL._AC_SX320_.jpg",
    "variant": "Gunmetal/Gunmetal/Gunmetal",
-   "price": 146.66,
+   "price": 147.23,
    "prev_price": 146.66,
    "target_price": 100.0,
    "min_7d": 145.38,
@@ -3282,16 +3282,16 @@ window.RADAR_DATA = {
    "min_30d_date": "2026-07-26",
    "min_all": 142.73,
    "min_all_date": "2026-07-26",
-   "max_all": 146.66,
+   "max_all": 147.23,
    "median_all": 144.07,
    "list_price": null,
    "amazon_discount": null,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 2.753450571008202,
-   "discount_vs_typical": -1.7977372110779506,
-   "weekly_change": 1.7977372110779506,
-   "volatility_pct": 0.8419188482893846,
-   "trend": "estable",
+   "pct_vs_prev": 0.3886540297286194,
+   "pct_vs_min_all": 3.1528059973376306,
+   "discount_vs_typical": -2.1933782189213553,
+   "weekly_change": 2.1933782189213553,
+   "volatility_pct": 0.8989801459938447,
+   "trend": "subiendo (+1.6%/sem)",
    "best_weekday": "-",
    "history_days": 13,
    "at_all_time_low": false,
@@ -3349,7 +3349,7 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-09",
-     146.66
+     147.23
     ]
    ]
   },
