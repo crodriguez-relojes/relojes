@@ -1,9 +1,9 @@
 /* Generado automaticamente por: python -m src.main site — no editar a mano */
 window.RADAR_DATA = {
  "demo": false,
- "generated_at": "20/08/2026 07:57",
+ "generated_at": "21/08/2026 08:42",
  "currency_symbol": "$",
- "days_tracked": 26,
+ "days_tracked": 27,
  "form_url": "https://docs.google.com/forms/d/e/1FAIpQLScsAHXrfNiu9z2OcQXF5wt-Rlc_yNwIxbiXjlQUrDPyGvlyAQ/viewform",
  "items": [
   {
@@ -17,23 +17,23 @@ window.RADAR_DATA = {
    "prev_price": 105.2,
    "target_price": 100.0,
    "min_7d": 105.2,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 105.2,
    "min_30d_date": "2026-08-11",
    "min_all": 105.2,
    "min_all_date": "2026-08-11",
    "max_all": 181.0,
-   "median_all": 129.73,
+   "median_all": 119.21,
    "list_price": 181.0,
    "amazon_discount": 42.0,
    "pct_vs_prev": 0.0,
    "pct_vs_min_all": 0.0,
-   "discount_vs_typical": 18.908502273953587,
+   "discount_vs_typical": 11.752369767636935,
    "weekly_change": 0.0,
-   "volatility_pct": 22.318998243646675,
-   "trend": "bajando (-12.4%/sem)",
+   "volatility_pct": 22.537910648510998,
+   "trend": "bajando (-12.7%/sem)",
    "best_weekday": "Miercoles",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -130,121 +130,274 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      105.2
+    ],
+    [
+     "2026-08-21",
+     105.2
     ]
    ]
   },
   {
-   "asin": "B0FCVG2W8V",
-   "name": "Fossil Men's Watch, Garrett Multifunction Stainless Steel Watch for Men",
-   "url": "https://www.amazon.com/dp/B0FCVG2W8V",
+   "asin": "B0FCVKJ8F2",
+   "name": "Fossil Men's Watch, Autocross Multifunction Stainless Steel Watch for Men",
+   "url": "https://www.amazon.com/dp/B0FCVKJ8F2",
    "category": "",
-   "image": "https://m.media-amazon.com/images/I/71YY+x5o3NL._AC_SX320_.jpg",
-   "variant": "Brown/Green",
-   "price": 99.0,
-   "prev_price": 99.0,
-   "target_price": 90.0,
-   "min_7d": 99.0,
-   "min_7d_date": "2026-08-14",
-   "min_30d": 99.0,
-   "min_30d_date": "2026-08-14",
-   "min_all": 99.0,
-   "min_all_date": "2026-08-14",
-   "max_all": 136.09,
-   "median_all": 110.0,
-   "list_price": 180.0,
-   "amazon_discount": 45.0,
-   "pct_vs_prev": 0.0,
+   "image": "https://m.media-amazon.com/images/I/71ky5hr9OuL._AC_SX320_.jpg",
+   "variant": "Silver/Green",
+   "price": 113.84,
+   "prev_price": 127.15,
+   "target_price": 100.0,
+   "min_7d": 113.84,
+   "min_7d_date": "2026-08-21",
+   "min_30d": 113.84,
+   "min_30d_date": "2026-08-21",
+   "min_all": 113.84,
+   "min_all_date": "2026-08-21",
+   "max_all": 160.0,
+   "median_all": 160.0,
+   "list_price": 160.0,
+   "amazon_discount": 29.0,
+   "pct_vs_prev": -10.467951238694456,
    "pct_vs_min_all": 0.0,
-   "discount_vs_typical": 10.0,
-   "weekly_change": -24.851981175041754,
-   "volatility_pct": 11.786206525476949,
-   "trend": "bajando (-4.8%/sem)",
-   "best_weekday": "-",
-   "history_days": 19,
+   "discount_vs_typical": 28.849999999999998,
+   "weekly_change": -4.13473684210526,
+   "volatility_pct": 10.76523074594013,
+   "trend": "bajando (-8.6%/sem)",
+   "best_weekday": "Viernes",
+   "history_days": 23,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
     "min_30d",
-    "min_all_time"
+    "min_all_time",
+    "daily_drop"
    ],
    "score": 100,
    "recommendation": "COMPRAR AHORA",
    "history": [
     [
+     "2026-07-25",
+     160.0
+    ],
+    [
+     "2026-07-26",
+     160.0
+    ],
+    [
      "2026-07-28",
-     125.0
+     160.0
     ],
     [
      "2026-07-29",
-     125.0
+     160.0
     ],
     [
      "2026-07-30",
-     108.0
+     160.0
     ],
     [
      "2026-07-31",
-     108.0
+     160.0
     ],
     [
      "2026-08-01",
-     108.0
+     160.0
     ],
     [
      "2026-08-02",
-     108.0
+     160.0
     ],
     [
      "2026-08-04",
-     110.0
+     160.0
     ],
     [
      "2026-08-06",
-     130.18
+     160.0
     ],
     [
      "2026-08-07",
-     136.09
+     160.0
     ],
     [
      "2026-08-08",
-     130.42
+     160.0
     ],
     [
      "2026-08-09",
-     130.12
+     160.0
     ],
     [
      "2026-08-10",
-     130.12
+     160.0
     ],
     [
      "2026-08-11",
-     130.12
+     160.0
+    ],
+    [
+     "2026-08-12",
+     160.0
     ],
     [
      "2026-08-13",
-     131.74
+     160.0
     ],
     [
      "2026-08-14",
-     99.0
+     118.75
     ],
     [
      "2026-08-17",
-     99.0
+     127.08
     ],
     [
      "2026-08-18",
-     99.0
+     128.0
     ],
     [
      "2026-08-19",
-     99.0
+     127.0
     ],
     [
      "2026-08-20",
-     99.0
+     127.15
+    ],
+    [
+     "2026-08-21",
+     113.84
+    ]
+   ]
+  },
+  {
+   "asin": "B0183NWFB2",
+   "name": "Fossil Men's Watch, Townsman Automatic Stainless Steel Watch for Men",
+   "url": "https://www.amazon.com/dp/B0183NWFB2",
+   "category": "",
+   "image": "https://m.media-amazon.com/images/I/711Fz-mfHfL._AC_SX320_.jpg",
+   "variant": "Brown Leather/Silver/Blue Dial / 44MM",
+   "price": 138.6,
+   "prev_price": 164.95,
+   "target_price": 100.0,
+   "min_7d": 138.6,
+   "min_7d_date": "2026-08-21",
+   "min_30d": 138.6,
+   "min_30d_date": "2026-08-01",
+   "min_all": 138.6,
+   "min_all_date": "2026-08-01",
+   "max_all": 164.95,
+   "median_all": 138.6,
+   "list_price": 157.98,
+   "amazon_discount": 12.0,
+   "pct_vs_prev": -15.974537738708698,
+   "pct_vs_min_all": 0.0,
+   "discount_vs_typical": 0.0,
+   "weekly_change": 0.0,
+   "volatility_pct": 8.389566801662372,
+   "trend": "bajando (-3.2%/sem)",
+   "best_weekday": "Viernes",
+   "history_days": 23,
+   "at_all_time_low": true,
+   "triggered": [
+    "min_7d",
+    "min_30d",
+    "min_all_time",
+    "daily_drop"
+   ],
+   "score": 100,
+   "recommendation": "COMPRAR AHORA",
+   "history": [
+    [
+     "2026-07-25",
+     164.95
+    ],
+    [
+     "2026-07-26",
+     164.95
+    ],
+    [
+     "2026-07-28",
+     164.95
+    ],
+    [
+     "2026-07-29",
+     164.95
+    ],
+    [
+     "2026-07-30",
+     164.95
+    ],
+    [
+     "2026-07-31",
+     164.95
+    ],
+    [
+     "2026-08-01",
+     138.6
+    ],
+    [
+     "2026-08-02",
+     138.6
+    ],
+    [
+     "2026-08-04",
+     138.6
+    ],
+    [
+     "2026-08-06",
+     138.6
+    ],
+    [
+     "2026-08-07",
+     138.6
+    ],
+    [
+     "2026-08-08",
+     138.6
+    ],
+    [
+     "2026-08-09",
+     138.6
+    ],
+    [
+     "2026-08-10",
+     138.6
+    ],
+    [
+     "2026-08-11",
+     138.6
+    ],
+    [
+     "2026-08-12",
+     138.6
+    ],
+    [
+     "2026-08-13",
+     138.6
+    ],
+    [
+     "2026-08-14",
+     138.6
+    ],
+    [
+     "2026-08-17",
+     162.55
+    ],
+    [
+     "2026-08-18",
+     162.55
+    ],
+    [
+     "2026-08-19",
+     143.07
+    ],
+    [
+     "2026-08-20",
+     164.95
+    ],
+    [
+     "2026-08-21",
+     138.6
     ]
    ]
   },
@@ -259,7 +412,7 @@ window.RADAR_DATA = {
    "prev_price": 107.25,
    "target_price": 90.0,
    "min_7d": 107.25,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 107.25,
    "min_30d_date": "2026-08-13",
    "min_all": 107.25,
@@ -272,10 +425,10 @@ window.RADAR_DATA = {
    "pct_vs_min_all": 0.0,
    "discount_vs_typical": 21.428571428571427,
    "weekly_change": 0.0,
-   "volatility_pct": 25.732601791535338,
-   "trend": "bajando (-15.5%/sem)",
+   "volatility_pct": 26.228545504176758,
+   "trend": "bajando (-16.1%/sem)",
    "best_weekday": "Lunes",
-   "history_days": 21,
+   "history_days": 22,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -368,6 +521,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      107.25
+    ],
+    [
+     "2026-08-21",
+     107.25
     ]
    ]
   },
@@ -378,27 +535,27 @@ window.RADAR_DATA = {
    "category": "",
    "image": "https://m.media-amazon.com/images/I/71zU+ScoDdL._AC_SX320_.jpg",
    "variant": "Black/Black Silicone",
-   "price": 86.95,
-   "prev_price": 87.05,
+   "price": 86.79,
+   "prev_price": 86.95,
    "target_price": 90.0,
-   "min_7d": 86.95,
-   "min_7d_date": "2026-08-20",
-   "min_30d": 86.95,
-   "min_30d_date": "2026-08-20",
-   "min_all": 86.95,
-   "min_all_date": "2026-08-20",
+   "min_7d": 86.79,
+   "min_7d_date": "2026-08-21",
+   "min_30d": 86.79,
+   "min_30d_date": "2026-08-21",
+   "min_all": 86.79,
+   "min_all_date": "2026-08-21",
    "max_all": 101.95,
    "median_all": 87.55,
    "list_price": 150.0,
    "amazon_discount": 42.0,
-   "pct_vs_prev": -0.11487650775415775,
+   "pct_vs_prev": -0.1840138010350737,
    "pct_vs_min_all": 0.0,
-   "discount_vs_typical": 0.6853226727584173,
-   "weekly_change": -0.5376344086021492,
-   "volatility_pct": 6.36725372624965,
+   "discount_vs_typical": 0.8680753854939931,
+   "weekly_change": -0.6752117189288044,
+   "volatility_pct": 6.295699733543531,
    "trend": "bajando (-3.0%/sem)",
    "best_weekday": "Lunes",
-   "history_days": 21,
+   "history_days": 22,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -492,6 +649,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      86.95
+    ],
+    [
+     "2026-08-21",
+     86.79
     ]
    ]
   },
@@ -503,7 +664,7 @@ window.RADAR_DATA = {
    "image": "https://m.media-amazon.com/images/I/81IXPNZjJXL._AC_SX320_.jpg",
    "variant": "Black Dial",
    "price": 193.48,
-   "prev_price": 215.0,
+   "prev_price": 193.48,
    "target_price": 100.0,
    "min_7d": 193.48,
    "min_7d_date": "2026-08-20",
@@ -515,20 +676,19 @@ window.RADAR_DATA = {
    "median_all": 215.0,
    "list_price": 215.0,
    "amazon_discount": 10.0,
-   "pct_vs_prev": -10.0093023255814,
+   "pct_vs_prev": 0.0,
    "pct_vs_min_all": 0.0,
    "discount_vs_typical": 10.0093023255814,
    "weekly_change": -10.0093023255814,
-   "volatility_pct": 2.2468826618269824,
-   "trend": "estable",
+   "volatility_pct": 3.033150417199129,
+   "trend": "bajando (-1.9%/sem)",
    "best_weekday": "-",
-   "history_days": 19,
+   "history_days": 20,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
     "min_30d",
-    "min_all_time",
-    "daily_drop"
+    "min_all_time"
    ],
    "score": 100,
    "recommendation": "COMPRAR AHORA",
@@ -608,6 +768,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      193.48
+    ],
+    [
+     "2026-08-21",
+     193.48
     ]
    ]
   },
@@ -622,7 +786,7 @@ window.RADAR_DATA = {
    "prev_price": 103.95,
    "target_price": 60.0,
    "min_7d": 103.95,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 103.95,
    "min_30d_date": "2026-07-24",
    "min_all": 103.95,
@@ -638,7 +802,7 @@ window.RADAR_DATA = {
    "volatility_pct": 0.0,
    "trend": "estable",
    "best_weekday": "Viernes",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -735,6 +899,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      103.95
+    ],
+    [
+     "2026-08-21",
+     103.95
     ]
    ]
   },
@@ -749,7 +917,7 @@ window.RADAR_DATA = {
    "prev_price": 138.6,
    "target_price": 100.0,
    "min_7d": 138.6,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 138.6,
    "min_30d_date": "2026-07-25",
    "min_all": 138.6,
@@ -765,7 +933,7 @@ window.RADAR_DATA = {
    "volatility_pct": 0.0,
    "trend": "estable",
    "best_weekday": "Sabado",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -861,6 +1029,10 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-20",
+     138.6
+    ],
+    [
+     "2026-08-21",
      138.6
     ]
    ]
@@ -876,7 +1048,7 @@ window.RADAR_DATA = {
    "prev_price": 249.99,
    "target_price": 120.0,
    "min_7d": 249.99,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 249.99,
    "min_30d_date": "2026-07-25",
    "min_all": 249.99,
@@ -892,7 +1064,7 @@ window.RADAR_DATA = {
    "volatility_pct": 0.0,
    "trend": "estable",
    "best_weekday": "Sabado",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -988,6 +1160,10 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-20",
+     249.99
+    ],
+    [
+     "2026-08-21",
      249.99
     ]
    ]
@@ -1003,7 +1179,7 @@ window.RADAR_DATA = {
    "prev_price": 299.99,
    "target_price": 120.0,
    "min_7d": 299.99,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 299.99,
    "min_30d_date": "2026-07-25",
    "min_all": 299.99,
@@ -1019,7 +1195,7 @@ window.RADAR_DATA = {
    "volatility_pct": 0.0,
    "trend": "estable",
    "best_weekday": "Sabado",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -1116,6 +1292,129 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      299.99
+    ],
+    [
+     "2026-08-21",
+     299.99
+    ]
+   ]
+  },
+  {
+   "asin": "B0FCVG2W8V",
+   "name": "Fossil Men's Watch, Garrett Multifunction Stainless Steel Watch for Men",
+   "url": "https://www.amazon.com/dp/B0FCVG2W8V",
+   "category": "",
+   "image": "https://m.media-amazon.com/images/I/71YY+x5o3NL._AC_SX320_.jpg",
+   "variant": "Brown/Green",
+   "price": 99.0,
+   "prev_price": 99.0,
+   "target_price": 90.0,
+   "min_7d": 99.0,
+   "min_7d_date": "2026-08-17",
+   "min_30d": 99.0,
+   "min_30d_date": "2026-08-14",
+   "min_all": 99.0,
+   "min_all_date": "2026-08-14",
+   "max_all": 136.09,
+   "median_all": 109.0,
+   "list_price": 180.0,
+   "amazon_discount": 45.0,
+   "pct_vs_prev": 0.0,
+   "pct_vs_min_all": 0.0,
+   "discount_vs_typical": 9.174311926605505,
+   "weekly_change": 0.0,
+   "volatility_pct": 12.016052556132276,
+   "trend": "bajando (-5.6%/sem)",
+   "best_weekday": "-",
+   "history_days": 20,
+   "at_all_time_low": true,
+   "triggered": [
+    "min_7d",
+    "min_30d",
+    "min_all_time"
+   ],
+   "score": 97,
+   "recommendation": "COMPRAR AHORA",
+   "history": [
+    [
+     "2026-07-28",
+     125.0
+    ],
+    [
+     "2026-07-29",
+     125.0
+    ],
+    [
+     "2026-07-30",
+     108.0
+    ],
+    [
+     "2026-07-31",
+     108.0
+    ],
+    [
+     "2026-08-01",
+     108.0
+    ],
+    [
+     "2026-08-02",
+     108.0
+    ],
+    [
+     "2026-08-04",
+     110.0
+    ],
+    [
+     "2026-08-06",
+     130.18
+    ],
+    [
+     "2026-08-07",
+     136.09
+    ],
+    [
+     "2026-08-08",
+     130.42
+    ],
+    [
+     "2026-08-09",
+     130.12
+    ],
+    [
+     "2026-08-10",
+     130.12
+    ],
+    [
+     "2026-08-11",
+     130.12
+    ],
+    [
+     "2026-08-13",
+     131.74
+    ],
+    [
+     "2026-08-14",
+     99.0
+    ],
+    [
+     "2026-08-17",
+     99.0
+    ],
+    [
+     "2026-08-18",
+     99.0
+    ],
+    [
+     "2026-08-19",
+     99.0
+    ],
+    [
+     "2026-08-20",
+     99.0
+    ],
+    [
+     "2026-08-21",
+     99.0
     ]
    ]
   },
@@ -1130,7 +1429,7 @@ window.RADAR_DATA = {
    "prev_price": 257.0,
    "target_price": 120.0,
    "min_7d": 257.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 257.0,
    "min_30d_date": "2026-07-26",
    "min_all": 257.0,
@@ -1146,7 +1445,7 @@ window.RADAR_DATA = {
    "volatility_pct": 0.0,
    "trend": "estable",
    "best_weekday": "Domingo",
-   "history_days": 21,
+   "history_days": 22,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -1239,6 +1538,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      257.0
+    ],
+    [
+     "2026-08-21",
+     257.0
     ]
    ]
   },
@@ -1253,7 +1556,7 @@ window.RADAR_DATA = {
    "prev_price": 299.99,
    "target_price": 150.0,
    "min_7d": 299.99,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 299.99,
    "min_30d_date": "2026-07-29",
    "min_all": 299.99,
@@ -1269,7 +1572,7 @@ window.RADAR_DATA = {
    "volatility_pct": 0.0,
    "trend": "estable",
    "best_weekday": "-",
-   "history_days": 19,
+   "history_days": 20,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -1353,6 +1656,10 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-20",
+     299.99
+    ],
+    [
+     "2026-08-21",
      299.99
     ]
    ]
@@ -1368,7 +1675,7 @@ window.RADAR_DATA = {
    "prev_price": 189.0,
    "target_price": 120.0,
    "min_7d": 189.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 189.0,
    "min_30d_date": "2026-07-29",
    "min_all": 189.0,
@@ -1384,7 +1691,7 @@ window.RADAR_DATA = {
    "volatility_pct": 0.0,
    "trend": "estable",
    "best_weekday": "-",
-   "history_days": 19,
+   "history_days": 20,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -1468,6 +1775,10 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-20",
+     189.0
+    ],
+    [
+     "2026-08-21",
      189.0
     ]
    ]
@@ -1483,7 +1794,7 @@ window.RADAR_DATA = {
    "prev_price": 140.7,
    "target_price": 120.0,
    "min_7d": 140.7,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 140.7,
    "min_30d_date": "2026-07-29",
    "min_all": 140.7,
@@ -1499,7 +1810,7 @@ window.RADAR_DATA = {
    "volatility_pct": 0.0,
    "trend": "estable",
    "best_weekday": "-",
-   "history_days": 19,
+   "history_days": 20,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -1584,6 +1895,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      140.7
+    ],
+    [
+     "2026-08-21",
+     140.7
     ]
    ]
   },
@@ -1595,7 +1910,7 @@ window.RADAR_DATA = {
    "image": "https://m.media-amazon.com/images/I/81cfp4YcCtL._AC_SX320_.jpg",
    "variant": "Blue Leather/Black",
    "price": 113.33,
-   "prev_price": 115.0,
+   "prev_price": 113.33,
    "target_price": 95.0,
    "min_7d": 113.33,
    "min_7d_date": "2026-08-20",
@@ -1607,14 +1922,14 @@ window.RADAR_DATA = {
    "median_all": 119.41,
    "list_price": 180.0,
    "amazon_discount": 37.0,
-   "pct_vs_prev": -1.4521739130434796,
+   "pct_vs_prev": 0.0,
    "pct_vs_min_all": 0.0,
    "discount_vs_typical": 5.0917008625743225,
    "weekly_change": -2.5034411562284897,
-   "volatility_pct": 1.840232364638246,
-   "trend": "bajando (-2.2%/sem)",
+   "volatility_pct": 2.008693709205423,
+   "trend": "bajando (-2.3%/sem)",
    "best_weekday": "-",
-   "history_days": 19,
+   "history_days": 20,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -1699,6 +2014,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      113.33
+    ],
+    [
+     "2026-08-21",
+     113.33
     ]
    ]
   },
@@ -1725,11 +2044,11 @@ window.RADAR_DATA = {
    "pct_vs_prev": 0.0,
    "pct_vs_min_all": 0.0,
    "discount_vs_typical": 8.489370688441506,
-   "weekly_change": -9.369771332961516,
-   "volatility_pct": 3.910261666729679,
-   "trend": "bajando (-4.1%/sem)",
+   "weekly_change": 0.0,
+   "volatility_pct": 4.127698652598298,
+   "trend": "bajando (-4.4%/sem)",
    "best_weekday": "-",
-   "history_days": 16,
+   "history_days": 17,
    "at_all_time_low": true,
    "triggered": [
     "min_7d",
@@ -1802,416 +2121,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      195.0
-    ]
-   ]
-  },
-  {
-   "asin": "B00786VYGS",
-   "name": "A|X Armani Exchange Men's Watch, Three-Hand Stainless Steel Watch for Men",
-   "url": "https://www.amazon.com/dp/B00786VYGS",
-   "category": "armani-exchange",
-   "image": "https://m.media-amazon.com/images/I/712gwCCidxL._AC_SX320_.jpg",
-   "variant": "Silver/Black",
-   "price": 115.12,
-   "prev_price": 115.12,
-   "target_price": 80.0,
-   "min_7d": 115.12,
-   "min_7d_date": "2026-08-17",
-   "min_30d": 115.12,
-   "min_30d_date": "2026-08-17",
-   "min_all": 107.96,
-   "min_all_date": "2026-07-21",
-   "max_all": 127.95,
-   "median_all": 127.95,
-   "list_price": null,
-   "amazon_discount": null,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 6.632085957762144,
-   "discount_vs_typical": 10.027354435326298,
-   "weekly_change": -1.0826602509022092,
-   "volatility_pct": 5.097213393637065,
-   "trend": "bajando (-3.4%/sem)",
-   "best_weekday": "Martes",
-   "history_days": 25,
-   "at_all_time_low": false,
-   "triggered": [
-    "min_7d",
-    "min_30d"
-   ],
-   "score": 53,
-   "recommendation": "MONITOREAR",
-   "history": [
-    [
-     "2026-07-21",
-     107.96
-    ],
-    [
-     "2026-07-22",
-     127.95
-    ],
-    [
-     "2026-07-23",
-     124.06
-    ],
-    [
-     "2026-07-24",
-     127.95
-    ],
-    [
-     "2026-07-25",
-     127.95
-    ],
-    [
-     "2026-07-26",
-     127.95
-    ],
-    [
-     "2026-07-28",
-     127.95
-    ],
-    [
-     "2026-07-29",
-     127.95
-    ],
-    [
-     "2026-07-30",
-     127.95
-    ],
-    [
-     "2026-07-31",
-     127.95
-    ],
-    [
-     "2026-08-01",
-     127.95
-    ],
-    [
-     "2026-08-02",
-     127.95
-    ],
-    [
-     "2026-08-04",
-     127.95
-    ],
-    [
-     "2026-08-06",
-     127.95
-    ],
-    [
-     "2026-08-07",
-     127.95
-    ],
-    [
-     "2026-08-08",
-     127.95
-    ],
-    [
-     "2026-08-09",
-     127.95
-    ],
-    [
-     "2026-08-10",
-     127.95
-    ],
-    [
-     "2026-08-11",
-     116.38
-    ],
-    [
-     "2026-08-13",
-     116.38
-    ],
-    [
-     "2026-08-14",
-     116.38
-    ],
-    [
-     "2026-08-17",
-     115.12
-    ],
-    [
-     "2026-08-18",
-     115.12
-    ],
-    [
-     "2026-08-19",
-     115.12
-    ],
-    [
-     "2026-08-20",
-     115.12
-    ]
-   ]
-  },
-  {
-   "asin": "B00BYIMWYE",
-   "name": "A|X Armani Exchange Men's Watch, Three-Hand Stainless Steel Watch for Men",
-   "url": "https://www.amazon.com/dp/B00BYIMWYE",
-   "category": "armani-exchange",
-   "image": "https://m.media-amazon.com/images/I/71kQQ7nuQhL._AC_SX320_.jpg",
-   "variant": "Black/Black",
-   "price": 128.95,
-   "prev_price": 128.95,
-   "target_price": 80.0,
-   "min_7d": 128.95,
-   "min_7d_date": "2026-08-14",
-   "min_30d": 128.95,
-   "min_30d_date": "2026-07-22",
-   "min_all": 107.96,
-   "min_all_date": "2026-07-21",
-   "max_all": 128.95,
-   "median_all": 128.95,
-   "list_price": 215.0,
-   "amazon_discount": 40.0,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 19.44238606891441,
-   "discount_vs_typical": 0.0,
-   "weekly_change": 0.0,
-   "volatility_pct": 3.210655166232805,
-   "trend": "estable",
-   "best_weekday": "Martes",
-   "history_days": 25,
-   "at_all_time_low": false,
-   "triggered": [
-    "min_7d",
-    "min_30d"
-   ],
-   "score": 37,
-   "recommendation": "MONITOREAR",
-   "history": [
-    [
-     "2026-07-21",
-     107.96
-    ],
-    [
-     "2026-07-22",
-     128.95
-    ],
-    [
-     "2026-07-23",
-     128.95
-    ],
-    [
-     "2026-07-24",
-     128.95
-    ],
-    [
-     "2026-07-25",
-     128.95
-    ],
-    [
-     "2026-07-26",
-     128.95
-    ],
-    [
-     "2026-07-28",
-     128.95
-    ],
-    [
-     "2026-07-29",
-     128.95
-    ],
-    [
-     "2026-07-30",
-     128.95
-    ],
-    [
-     "2026-07-31",
-     128.95
-    ],
-    [
-     "2026-08-01",
-     128.95
-    ],
-    [
-     "2026-08-02",
-     128.95
-    ],
-    [
-     "2026-08-04",
-     128.95
-    ],
-    [
-     "2026-08-06",
-     128.95
-    ],
-    [
-     "2026-08-07",
-     128.95
-    ],
-    [
-     "2026-08-08",
-     128.95
-    ],
-    [
-     "2026-08-09",
-     128.95
-    ],
-    [
-     "2026-08-10",
-     128.95
-    ],
-    [
-     "2026-08-11",
-     128.95
-    ],
-    [
-     "2026-08-13",
-     128.95
-    ],
-    [
-     "2026-08-14",
-     128.95
-    ],
-    [
-     "2026-08-17",
-     128.95
-    ],
-    [
-     "2026-08-18",
-     128.95
-    ],
-    [
-     "2026-08-19",
-     128.95
-    ],
-    [
-     "2026-08-20",
-     128.95
-    ]
-   ]
-  },
-  {
-   "asin": "B01LZU0GYY",
-   "name": "A|X Armani Exchange Men's Watch, Three-Hand Stainless Steel Watch for Men",
-   "url": "https://www.amazon.com/dp/B01LZU0GYY",
-   "category": "armani-exchange",
-   "image": "https://m.media-amazon.com/images/I/81MbAnH96vL._AC_SX320_.jpg",
-   "variant": "Black/Black Set",
-   "price": 116.68,
-   "prev_price": 116.68,
-   "target_price": 80.0,
-   "min_7d": 116.68,
-   "min_7d_date": "2026-08-14",
-   "min_30d": 111.7,
-   "min_30d_date": "2026-08-04",
-   "min_all": 111.7,
-   "min_all_date": "2026-08-04",
-   "max_all": 146.95,
-   "median_all": 120.265,
-   "list_price": 235.0,
-   "amazon_discount": 50.0,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 4.458370635631159,
-   "discount_vs_typical": 2.9809171413129287,
-   "weekly_change": 0.0,
-   "volatility_pct": 10.413855425908183,
-   "trend": "bajando (-8.3%/sem)",
-   "best_weekday": "Lunes",
-   "history_days": 24,
-   "at_all_time_low": false,
-   "triggered": [
-    "min_7d",
-    "amazon_discount"
-   ],
-   "score": 30,
-   "recommendation": "MONITOREAR",
-   "history": [
-    [
-     "2026-07-21",
-     125.0
-    ],
-    [
-     "2026-07-22",
-     125.0
-    ],
-    [
-     "2026-07-23",
-     146.95
-    ],
-    [
-     "2026-07-24",
-     146.95
-    ],
-    [
-     "2026-07-25",
-     142.97
-    ],
-    [
-     "2026-07-26",
-     142.97
-    ],
-    [
-     "2026-07-28",
-     146.95
-    ],
-    [
-     "2026-07-29",
-     146.95
-    ],
-    [
-     "2026-07-30",
-     123.48
-    ],
-    [
-     "2026-07-31",
-     123.48
-    ],
-    [
-     "2026-08-01",
-     144.17
-    ],
-    [
-     "2026-08-02",
-     137.34
-    ],
-    [
-     "2026-08-04",
-     111.7
-    ],
-    [
-     "2026-08-06",
-     111.7
-    ],
-    [
-     "2026-08-07",
-     111.7
-    ],
-    [
-     "2026-08-08",
-     117.05
-    ],
-    [
-     "2026-08-09",
-     117.02
-    ],
-    [
-     "2026-08-10",
-     116.91
-    ],
-    [
-     "2026-08-11",
-     116.81
-    ],
-    [
-     "2026-08-14",
-     116.68
-    ],
-    [
-     "2026-08-17",
-     116.68
-    ],
-    [
-     "2026-08-18",
-     116.68
-    ],
-    [
-     "2026-08-19",
-     116.68
     ],
     [
-     "2026-08-20",
-     116.68
+     "2026-08-21",
+     195.0
     ]
    ]
   },
@@ -2223,7 +2136,7 @@ window.RADAR_DATA = {
    "image": "https://m.media-amazon.com/images/I/81-K8IkjzVL._AC_SX320_.jpg",
    "variant": "Brown Leather Strap & Ivory Dial",
    "price": 196.86,
-   "prev_price": 197.25,
+   "prev_price": 196.86,
    "target_price": 120.0,
    "min_7d": 196.77,
    "min_7d_date": "2026-08-18",
@@ -2232,17 +2145,17 @@ window.RADAR_DATA = {
    "min_all": 189.0,
    "min_all_date": "2026-07-26",
    "max_all": 208.0,
-   "median_all": 195.25,
+   "median_all": 195.35500000000002,
    "list_price": 450.0,
    "amazon_discount": 56.0,
-   "pct_vs_prev": -0.1977186311787003,
+   "pct_vs_prev": 0.0,
    "pct_vs_min_all": 4.158730158730166,
-   "discount_vs_typical": -0.824583866837395,
+   "discount_vs_typical": -0.770392362621891,
    "weekly_change": -5.355769230769225,
-   "volatility_pct": 2.840049459462789,
-   "trend": "subiendo (+2.4%/sem)",
+   "volatility_pct": 2.7846032207197036,
+   "trend": "subiendo (+2.2%/sem)",
    "best_weekday": "Domingo",
-   "history_days": 21,
+   "history_days": 22,
    "at_all_time_low": false,
    "triggered": [
     "min_7d",
@@ -2334,129 +2247,185 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      196.86
+    ],
+    [
+     "2026-08-21",
+     196.86
     ]
    ]
   },
   {
-   "asin": "B0FCVKJ8F2",
-   "name": "Fossil Men's Watch, Autocross Multifunction Stainless Steel Watch for Men",
-   "url": "https://www.amazon.com/dp/B0FCVKJ8F2",
+   "asin": "B099SXGTPV",
+   "name": "Citizen Men's Eco-Drive Weekender Sport Casual",
+   "url": "https://www.amazon.com/dp/B099SXGTPV",
    "category": "",
-   "image": "https://m.media-amazon.com/images/I/71ky5hr9OuL._AC_SX320_.jpg",
-   "variant": "Silver/Green",
-   "price": 127.15,
-   "prev_price": 127.0,
+   "image": "https://m.media-amazon.com/images/I/818ddFf1NxL._AC_SX320_.jpg",
+   "variant": "Silver-Tone Bracelet & Black Dial",
+   "price": 193.03,
+   "prev_price": 193.04,
    "target_price": 100.0,
-   "min_7d": 118.75,
-   "min_7d_date": "2026-08-14",
-   "min_30d": 118.75,
-   "min_30d_date": "2026-08-14",
-   "min_all": 118.75,
-   "min_all_date": "2026-08-14",
-   "max_all": 160.0,
-   "median_all": 160.0,
-   "list_price": 160.0,
-   "amazon_discount": 21.0,
-   "pct_vs_prev": 0.11811023622047691,
-   "pct_vs_min_all": 7.073684210526321,
-   "discount_vs_typical": 20.531249999999996,
-   "weekly_change": -20.531249999999996,
-   "volatility_pct": 9.535207984163426,
-   "trend": "bajando (-7.5%/sem)",
-   "best_weekday": "Lunes",
-   "history_days": 22,
+   "min_7d": 193.03,
+   "min_7d_date": "2026-08-21",
+   "min_30d": 191.72,
+   "min_30d_date": "2026-08-08",
+   "min_all": 191.72,
+   "min_all_date": "2026-08-08",
+   "max_all": 195.95,
+   "median_all": 192.54000000000002,
+   "list_price": null,
+   "amazon_discount": null,
+   "pct_vs_prev": -0.005180273518437062,
+   "pct_vs_min_all": 0.6832881285207606,
+   "discount_vs_typical": -0.2544925729718399,
+   "weekly_change": 0.6570370756635505,
+   "volatility_pct": 0.8753488348846103,
+   "trend": "estable",
+   "best_weekday": "-",
+   "history_days": 20,
    "at_all_time_low": false,
-   "triggered": [],
-   "score": 23,
+   "triggered": [
+    "min_7d"
+   ],
+   "score": 27,
    "recommendation": "ESPERAR",
    "history": [
     [
-     "2026-07-25",
-     160.0
-    ],
-    [
-     "2026-07-26",
-     160.0
-    ],
-    [
-     "2026-07-28",
-     160.0
-    ],
-    [
      "2026-07-29",
-     160.0
+     195.94
     ],
     [
      "2026-07-30",
-     160.0
+     195.94
     ],
     [
      "2026-07-31",
-     160.0
+     195.94
     ],
     [
      "2026-08-01",
-     160.0
+     195.95
     ],
     [
      "2026-08-02",
-     160.0
+     195.95
     ],
     [
      "2026-08-04",
-     160.0
+     192.05
     ],
     [
      "2026-08-06",
-     160.0
+     191.73
     ],
     [
      "2026-08-07",
-     160.0
+     191.73
     ],
     [
      "2026-08-08",
-     160.0
+     191.72
     ],
     [
      "2026-08-09",
-     160.0
+     191.78
     ],
     [
      "2026-08-10",
-     160.0
+     191.85
     ],
     [
      "2026-08-11",
-     160.0
+     191.83
     ],
     [
      "2026-08-12",
-     160.0
+     191.83
     ],
     [
      "2026-08-13",
-     160.0
+     191.79
     ],
     [
      "2026-08-14",
-     118.75
+     191.77
     ],
     [
      "2026-08-17",
-     127.08
+     193.04
     ],
     [
      "2026-08-18",
-     128.0
+     193.08
     ],
     [
      "2026-08-19",
-     127.0
+     193.08
     ],
     [
      "2026-08-20",
-     127.15
+     193.04
+    ],
+    [
+     "2026-08-21",
+     193.03
+    ]
+   ]
+  },
+  {
+   "asin": "B08KTTQFBV",
+   "name": "Fossil Women's Watch, Scarlette Quartz Stainless Steel Three-Hand Watch for Women",
+   "url": "https://www.amazon.com/dp/B08KTTQFBV",
+   "category": "",
+   "image": "https://m.media-amazon.com/images/I/71GGKKgmRlL._AC_SX320_.jpg",
+   "variant": "32MM / Gold/Silver/Gold",
+   "price": 120.22,
+   "prev_price": 129.98,
+   "target_price": 90.0,
+   "min_7d": 120.22,
+   "min_7d_date": "2026-08-21",
+   "min_30d": 120.22,
+   "min_30d_date": "2026-08-21",
+   "min_all": 120.22,
+   "min_all_date": "2026-08-21",
+   "max_all": 129.98,
+   "median_all": 129.98,
+   "list_price": null,
+   "amazon_discount": null,
+   "pct_vs_prev": -7.508847515002301,
+   "pct_vs_min_all": 0.0,
+   "discount_vs_typical": 7.508847515002301,
+   "weekly_change": -7.508847515002301,
+   "volatility_pct": 2.963556736999222,
+   "trend": "bajando (-10.7%/sem)",
+   "best_weekday": "-",
+   "history_days": 5,
+   "at_all_time_low": false,
+   "triggered": [
+    "min_7d",
+    "daily_drop"
+   ],
+   "score": 25,
+   "recommendation": "ESPERAR",
+   "history": [
+    [
+     "2026-08-17",
+     129.98
+    ],
+    [
+     "2026-08-18",
+     129.98
+    ],
+    [
+     "2026-08-19",
+     127.75
+    ],
+    [
+     "2026-08-20",
+     129.98
+    ],
+    [
+     "2026-08-21",
+     120.22
     ]
    ]
   },
@@ -2468,7 +2437,7 @@ window.RADAR_DATA = {
    "image": "https://m.media-amazon.com/images/I/51DVEqPQcSL._AC_SX320_.jpg",
    "variant": "",
    "price": 97.99,
-   "prev_price": 97.97,
+   "prev_price": 97.99,
    "target_price": 80.0,
    "min_7d": 97.97,
    "min_7d_date": "2026-08-19",
@@ -2480,14 +2449,14 @@ window.RADAR_DATA = {
    "median_all": 97.99,
    "list_price": null,
    "amazon_discount": null,
-   "pct_vs_prev": 0.020414412575274085,
+   "pct_vs_prev": 0.0,
    "pct_vs_min_all": 2.360806434764432,
    "discount_vs_typical": 0.0,
    "weekly_change": 0.0,
-   "volatility_pct": 0.45146269973985265,
+   "volatility_pct": 0.44310706218555396,
    "trend": "estable",
    "best_weekday": "Miercoles",
-   "history_days": 25,
+   "history_days": 26,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -2594,131 +2563,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      97.99
-    ]
-   ]
-  },
-  {
-   "asin": "B00213KT1Y",
-   "name": "CITIZEN Men's Wrist WatchALTERNA Eco-Drive VO10-6741F",
-   "url": "https://www.amazon.com/dp/B00213KT1Y",
-   "category": "",
-   "image": "https://m.media-amazon.com/images/I/71Ce+wPwfwL._AC_SX320_.jpg",
-   "variant": "",
-   "price": 150.19,
-   "prev_price": 149.92,
-   "target_price": 100.0,
-   "min_7d": 149.92,
-   "min_7d_date": "2026-08-17",
-   "min_30d": 141.45,
-   "min_30d_date": "2026-07-30",
-   "min_all": 141.45,
-   "min_all_date": "2026-07-30",
-   "max_all": 150.63,
-   "median_all": 147.775,
-   "list_price": null,
-   "amazon_discount": null,
-   "pct_vs_prev": 0.18009605122732808,
-   "pct_vs_min_all": 6.178861788617893,
-   "discount_vs_typical": -1.6342412451361814,
-   "weekly_change": -0.2921064860917465,
-   "volatility_pct": 2.1843023148113065,
-   "trend": "subiendo (+2.1%/sem)",
-   "best_weekday": "Domingo",
-   "history_days": 22,
-   "at_all_time_low": false,
-   "triggered": [
-    "min_7d"
-   ],
-   "score": 20,
-   "recommendation": "ESPERAR",
-   "history": [
-    [
-     "2026-07-25",
-     142.41
     ],
     [
-     "2026-07-26",
-     142.41
-    ],
-    [
-     "2026-07-28",
-     142.76
-    ],
-    [
-     "2026-07-29",
-     143.09
-    ],
-    [
-     "2026-07-30",
-     141.45
-    ],
-    [
-     "2026-07-31",
-     141.47
-    ],
-    [
-     "2026-08-01",
-     148.27
-    ],
-    [
-     "2026-08-02",
-     147.91
-    ],
-    [
-     "2026-08-04",
-     147.83
-    ],
-    [
-     "2026-08-06",
-     147.72
-    ],
-    [
-     "2026-08-07",
-     147.72
-    ],
-    [
-     "2026-08-08",
-     147.72
-    ],
-    [
-     "2026-08-09",
-     147.72
-    ],
-    [
-     "2026-08-10",
-     147.72
-    ],
-    [
-     "2026-08-11",
-     150.5
-    ],
-    [
-     "2026-08-12",
-     150.5
-    ],
-    [
-     "2026-08-13",
-     150.63
-    ],
-    [
-     "2026-08-14",
-     150.51
-    ],
-    [
-     "2026-08-17",
-     149.92
-    ],
-    [
-     "2026-08-18",
-     149.92
-    ],
-    [
-     "2026-08-19",
-     149.92
-    ],
-    [
-     "2026-08-20",
-     150.19
+     "2026-08-21",
+     97.99
     ]
    ]
   },
@@ -2733,7 +2581,7 @@ window.RADAR_DATA = {
    "prev_price": 286.95,
    "target_price": 100.0,
    "min_7d": 286.95,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 272.6,
    "min_30d_date": "2026-08-01",
    "min_all": 272.6,
@@ -2746,10 +2594,10 @@ window.RADAR_DATA = {
    "pct_vs_min_all": 5.264123257520163,
    "discount_vs_typical": 0.0,
    "weekly_change": 0.0,
-   "volatility_pct": 1.7279540044201216,
+   "volatility_pct": 1.6952571686821714,
    "trend": "estable",
    "best_weekday": "Sabado",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -2844,117 +2692,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      286.95
-    ]
-   ]
-  },
-  {
-   "asin": "B099SXGTPV",
-   "name": "Citizen Men's Eco-Drive Weekender Sport Casual",
-   "url": "https://www.amazon.com/dp/B099SXGTPV",
-   "category": "",
-   "image": "https://m.media-amazon.com/images/I/818ddFf1NxL._AC_SX320_.jpg",
-   "variant": "Silver-Tone Bracelet & Black Dial",
-   "price": 193.04,
-   "prev_price": 193.08,
-   "target_price": 100.0,
-   "min_7d": 191.77,
-   "min_7d_date": "2026-08-14",
-   "min_30d": 191.72,
-   "min_30d_date": "2026-08-08",
-   "min_all": 191.72,
-   "min_all_date": "2026-08-08",
-   "max_all": 195.95,
-   "median_all": 192.05,
-   "list_price": null,
-   "amazon_discount": null,
-   "pct_vs_prev": -0.020716801325885884,
-   "pct_vs_min_all": 0.6885040684331281,
-   "discount_vs_typical": -0.5154907576151943,
-   "weekly_change": 0.6517545231763909,
-   "volatility_pct": 0.897932632782912,
-   "trend": "estable",
-   "best_weekday": "-",
-   "history_days": 19,
-   "at_all_time_low": false,
-   "triggered": [],
-   "score": 15,
-   "recommendation": "ESPERAR",
-   "history": [
-    [
-     "2026-07-29",
-     195.94
     ],
     [
-     "2026-07-30",
-     195.94
-    ],
-    [
-     "2026-07-31",
-     195.94
-    ],
-    [
-     "2026-08-01",
-     195.95
-    ],
-    [
-     "2026-08-02",
-     195.95
-    ],
-    [
-     "2026-08-04",
-     192.05
-    ],
-    [
-     "2026-08-06",
-     191.73
-    ],
-    [
-     "2026-08-07",
-     191.73
-    ],
-    [
-     "2026-08-08",
-     191.72
-    ],
-    [
-     "2026-08-09",
-     191.78
-    ],
-    [
-     "2026-08-10",
-     191.85
-    ],
-    [
-     "2026-08-11",
-     191.83
-    ],
-    [
-     "2026-08-12",
-     191.83
-    ],
-    [
-     "2026-08-13",
-     191.79
-    ],
-    [
-     "2026-08-14",
-     191.77
-    ],
-    [
-     "2026-08-17",
-     193.04
-    ],
-    [
-     "2026-08-18",
-     193.08
-    ],
-    [
-     "2026-08-19",
-     193.08
-    ],
-    [
-     "2026-08-20",
-     193.04
+     "2026-08-21",
+     286.95
     ]
    ]
   },
@@ -2969,9 +2710,9 @@ window.RADAR_DATA = {
    "prev_price": 99.0,
    "target_price": 80.0,
    "min_7d": 99.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 90.0,
-   "min_30d_date": "2026-07-22",
+   "min_30d_date": "2026-07-23",
    "min_all": 90.0,
    "min_all_date": "2026-07-21",
    "max_all": 144.0,
@@ -2981,11 +2722,11 @@ window.RADAR_DATA = {
    "pct_vs_prev": 0.0,
    "pct_vs_min_all": 10.0,
    "discount_vs_typical": 8.333333333333332,
-   "weekly_change": -31.25,
-   "volatility_pct": 14.833513700477708,
-   "trend": "subiendo (+4.0%/sem)",
-   "best_weekday": "Miercoles",
-   "history_days": 26,
+   "weekly_change": 0.0,
+   "volatility_pct": 14.733364295847482,
+   "trend": "subiendo (+2.0%/sem)",
+   "best_weekday": "Viernes",
+   "history_days": 27,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -3096,276 +2837,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      99.0
-    ]
-   ]
-  },
-  {
-   "asin": "B00AFTTQQ0",
-   "name": "Fossil Men's Watch, Grant Quartz Stainless Steel Chronograph Watch for Men",
-   "url": "https://www.amazon.com/dp/B00AFTTQQ0",
-   "category": "fossil",
-   "image": "https://m.media-amazon.com/images/I/71UIocsjBUL._AC_SX320_.jpg",
-   "variant": "Black/Silver",
-   "price": 99.0,
-   "prev_price": 99.0,
-   "target_price": 80.0,
-   "min_7d": 99.0,
-   "min_7d_date": "2026-08-14",
-   "min_30d": 90.0,
-   "min_30d_date": "2026-07-22",
-   "min_all": 90.0,
-   "min_all_date": "2026-07-22",
-   "max_all": 174.2,
-   "median_all": 108.0,
-   "list_price": 180.0,
-   "amazon_discount": 45.0,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 10.0,
-   "discount_vs_typical": 8.333333333333332,
-   "weekly_change": 0.0,
-   "volatility_pct": 25.49943774023004,
-   "trend": "subiendo (+2.2%/sem)",
-   "best_weekday": "Viernes",
-   "history_days": 24,
-   "at_all_time_low": false,
-   "triggered": [
-    "min_7d"
-   ],
-   "score": 12,
-   "recommendation": "ESPERAR",
-   "history": [
-    [
-     "2026-07-21",
-     169.99
     ],
     [
-     "2026-07-22",
-     90.0
-    ],
-    [
-     "2026-07-23",
-     90.0
-    ],
-    [
-     "2026-07-24",
-     90.0
-    ],
-    [
-     "2026-07-25",
-     90.0
-    ],
-    [
-     "2026-07-26",
-     90.0
-    ],
-    [
-     "2026-07-28",
-     174.2
-    ],
-    [
-     "2026-07-29",
-     169.99
-    ],
-    [
-     "2026-07-30",
-     108.0
-    ],
-    [
-     "2026-07-31",
-     108.0
-    ],
-    [
-     "2026-08-01",
-     108.0
-    ],
-    [
-     "2026-08-02",
-     108.0
-    ],
-    [
-     "2026-08-04",
-     170.13
-    ],
-    [
-     "2026-08-06",
-     170.13
-    ],
-    [
-     "2026-08-07",
-     126.0
-    ],
-    [
-     "2026-08-08",
-     126.0
-    ],
-    [
-     "2026-08-09",
-     126.0
-    ],
-    [
-     "2026-08-10",
-     126.0
-    ],
-    [
-     "2026-08-11",
-     170.13
-    ],
-    [
-     "2026-08-14",
+     "2026-08-21",
      99.0
-    ],
-    [
-     "2026-08-17",
-     99.0
-    ],
-    [
-     "2026-08-18",
-     99.0
-    ],
-    [
-     "2026-08-19",
-     99.0
-    ],
-    [
-     "2026-08-20",
-     99.0
-    ]
-   ]
-  },
-  {
-   "asin": "B0094KMB4U",
-   "name": "Armani Exchange A|X Stainless Steel Chronograph Watch for Men",
-   "url": "https://www.amazon.com/dp/B0094KMB4U",
-   "category": "armani-exchange",
-   "image": "https://m.media-amazon.com/images/I/71YOF1SFrYL._AC_SX320_.jpg",
-   "variant": "Black/Black Leather",
-   "price": 135.0,
-   "prev_price": 135.0,
-   "target_price": 80.0,
-   "min_7d": 135.0,
-   "min_7d_date": "2026-08-14",
-   "min_30d": 120.0,
-   "min_30d_date": "2026-07-22",
-   "min_all": 120.0,
-   "min_all_date": "2026-07-22",
-   "max_all": 135.99,
-   "median_all": 135.0,
-   "list_price": null,
-   "amazon_discount": null,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 12.5,
-   "discount_vs_typical": 0.0,
-   "weekly_change": 0.0,
-   "volatility_pct": 4.5614290313097365,
-   "trend": "subiendo (+3.3%/sem)",
-   "best_weekday": "Miercoles",
-   "history_days": 25,
-   "at_all_time_low": false,
-   "triggered": [
-    "min_7d"
-   ],
-   "score": 12,
-   "recommendation": "ESPERAR",
-   "history": [
-    [
-     "2026-07-21",
-     135.99
-    ],
-    [
-     "2026-07-22",
-     120.0
-    ],
-    [
-     "2026-07-23",
-     120.0
-    ],
-    [
-     "2026-07-24",
-     120.0
-    ],
-    [
-     "2026-07-25",
-     120.0
-    ],
-    [
-     "2026-07-26",
-     120.0
-    ],
-    [
-     "2026-07-28",
-     135.0
-    ],
-    [
-     "2026-07-29",
-     135.0
-    ],
-    [
-     "2026-07-30",
-     135.0
-    ],
-    [
-     "2026-07-31",
-     135.0
-    ],
-    [
-     "2026-08-01",
-     135.0
-    ],
-    [
-     "2026-08-02",
-     135.0
-    ],
-    [
-     "2026-08-04",
-     135.0
-    ],
-    [
-     "2026-08-06",
-     135.0
-    ],
-    [
-     "2026-08-07",
-     135.0
-    ],
-    [
-     "2026-08-08",
-     135.0
-    ],
-    [
-     "2026-08-09",
-     135.0
-    ],
-    [
-     "2026-08-10",
-     135.0
-    ],
-    [
-     "2026-08-11",
-     135.0
-    ],
-    [
-     "2026-08-13",
-     135.0
-    ],
-    [
-     "2026-08-14",
-     135.0
-    ],
-    [
-     "2026-08-17",
-     135.0
-    ],
-    [
-     "2026-08-18",
-     135.0
-    ],
-    [
-     "2026-08-19",
-     135.0
-    ],
-    [
-     "2026-08-20",
-     135.0
     ]
    ]
   },
@@ -3380,23 +2855,23 @@ window.RADAR_DATA = {
    "prev_price": 112.0,
    "target_price": 80.0,
    "min_7d": 112.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 103.27,
    "min_30d_date": "2026-07-26",
    "min_all": 103.27,
    "min_all_date": "2026-07-26",
    "max_all": 140.0,
-   "median_all": 119.0,
+   "median_all": 115.5,
    "list_price": 140.0,
    "amazon_discount": 20.0,
    "pct_vs_prev": 0.0,
    "pct_vs_min_all": 8.453568316064688,
-   "discount_vs_typical": 5.88235294117647,
+   "discount_vs_typical": 3.0303030303030303,
    "weekly_change": 0.0,
-   "volatility_pct": 12.635314290266766,
-   "trend": "subiendo (+1.6%/sem)",
+   "volatility_pct": 12.528882875565845,
+   "trend": "estable",
    "best_weekday": "Miercoles",
-   "history_days": 25,
+   "history_days": 26,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -3503,6 +2978,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      112.0
+    ],
+    [
+     "2026-08-21",
+     112.0
     ]
    ]
   },
@@ -3517,7 +2996,7 @@ window.RADAR_DATA = {
    "prev_price": 165.0,
    "target_price": 100.0,
    "min_7d": 165.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 114.79,
    "min_30d_date": "2026-07-25",
    "min_all": 114.79,
@@ -3530,10 +3009,10 @@ window.RADAR_DATA = {
    "pct_vs_min_all": 43.740743967244526,
    "discount_vs_typical": 0.0,
    "weekly_change": 0.0,
-   "volatility_pct": 10.788167148874301,
-   "trend": "subiendo (+7.1%/sem)",
+   "volatility_pct": 10.567492776022462,
+   "trend": "subiendo (+6.5%/sem)",
    "best_weekday": "Sabado",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -3628,6 +3107,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      165.0
+    ],
+    [
+     "2026-08-21",
+     165.0
     ]
    ]
   },
@@ -3642,7 +3125,7 @@ window.RADAR_DATA = {
    "prev_price": 115.5,
    "target_price": 90.0,
    "min_7d": 115.5,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 100.79,
    "min_30d_date": "2026-07-25",
    "min_all": 100.79,
@@ -3654,11 +3137,11 @@ window.RADAR_DATA = {
    "pct_vs_prev": 0.0,
    "pct_vs_min_all": 14.594701855342784,
    "discount_vs_typical": 0.0,
-   "weekly_change": -12.5,
-   "volatility_pct": 11.2657455587,
-   "trend": "subiendo (+7.9%/sem)",
+   "weekly_change": 0.0,
+   "volatility_pct": 11.019906741100026,
+   "trend": "subiendo (+7.1%/sem)",
    "best_weekday": "Sabado",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -3753,6 +3236,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      115.5
+    ],
+    [
+     "2026-08-21",
+     115.5
     ]
    ]
   },
@@ -3767,7 +3254,7 @@ window.RADAR_DATA = {
    "prev_price": 145.95,
    "target_price": 110.0,
    "min_7d": 145.95,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 134.62,
    "min_30d_date": "2026-08-01",
    "min_all": 134.62,
@@ -3780,10 +3267,10 @@ window.RADAR_DATA = {
    "pct_vs_min_all": 8.416282870301577,
    "discount_vs_typical": 0.0,
    "weekly_change": 0.0,
-   "volatility_pct": 2.2475476055571533,
+   "volatility_pct": 2.2022377882772415,
    "trend": "estable",
    "best_weekday": "Sabado",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -3878,6 +3365,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      145.95
+    ],
+    [
+     "2026-08-21",
+     145.95
     ]
    ]
   },
@@ -3892,7 +3383,7 @@ window.RADAR_DATA = {
    "prev_price": 271.97,
    "target_price": 120.0,
    "min_7d": 271.97,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 154.35,
    "min_30d_date": "2026-08-01",
    "min_all": 154.35,
@@ -3905,10 +3396,10 @@ window.RADAR_DATA = {
    "pct_vs_min_all": 76.20343375445418,
    "discount_vs_typical": 0.0,
    "weekly_change": 0.0,
-   "volatility_pct": 9.216467918190016,
-   "trend": "subiendo (+1.6%/sem)",
+   "volatility_pct": 9.014518795441322,
+   "trend": "estable",
    "best_weekday": "Sabado",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -4003,6 +3494,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      271.97
+    ],
+    [
+     "2026-08-21",
+     271.97
     ]
    ]
   },
@@ -4017,7 +3512,7 @@ window.RADAR_DATA = {
    "prev_price": 223.95,
    "target_price": 120.0,
    "min_7d": 223.95,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 147.3,
    "min_30d_date": "2026-07-28",
    "min_all": 147.3,
@@ -4030,10 +3525,10 @@ window.RADAR_DATA = {
    "pct_vs_min_all": 52.03665987780038,
    "discount_vs_typical": 0.0,
    "weekly_change": 0.0,
-   "volatility_pct": 8.104580764828437,
-   "trend": "subiendo (+5.4%/sem)",
+   "volatility_pct": 7.966140642917745,
+   "trend": "subiendo (+5.1%/sem)",
    "best_weekday": "Martes",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -4128,6 +3623,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      223.95
+    ],
+    [
+     "2026-08-21",
+     223.95
     ]
    ]
   },
@@ -4142,7 +3641,7 @@ window.RADAR_DATA = {
    "prev_price": 121.0,
    "target_price": 90.0,
    "min_7d": 121.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 110.0,
    "min_30d_date": "2026-07-26",
    "min_all": 110.0,
@@ -4155,10 +3654,10 @@ window.RADAR_DATA = {
    "pct_vs_min_all": 10.0,
    "discount_vs_typical": 8.333333333333332,
    "weekly_change": 0.0,
-   "volatility_pct": 23.86356428953713,
+   "volatility_pct": 23.69870722895689,
    "trend": "bajando (-10.1%/sem)",
    "best_weekday": "Miercoles",
-   "history_days": 21,
+   "history_days": 22,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -4249,6 +3748,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      121.0
+    ],
+    [
+     "2026-08-21",
+     121.0
     ]
    ]
   },
@@ -4263,7 +3766,7 @@ window.RADAR_DATA = {
    "prev_price": 240.0,
    "target_price": 120.0,
    "min_7d": 240.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 150.0,
    "min_30d_date": "2026-07-29",
    "min_all": 150.0,
@@ -4275,11 +3778,11 @@ window.RADAR_DATA = {
    "pct_vs_prev": 0.0,
    "pct_vs_min_all": 60.0,
    "discount_vs_typical": 0.0,
-   "weekly_change": -19.42793836237285,
-   "volatility_pct": 24.755157089496787,
-   "trend": "subiendo (+16.2%/sem)",
+   "weekly_change": 0.0,
+   "volatility_pct": 24.1439578161539,
+   "trend": "subiendo (+13.8%/sem)",
    "best_weekday": "-",
-   "history_days": 19,
+   "history_days": 20,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -4361,6 +3864,10 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-20",
+     240.0
+    ],
+    [
+     "2026-08-21",
      240.0
     ]
    ]
@@ -4376,7 +3883,7 @@ window.RADAR_DATA = {
    "prev_price": 215.0,
    "target_price": 110.0,
    "min_7d": 215.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 124.79,
    "min_30d_date": "2026-08-07",
    "min_all": 124.79,
@@ -4389,10 +3896,10 @@ window.RADAR_DATA = {
    "pct_vs_min_all": 72.28944626973315,
    "discount_vs_typical": -50.402238544945796,
    "weekly_change": 0.0,
-   "volatility_pct": 24.079192417260643,
-   "trend": "subiendo (+23.9%/sem)",
+   "volatility_pct": 24.254710607990916,
+   "trend": "subiendo (+23.6%/sem)",
    "best_weekday": "-",
-   "history_days": 19,
+   "history_days": 20,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -4475,6 +3982,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      215.0
+    ],
+    [
+     "2026-08-21",
+     215.0
     ]
    ]
   },
@@ -4489,7 +4000,7 @@ window.RADAR_DATA = {
    "prev_price": 196.0,
    "target_price": 100.0,
    "min_7d": 196.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 131.95,
    "min_30d_date": "2026-07-29",
    "min_all": 131.95,
@@ -4502,10 +4013,10 @@ window.RADAR_DATA = {
    "pct_vs_min_all": 48.54111405835545,
    "discount_vs_typical": 0.0,
    "weekly_change": 0.0,
-   "volatility_pct": 10.9742233103311,
-   "trend": "subiendo (+1.7%/sem)",
+   "volatility_pct": 10.764003250632463,
+   "trend": "estable",
    "best_weekday": "-",
-   "history_days": 19,
+   "history_days": 20,
    "at_all_time_low": false,
    "triggered": [
     "min_7d"
@@ -4588,57 +4099,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      196.0
-    ]
-   ]
-  },
-  {
-   "asin": "B08KTTQFBV",
-   "name": "Fossil Women's Watch, Scarlette Quartz Stainless Steel Three-Hand Watch for Women",
-   "url": "https://www.amazon.com/dp/B08KTTQFBV",
-   "category": "",
-   "image": "https://m.media-amazon.com/images/I/71GGKKgmRlL._AC_SX320_.jpg",
-   "variant": "32MM / Gold/Silver/Gold",
-   "price": 129.98,
-   "prev_price": 127.75,
-   "target_price": 90.0,
-   "min_7d": 127.75,
-   "min_7d_date": "2026-08-19",
-   "min_30d": 127.75,
-   "min_30d_date": "2026-08-19",
-   "min_all": 127.75,
-   "min_all_date": "2026-08-19",
-   "max_all": 129.98,
-   "median_all": 129.98,
-   "list_price": null,
-   "amazon_discount": null,
-   "pct_vs_prev": 1.745596868884532,
-   "pct_vs_min_all": 1.745596868884532,
-   "discount_vs_typical": 0.0,
-   "weekly_change": 0.0,
-   "volatility_pct": 0.7460977227449977,
-   "trend": "sin datos suficientes",
-   "best_weekday": "-",
-   "history_days": 4,
-   "at_all_time_low": false,
-   "triggered": [],
-   "score": 9,
-   "recommendation": "ESPERAR",
-   "history": [
-    [
-     "2026-08-17",
-     129.98
     ],
     [
-     "2026-08-18",
-     129.98
-    ],
-    [
-     "2026-08-19",
-     127.75
-    ],
-    [
-     "2026-08-20",
-     129.98
+     "2026-08-21",
+     196.0
     ]
    ]
   },
@@ -4649,27 +4113,27 @@ window.RADAR_DATA = {
    "category": "",
    "image": "https://m.media-amazon.com/images/I/71sA4EaqqCL._AC_SX320_.jpg",
    "variant": "Silver Tone/Silver Tone/Blue",
-   "price": 135.18,
-   "prev_price": 134.54,
+   "price": 135.34,
+   "prev_price": 135.18,
    "target_price": 100.0,
-   "min_7d": 131.25,
-   "min_7d_date": "2026-08-14",
+   "min_7d": 131.54,
+   "min_7d_date": "2026-08-17",
    "min_30d": 126.75,
    "min_30d_date": "2026-08-08",
    "min_all": 126.75,
    "min_all_date": "2026-08-08",
    "max_all": 140.0,
-   "median_all": 140.0,
+   "median_all": 137.67000000000002,
    "list_price": null,
    "amazon_discount": null,
-   "pct_vs_prev": 0.47569496060652205,
-   "pct_vs_min_all": 6.650887573964502,
-   "discount_vs_typical": 3.4428571428571377,
-   "weekly_change": 2.939384709107534,
-   "volatility_pct": 3.732628618566002,
-   "trend": "bajando (-2.9%/sem)",
+   "pct_vs_prev": 0.11836070424618772,
+   "pct_vs_min_all": 6.777120315581857,
+   "discount_vs_typical": 1.6924529672405115,
+   "weekly_change": 3.1161904761904786,
+   "volatility_pct": 3.6472582097267274,
+   "trend": "bajando (-2.5%/sem)",
    "best_weekday": "Lunes",
-   "history_days": 21,
+   "history_days": 22,
    "at_all_time_low": false,
    "triggered": [],
    "score": 8,
@@ -4758,6 +4222,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      135.18
+    ],
+    [
+     "2026-08-21",
+     135.34
     ]
    ]
   },
@@ -4774,7 +4242,7 @@ window.RADAR_DATA = {
    "min_7d": 99.0,
    "min_7d_date": "2026-08-17",
    "min_30d": 90.0,
-   "min_30d_date": "2026-07-22",
+   "min_30d_date": "2026-07-23",
    "min_all": 90.0,
    "min_all_date": "2026-07-21",
    "max_all": 144.48,
@@ -4786,7 +4254,7 @@ window.RADAR_DATA = {
    "discount_vs_typical": null,
    "weekly_change": 0.0,
    "volatility_pct": 16.47522472400803,
-   "trend": "subiendo (+6.6%/sem)",
+   "trend": "subiendo (+5.3%/sem)",
    "best_weekday": "Viernes",
    "history_days": 21,
    "at_all_time_low": false,
@@ -4881,33 +4349,700 @@ window.RADAR_DATA = {
    ]
   },
   {
+   "asin": "B00AFTTQQ0",
+   "name": "Fossil Men's Watch, Grant Quartz Stainless Steel Chronograph Watch for Men",
+   "url": "https://www.amazon.com/dp/B00AFTTQQ0",
+   "category": "fossil",
+   "image": "https://m.media-amazon.com/images/I/71UIocsjBUL._AC_SX320_.jpg",
+   "variant": "Black/Silver",
+   "price": null,
+   "prev_price": 99.0,
+   "target_price": 80.0,
+   "min_7d": 99.0,
+   "min_7d_date": "2026-08-17",
+   "min_30d": 90.0,
+   "min_30d_date": "2026-07-23",
+   "min_all": 90.0,
+   "min_all_date": "2026-07-22",
+   "max_all": 174.2,
+   "median_all": 108.0,
+   "list_price": 180.0,
+   "amazon_discount": 45.0,
+   "pct_vs_prev": null,
+   "pct_vs_min_all": null,
+   "discount_vs_typical": null,
+   "weekly_change": 0.0,
+   "volatility_pct": 25.49943774023004,
+   "trend": "estable",
+   "best_weekday": "Viernes",
+   "history_days": 24,
+   "at_all_time_low": false,
+   "triggered": [],
+   "score": 0,
+   "recommendation": "REVISAR MANUALMENTE",
+   "history": [
+    [
+     "2026-07-21",
+     169.99
+    ],
+    [
+     "2026-07-22",
+     90.0
+    ],
+    [
+     "2026-07-23",
+     90.0
+    ],
+    [
+     "2026-07-24",
+     90.0
+    ],
+    [
+     "2026-07-25",
+     90.0
+    ],
+    [
+     "2026-07-26",
+     90.0
+    ],
+    [
+     "2026-07-28",
+     174.2
+    ],
+    [
+     "2026-07-29",
+     169.99
+    ],
+    [
+     "2026-07-30",
+     108.0
+    ],
+    [
+     "2026-07-31",
+     108.0
+    ],
+    [
+     "2026-08-01",
+     108.0
+    ],
+    [
+     "2026-08-02",
+     108.0
+    ],
+    [
+     "2026-08-04",
+     170.13
+    ],
+    [
+     "2026-08-06",
+     170.13
+    ],
+    [
+     "2026-08-07",
+     126.0
+    ],
+    [
+     "2026-08-08",
+     126.0
+    ],
+    [
+     "2026-08-09",
+     126.0
+    ],
+    [
+     "2026-08-10",
+     126.0
+    ],
+    [
+     "2026-08-11",
+     170.13
+    ],
+    [
+     "2026-08-14",
+     99.0
+    ],
+    [
+     "2026-08-17",
+     99.0
+    ],
+    [
+     "2026-08-18",
+     99.0
+    ],
+    [
+     "2026-08-19",
+     99.0
+    ],
+    [
+     "2026-08-20",
+     99.0
+    ]
+   ]
+  },
+  {
+   "asin": "B01LZU0GYY",
+   "name": "A|X Armani Exchange Men's Watch, Three-Hand Stainless Steel Watch for Men",
+   "url": "https://www.amazon.com/dp/B01LZU0GYY",
+   "category": "armani-exchange",
+   "image": "https://m.media-amazon.com/images/I/81MbAnH96vL._AC_SX320_.jpg",
+   "variant": "Black/Black Set",
+   "price": null,
+   "prev_price": 116.68,
+   "target_price": 80.0,
+   "min_7d": 116.68,
+   "min_7d_date": "2026-08-17",
+   "min_30d": 111.7,
+   "min_30d_date": "2026-08-04",
+   "min_all": 111.7,
+   "min_all_date": "2026-08-04",
+   "max_all": 146.95,
+   "median_all": 120.265,
+   "list_price": 235.0,
+   "amazon_discount": 50.0,
+   "pct_vs_prev": null,
+   "pct_vs_min_all": null,
+   "discount_vs_typical": null,
+   "weekly_change": 0.0,
+   "volatility_pct": 10.413855425908183,
+   "trend": "bajando (-9.6%/sem)",
+   "best_weekday": "Lunes",
+   "history_days": 24,
+   "at_all_time_low": false,
+   "triggered": [],
+   "score": 0,
+   "recommendation": "REVISAR MANUALMENTE",
+   "history": [
+    [
+     "2026-07-21",
+     125.0
+    ],
+    [
+     "2026-07-22",
+     125.0
+    ],
+    [
+     "2026-07-23",
+     146.95
+    ],
+    [
+     "2026-07-24",
+     146.95
+    ],
+    [
+     "2026-07-25",
+     142.97
+    ],
+    [
+     "2026-07-26",
+     142.97
+    ],
+    [
+     "2026-07-28",
+     146.95
+    ],
+    [
+     "2026-07-29",
+     146.95
+    ],
+    [
+     "2026-07-30",
+     123.48
+    ],
+    [
+     "2026-07-31",
+     123.48
+    ],
+    [
+     "2026-08-01",
+     144.17
+    ],
+    [
+     "2026-08-02",
+     137.34
+    ],
+    [
+     "2026-08-04",
+     111.7
+    ],
+    [
+     "2026-08-06",
+     111.7
+    ],
+    [
+     "2026-08-07",
+     111.7
+    ],
+    [
+     "2026-08-08",
+     117.05
+    ],
+    [
+     "2026-08-09",
+     117.02
+    ],
+    [
+     "2026-08-10",
+     116.91
+    ],
+    [
+     "2026-08-11",
+     116.81
+    ],
+    [
+     "2026-08-14",
+     116.68
+    ],
+    [
+     "2026-08-17",
+     116.68
+    ],
+    [
+     "2026-08-18",
+     116.68
+    ],
+    [
+     "2026-08-19",
+     116.68
+    ],
+    [
+     "2026-08-20",
+     116.68
+    ]
+   ]
+  },
+  {
+   "asin": "B00786VYGS",
+   "name": "A|X Armani Exchange Men's Watch, Three-Hand Stainless Steel Watch for Men",
+   "url": "https://www.amazon.com/dp/B00786VYGS",
+   "category": "armani-exchange",
+   "image": "https://m.media-amazon.com/images/I/712gwCCidxL._AC_SX320_.jpg",
+   "variant": "Silver/Black",
+   "price": null,
+   "prev_price": 115.12,
+   "target_price": 80.0,
+   "min_7d": 115.12,
+   "min_7d_date": "2026-08-17",
+   "min_30d": 115.12,
+   "min_30d_date": "2026-08-17",
+   "min_all": 107.96,
+   "min_all_date": "2026-07-21",
+   "max_all": 127.95,
+   "median_all": 127.95,
+   "list_price": null,
+   "amazon_discount": null,
+   "pct_vs_prev": null,
+   "pct_vs_min_all": null,
+   "discount_vs_typical": null,
+   "weekly_change": -1.0826602509022092,
+   "volatility_pct": 5.097213393637065,
+   "trend": "bajando (-3.6%/sem)",
+   "best_weekday": "Martes",
+   "history_days": 25,
+   "at_all_time_low": false,
+   "triggered": [],
+   "score": 0,
+   "recommendation": "REVISAR MANUALMENTE",
+   "history": [
+    [
+     "2026-07-21",
+     107.96
+    ],
+    [
+     "2026-07-22",
+     127.95
+    ],
+    [
+     "2026-07-23",
+     124.06
+    ],
+    [
+     "2026-07-24",
+     127.95
+    ],
+    [
+     "2026-07-25",
+     127.95
+    ],
+    [
+     "2026-07-26",
+     127.95
+    ],
+    [
+     "2026-07-28",
+     127.95
+    ],
+    [
+     "2026-07-29",
+     127.95
+    ],
+    [
+     "2026-07-30",
+     127.95
+    ],
+    [
+     "2026-07-31",
+     127.95
+    ],
+    [
+     "2026-08-01",
+     127.95
+    ],
+    [
+     "2026-08-02",
+     127.95
+    ],
+    [
+     "2026-08-04",
+     127.95
+    ],
+    [
+     "2026-08-06",
+     127.95
+    ],
+    [
+     "2026-08-07",
+     127.95
+    ],
+    [
+     "2026-08-08",
+     127.95
+    ],
+    [
+     "2026-08-09",
+     127.95
+    ],
+    [
+     "2026-08-10",
+     127.95
+    ],
+    [
+     "2026-08-11",
+     116.38
+    ],
+    [
+     "2026-08-13",
+     116.38
+    ],
+    [
+     "2026-08-14",
+     116.38
+    ],
+    [
+     "2026-08-17",
+     115.12
+    ],
+    [
+     "2026-08-18",
+     115.12
+    ],
+    [
+     "2026-08-19",
+     115.12
+    ],
+    [
+     "2026-08-20",
+     115.12
+    ]
+   ]
+  },
+  {
+   "asin": "B00BYIMWYE",
+   "name": "A|X Armani Exchange Men's Watch, Three-Hand Stainless Steel Watch for Men",
+   "url": "https://www.amazon.com/dp/B00BYIMWYE",
+   "category": "armani-exchange",
+   "image": "https://m.media-amazon.com/images/I/71kQQ7nuQhL._AC_SX320_.jpg",
+   "variant": "Black/Black",
+   "price": null,
+   "prev_price": 128.95,
+   "target_price": 80.0,
+   "min_7d": 128.95,
+   "min_7d_date": "2026-08-17",
+   "min_30d": 128.95,
+   "min_30d_date": "2026-07-23",
+   "min_all": 107.96,
+   "min_all_date": "2026-07-21",
+   "max_all": 128.95,
+   "median_all": 128.95,
+   "list_price": 215.0,
+   "amazon_discount": 40.0,
+   "pct_vs_prev": null,
+   "pct_vs_min_all": null,
+   "discount_vs_typical": null,
+   "weekly_change": 0.0,
+   "volatility_pct": 3.210655166232805,
+   "trend": "estable",
+   "best_weekday": "Martes",
+   "history_days": 25,
+   "at_all_time_low": false,
+   "triggered": [],
+   "score": 0,
+   "recommendation": "REVISAR MANUALMENTE",
+   "history": [
+    [
+     "2026-07-21",
+     107.96
+    ],
+    [
+     "2026-07-22",
+     128.95
+    ],
+    [
+     "2026-07-23",
+     128.95
+    ],
+    [
+     "2026-07-24",
+     128.95
+    ],
+    [
+     "2026-07-25",
+     128.95
+    ],
+    [
+     "2026-07-26",
+     128.95
+    ],
+    [
+     "2026-07-28",
+     128.95
+    ],
+    [
+     "2026-07-29",
+     128.95
+    ],
+    [
+     "2026-07-30",
+     128.95
+    ],
+    [
+     "2026-07-31",
+     128.95
+    ],
+    [
+     "2026-08-01",
+     128.95
+    ],
+    [
+     "2026-08-02",
+     128.95
+    ],
+    [
+     "2026-08-04",
+     128.95
+    ],
+    [
+     "2026-08-06",
+     128.95
+    ],
+    [
+     "2026-08-07",
+     128.95
+    ],
+    [
+     "2026-08-08",
+     128.95
+    ],
+    [
+     "2026-08-09",
+     128.95
+    ],
+    [
+     "2026-08-10",
+     128.95
+    ],
+    [
+     "2026-08-11",
+     128.95
+    ],
+    [
+     "2026-08-13",
+     128.95
+    ],
+    [
+     "2026-08-14",
+     128.95
+    ],
+    [
+     "2026-08-17",
+     128.95
+    ],
+    [
+     "2026-08-18",
+     128.95
+    ],
+    [
+     "2026-08-19",
+     128.95
+    ],
+    [
+     "2026-08-20",
+     128.95
+    ]
+   ]
+  },
+  {
+   "asin": "B0094KMB4U",
+   "name": "Armani Exchange A|X Stainless Steel Chronograph Watch for Men",
+   "url": "https://www.amazon.com/dp/B0094KMB4U",
+   "category": "armani-exchange",
+   "image": "https://m.media-amazon.com/images/I/71YOF1SFrYL._AC_SX320_.jpg",
+   "variant": "Black/Black Leather",
+   "price": null,
+   "prev_price": 135.0,
+   "target_price": 80.0,
+   "min_7d": 135.0,
+   "min_7d_date": "2026-08-17",
+   "min_30d": 120.0,
+   "min_30d_date": "2026-07-23",
+   "min_all": 120.0,
+   "min_all_date": "2026-07-22",
+   "max_all": 135.99,
+   "median_all": 135.0,
+   "list_price": null,
+   "amazon_discount": null,
+   "pct_vs_prev": null,
+   "pct_vs_min_all": null,
+   "discount_vs_typical": null,
+   "weekly_change": 0.0,
+   "volatility_pct": 4.5614290313097365,
+   "trend": "subiendo (+3.0%/sem)",
+   "best_weekday": "Miercoles",
+   "history_days": 25,
+   "at_all_time_low": false,
+   "triggered": [],
+   "score": 0,
+   "recommendation": "REVISAR MANUALMENTE",
+   "history": [
+    [
+     "2026-07-21",
+     135.99
+    ],
+    [
+     "2026-07-22",
+     120.0
+    ],
+    [
+     "2026-07-23",
+     120.0
+    ],
+    [
+     "2026-07-24",
+     120.0
+    ],
+    [
+     "2026-07-25",
+     120.0
+    ],
+    [
+     "2026-07-26",
+     120.0
+    ],
+    [
+     "2026-07-28",
+     135.0
+    ],
+    [
+     "2026-07-29",
+     135.0
+    ],
+    [
+     "2026-07-30",
+     135.0
+    ],
+    [
+     "2026-07-31",
+     135.0
+    ],
+    [
+     "2026-08-01",
+     135.0
+    ],
+    [
+     "2026-08-02",
+     135.0
+    ],
+    [
+     "2026-08-04",
+     135.0
+    ],
+    [
+     "2026-08-06",
+     135.0
+    ],
+    [
+     "2026-08-07",
+     135.0
+    ],
+    [
+     "2026-08-08",
+     135.0
+    ],
+    [
+     "2026-08-09",
+     135.0
+    ],
+    [
+     "2026-08-10",
+     135.0
+    ],
+    [
+     "2026-08-11",
+     135.0
+    ],
+    [
+     "2026-08-13",
+     135.0
+    ],
+    [
+     "2026-08-14",
+     135.0
+    ],
+    [
+     "2026-08-17",
+     135.0
+    ],
+    [
+     "2026-08-18",
+     135.0
+    ],
+    [
+     "2026-08-19",
+     135.0
+    ],
+    [
+     "2026-08-20",
+     135.0
+    ]
+   ]
+  },
+  {
    "asin": "B0CCPFZXC9",
    "name": "Guess Men's 42mm Watch",
    "url": "https://www.amazon.com/dp/B0CCPFZXC9",
    "category": "",
    "image": "https://m.media-amazon.com/images/I/5160gcTAWRL._AC_SX320_.jpg",
    "variant": "Gunmetal/Gunmetal/Gunmetal",
-   "price": 154.41,
+   "price": 156.2,
    "prev_price": 154.41,
    "target_price": 100.0,
-   "min_7d": 148.82,
-   "min_7d_date": "2026-08-14",
+   "min_7d": 150.84,
+   "min_7d_date": "2026-08-17",
    "min_30d": 142.73,
    "min_30d_date": "2026-07-26",
    "min_all": 142.73,
    "min_all_date": "2026-07-26",
-   "max_all": 154.41,
-   "median_all": 145.38,
+   "max_all": 156.2,
+   "median_all": 146.01999999999998,
    "list_price": null,
    "amazon_discount": null,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 8.183283121978565,
-   "discount_vs_typical": -6.211308295501445,
-   "weekly_change": 3.756215562424408,
-   "volatility_pct": 2.514604435329525,
-   "trend": "subiendo (+2.7%/sem)",
+   "pct_vs_prev": 1.1592513438248768,
+   "pct_vs_min_all": 9.437399285363973,
+   "discount_vs_typical": -6.971647719490487,
+   "weekly_change": 4.959010885633649,
+   "volatility_pct": 2.771994728506894,
+   "trend": "subiendo (+2.9%/sem)",
    "best_weekday": "Sabado",
-   "history_days": 21,
+   "history_days": 22,
    "at_all_time_low": false,
    "triggered": [],
    "score": 0,
@@ -4996,6 +5131,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      154.41
+    ],
+    [
+     "2026-08-21",
+     156.2
     ]
    ]
   },
@@ -5006,27 +5145,27 @@ window.RADAR_DATA = {
    "category": "",
    "image": "https://m.media-amazon.com/images/I/71DF-aI36wL._AC_SX320_.jpg",
    "variant": "Blue/Silver Tone/Blue",
-   "price": 106.21,
-   "prev_price": 105.8,
+   "price": 106.46,
+   "prev_price": 106.21,
    "target_price": 90.0,
-   "min_7d": 102.23,
-   "min_7d_date": "2026-08-14",
+   "min_7d": 104.55,
+   "min_7d_date": "2026-08-17",
    "min_30d": 97.26,
    "min_30d_date": "2026-07-25",
    "min_all": 97.26,
    "min_all_date": "2026-07-25",
-   "max_all": 106.21,
-   "median_all": 99.375,
+   "max_all": 106.46,
+   "median_all": 99.47,
    "list_price": 113.66,
-   "amazon_discount": 7.0,
-   "pct_vs_prev": 0.3875236294895998,
-   "pct_vs_min_all": 9.202138597573501,
-   "discount_vs_typical": -6.877987421383641,
-   "weekly_change": 5.0336234177215085,
-   "volatility_pct": 2.9433777640230354,
-   "trend": "subiendo (+3.0%/sem)",
+   "amazon_discount": 6.0,
+   "pct_vs_prev": 0.2353827323227568,
+   "pct_vs_min_all": 9.459181575159354,
+   "discount_vs_typical": -7.0272443952950585,
+   "weekly_change": 4.137728651080886,
+   "volatility_pct": 3.1590383247589173,
+   "trend": "subiendo (+3.1%/sem)",
    "best_weekday": "Sabado",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": false,
    "triggered": [],
    "score": 0,
@@ -5119,6 +5258,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      106.21
+    ],
+    [
+     "2026-08-21",
+     106.46
     ]
    ]
   },
@@ -5200,7 +5343,7 @@ window.RADAR_DATA = {
    "prev_price": 114.0,
    "target_price": 100.0,
    "min_7d": 114.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 114.0,
    "min_30d_date": "2026-08-13",
    "min_all": 114.0,
@@ -5292,26 +5435,26 @@ window.RADAR_DATA = {
    "image": "https://m.media-amazon.com/images/I/713WN7mSObL._AC_SX320_.jpg",
    "variant": "Silver/Blue",
    "price": 295.0,
-   "prev_price": 236.0,
+   "prev_price": 295.0,
    "target_price": 120.0,
    "min_7d": 236.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 236.0,
    "min_30d_date": "2026-08-14",
    "min_all": 236.0,
    "min_all_date": "2026-08-14",
    "max_all": 295.0,
    "median_all": 295.0,
-   "list_price": 295.0,
-   "amazon_discount": 20.0,
-   "pct_vs_prev": 25.0,
+   "list_price": null,
+   "amazon_discount": null,
+   "pct_vs_prev": 0.0,
    "pct_vs_min_all": 25.0,
    "discount_vs_typical": 0.0,
-   "weekly_change": 0.0,
-   "volatility_pct": 8.004982428526954,
-   "trend": "bajando (-5.3%/sem)",
+   "weekly_change": 25.0,
+   "volatility_pct": 7.8538719703435556,
+   "trend": "bajando (-4.3%/sem)",
    "best_weekday": "Lunes",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": false,
    "triggered": [],
    "score": 0,
@@ -5403,130 +5546,134 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-20",
+     295.0
+    ],
+    [
+     "2026-08-21",
      295.0
     ]
    ]
   },
   {
-   "asin": "B0183NWFB2",
-   "name": "Fossil Men's Watch, Townsman Automatic Stainless Steel Watch for Men",
-   "url": "https://www.amazon.com/dp/B0183NWFB2",
+   "asin": "B00213KT1Y",
+   "name": "CITIZEN Men's Wrist WatchALTERNA Eco-Drive VO10-6741F",
+   "url": "https://www.amazon.com/dp/B00213KT1Y",
    "category": "",
-   "image": "https://m.media-amazon.com/images/I/711Fz-mfHfL._AC_SX320_.jpg",
-   "variant": "Brown Leather/Silver/Blue Dial / 44MM",
-   "price": 164.95,
-   "prev_price": 143.07,
+   "image": "https://m.media-amazon.com/images/I/71Ce+wPwfwL._AC_SX320_.jpg",
+   "variant": "",
+   "price": null,
+   "prev_price": 150.19,
    "target_price": 100.0,
-   "min_7d": 138.6,
-   "min_7d_date": "2026-08-14",
-   "min_30d": 138.6,
-   "min_30d_date": "2026-08-01",
-   "min_all": 138.6,
-   "min_all_date": "2026-08-01",
-   "max_all": 164.95,
-   "median_all": 138.6,
+   "min_7d": 149.92,
+   "min_7d_date": "2026-08-17",
+   "min_30d": 141.45,
+   "min_30d_date": "2026-07-30",
+   "min_all": 141.45,
+   "min_all_date": "2026-07-30",
+   "max_all": 150.63,
+   "median_all": 147.775,
    "list_price": null,
    "amazon_discount": null,
-   "pct_vs_prev": 15.293213112462428,
-   "pct_vs_min_all": 19.011544011544007,
-   "discount_vs_typical": -19.011544011544007,
-   "weekly_change": 19.011544011544007,
-   "volatility_pct": 8.4181643164392,
-   "trend": "bajando (-3.0%/sem)",
-   "best_weekday": "Sabado",
+   "pct_vs_prev": null,
+   "pct_vs_min_all": null,
+   "discount_vs_typical": null,
+   "weekly_change": -0.21261045777688736,
+   "volatility_pct": 2.1843023148113065,
+   "trend": "subiendo (+2.1%/sem)",
+   "best_weekday": "Domingo",
    "history_days": 22,
    "at_all_time_low": false,
    "triggered": [],
    "score": 0,
-   "recommendation": "ESPERAR",
+   "recommendation": "REVISAR MANUALMENTE",
    "history": [
     [
      "2026-07-25",
-     164.95
+     142.41
     ],
     [
      "2026-07-26",
-     164.95
+     142.41
     ],
     [
      "2026-07-28",
-     164.95
+     142.76
     ],
     [
      "2026-07-29",
-     164.95
+     143.09
     ],
     [
      "2026-07-30",
-     164.95
+     141.45
     ],
     [
      "2026-07-31",
-     164.95
+     141.47
     ],
     [
      "2026-08-01",
-     138.6
+     148.27
     ],
     [
      "2026-08-02",
-     138.6
+     147.91
     ],
     [
      "2026-08-04",
-     138.6
+     147.83
     ],
     [
      "2026-08-06",
-     138.6
+     147.72
     ],
     [
      "2026-08-07",
-     138.6
+     147.72
     ],
     [
      "2026-08-08",
-     138.6
+     147.72
     ],
     [
      "2026-08-09",
-     138.6
+     147.72
     ],
     [
      "2026-08-10",
-     138.6
+     147.72
     ],
     [
      "2026-08-11",
-     138.6
+     150.5
     ],
     [
      "2026-08-12",
-     138.6
+     150.5
     ],
     [
      "2026-08-13",
-     138.6
+     150.63
     ],
     [
      "2026-08-14",
-     138.6
+     150.51
     ],
     [
      "2026-08-17",
-     162.55
+     149.92
     ],
     [
      "2026-08-18",
-     162.55
+     149.92
     ],
     [
      "2026-08-19",
-     143.07
+     149.92
     ],
     [
      "2026-08-20",
-     164.95
+     150.19
     ]
    ]
   },
@@ -5537,8 +5684,8 @@ window.RADAR_DATA = {
    "category": "",
    "image": "https://m.media-amazon.com/images/I/71wEDXrGfnL._AC_SX320_.jpg",
    "variant": "",
-   "price": 322.26,
-   "prev_price": 285.94,
+   "price": 321.93,
+   "prev_price": 322.26,
    "target_price": 150.0,
    "min_7d": 285.94,
    "min_7d_date": "2026-08-17",
@@ -5550,14 +5697,14 @@ window.RADAR_DATA = {
    "median_all": 286.0,
    "list_price": null,
    "amazon_discount": null,
-   "pct_vs_prev": 12.701965447296635,
-   "pct_vs_min_all": 12.741393786733843,
-   "discount_vs_typical": -12.678321678321675,
-   "weekly_change": -0.8278196645637784,
-   "volatility_pct": 6.353643966641983,
+   "pct_vs_prev": -0.10240178737664747,
+   "pct_vs_min_all": 12.625944584382884,
+   "discount_vs_typical": -12.562937062937065,
+   "weekly_change": -0.9293737498076571,
+   "volatility_pct": 6.318703659491881,
    "trend": "subiendo (+3.3%/sem)",
    "best_weekday": "Martes",
-   "history_days": 22,
+   "history_days": 23,
    "at_all_time_low": false,
    "triggered": [],
    "score": 0,
@@ -5650,6 +5797,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      322.26
+    ],
+    [
+     "2026-08-21",
+     321.93
     ]
    ]
   },
@@ -5660,27 +5811,27 @@ window.RADAR_DATA = {
    "category": "",
    "image": "https://m.media-amazon.com/images/I/71ZigWUCF8L._AC_SX320_.jpg",
    "variant": "Brown Leather/Silver/Cream",
-   "price": 113.68,
+   "price": 141.21,
    "prev_price": 113.68,
    "target_price": 90.0,
-   "min_7d": 107.1,
-   "min_7d_date": "2026-08-14",
+   "min_7d": 113.68,
+   "min_7d_date": "2026-08-17",
    "min_30d": 96.41,
    "min_30d_date": "2026-08-02",
    "min_all": 96.41,
    "min_all_date": "2026-08-02",
-   "max_all": 136.22,
+   "max_all": 141.21,
    "median_all": 107.1,
    "list_price": 195.0,
-   "amazon_discount": 42.0,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 17.913079556062662,
-   "discount_vs_typical": -6.1437908496732145,
-   "weekly_change": 6.1437908496732145,
-   "volatility_pct": 10.767424127803285,
-   "trend": "bajando (-4.1%/sem)",
+   "amazon_discount": 28.0,
+   "pct_vs_prev": 24.217100633356793,
+   "pct_vs_min_all": 46.468208692044406,
+   "discount_vs_typical": -31.848739495798334,
+   "weekly_change": 31.848739495798334,
+   "volatility_pct": 11.544418068728465,
+   "trend": "estable",
    "best_weekday": "Sabado",
-   "history_days": 21,
+   "history_days": 22,
    "at_all_time_low": false,
    "triggered": [],
    "score": 0,
@@ -5769,6 +5920,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      113.68
+    ],
+    [
+     "2026-08-21",
+     141.21
     ]
    ]
   },
@@ -5780,10 +5935,10 @@ window.RADAR_DATA = {
    "image": "https://m.media-amazon.com/images/I/71ZBNhI+VgL._AC_SX320_.jpg",
    "variant": "Gunmetal",
    "price": 315.0,
-   "prev_price": 252.0,
+   "prev_price": 315.0,
    "target_price": 150.0,
    "min_7d": 252.0,
-   "min_7d_date": "2026-08-14",
+   "min_7d_date": "2026-08-17",
    "min_30d": 185.85,
    "min_30d_date": "2026-08-09",
    "min_all": 185.85,
@@ -5792,14 +5947,14 @@ window.RADAR_DATA = {
    "median_all": 315.0,
    "list_price": null,
    "amazon_discount": null,
-   "pct_vs_prev": 25.0,
+   "pct_vs_prev": 0.0,
    "pct_vs_min_all": 69.49152542372882,
    "discount_vs_typical": 0.0,
-   "weekly_change": 0.0,
-   "volatility_pct": 14.670254981327012,
-   "trend": "bajando (-5.6%/sem)",
+   "weekly_change": 25.0,
+   "volatility_pct": 14.348806523413588,
+   "trend": "bajando (-4.0%/sem)",
    "best_weekday": "-",
-   "history_days": 19,
+   "history_days": 20,
    "at_all_time_low": false,
    "triggered": [],
    "score": 0,
@@ -5880,6 +6035,10 @@ window.RADAR_DATA = {
     [
      "2026-08-20",
      315.0
+    ],
+    [
+     "2026-08-21",
+     315.0
     ]
    ]
   },
@@ -5900,17 +6059,17 @@ window.RADAR_DATA = {
    "min_all": 332.5,
    "min_all_date": "2026-07-31",
    "max_all": 380.0,
-   "median_all": 363.75,
+   "median_all": 371.25,
    "list_price": 495.0,
    "amazon_discount": 23.0,
    "pct_vs_prev": 0.0,
    "pct_vs_min_all": 14.285714285714285,
-   "discount_vs_typical": -4.4673539518900345,
-   "weekly_change": 6.666666666666667,
-   "volatility_pct": 4.921162979516625,
-   "trend": "subiendo (+5.1%/sem)",
+   "discount_vs_typical": -2.356902356902357,
+   "weekly_change": 2.356902356902357,
+   "volatility_pct": 4.884493853077421,
+   "trend": "subiendo (+4.9%/sem)",
    "best_weekday": "-",
-   "history_days": 16,
+   "history_days": 17,
    "at_all_time_low": false,
    "triggered": [],
    "score": 0,
@@ -5978,6 +6137,10 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-20",
+     380.0
+    ],
+    [
+     "2026-08-21",
      380.0
     ]
    ]
