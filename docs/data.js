@@ -1,7 +1,7 @@
 /* Generado automaticamente por: python -m src.main site — no editar a mano */
 window.RADAR_DATA = {
  "demo": false,
- "generated_at": "31/08/2026 00:19",
+ "generated_at": "31/08/2026 08:01",
  "currency_symbol": "$",
  "days_tracked": 37,
  "form_url": "https://docs.google.com/forms/d/e/1FAIpQLScsAHXrfNiu9z2OcQXF5wt-Rlc_yNwIxbiXjlQUrDPyGvlyAQ/viewform",
@@ -176,7 +176,7 @@ window.RADAR_DATA = {
    "category": "",
    "image": "https://m.media-amazon.com/images/I/71zU+ScoDdL._AC_SX320_.jpg",
    "variant": "Black/Black Silicone",
-   "price": 86.78,
+   "price": 86.79,
    "prev_price": 86.78,
    "target_price": 90.0,
    "min_7d": 86.78,
@@ -189,11 +189,11 @@ window.RADAR_DATA = {
    "median_all": 87.45,
    "list_price": 150.0,
    "amazon_discount": 42.0,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 0.0,
-   "discount_vs_typical": 0.7661520869068058,
-   "weekly_change": -0.011522064754009811,
-   "volatility_pct": 5.746214874038331,
+   "pct_vs_prev": 0.011523392486753993,
+   "pct_vs_min_all": 0.011523392486753993,
+   "discount_vs_typical": 0.7547169811320715,
+   "weekly_change": 0.0,
+   "volatility_pct": 5.745997835984975,
    "trend": "bajando (-3.5%/sem)",
    "best_weekday": "Lunes",
    "history_days": 30,
@@ -325,7 +325,7 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-31",
-     86.78
+     86.79
     ]
    ]
   },
@@ -4337,11 +4337,11 @@ window.RADAR_DATA = {
    "category": "",
    "image": "https://m.media-amazon.com/images/I/71wEDXrGfnL._AC_SX320_.jpg",
    "variant": "",
-   "price": 312.33,
+   "price": 312.29,
    "prev_price": 312.33,
    "target_price": 150.0,
-   "min_7d": 312.33,
-   "min_7d_date": "2026-08-29",
+   "min_7d": 312.29,
+   "min_7d_date": "2026-08-31",
    "min_30d": 285.84,
    "min_30d_date": "2026-08-02",
    "min_all": 285.84,
@@ -4350,11 +4350,11 @@ window.RADAR_DATA = {
    "median_all": 312.335,
    "list_price": 330.0,
    "amazon_discount": 5.0,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 9.267422334172966,
-   "discount_vs_typical": 0.0016008452462885853,
-   "weekly_change": -2.9639295367695095,
-   "volatility_pct": 5.7278480467692665,
+   "pct_vs_prev": -0.012806966990030935,
+   "pct_vs_min_all": 9.253428491463772,
+   "discount_vs_typical": 0.014407607216597267,
+   "weekly_change": -2.9763569142821584,
+   "volatility_pct": 5.727739462101401,
    "trend": "estable",
    "best_weekday": "Martes",
    "history_days": 30,
@@ -4483,7 +4483,7 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-31",
-     312.33
+     312.29
     ]
    ]
   },
@@ -5374,7 +5374,7 @@ window.RADAR_DATA = {
    "category": "fossil",
    "image": "https://m.media-amazon.com/images/I/71UIocsjBUL._AC_SX320_.jpg",
    "variant": "Black/Silver",
-   "price": 135.12,
+   "price": 130.33,
    "prev_price": 128.12,
    "target_price": 80.0,
    "min_7d": 99.0,
@@ -5386,13 +5386,13 @@ window.RADAR_DATA = {
    "max_all": 174.2,
    "median_all": 117.0,
    "list_price": 180.0,
-   "amazon_discount": 25.0,
-   "pct_vs_prev": 5.463627848891664,
-   "pct_vs_min_all": 50.13333333333334,
-   "discount_vs_typical": -15.487179487179493,
-   "weekly_change": 36.48484848484849,
-   "volatility_pct": 22.739266201385238,
-   "trend": "bajando (-5.1%/sem)",
+   "amazon_discount": 28.0,
+   "pct_vs_prev": 1.724945363721517,
+   "pct_vs_min_all": 44.811111111111124,
+   "discount_vs_typical": -11.393162393162404,
+   "weekly_change": 31.64646464646466,
+   "volatility_pct": 22.716141358787368,
+   "trend": "bajando (-5.5%/sem)",
    "best_weekday": "Viernes",
    "history_days": 32,
    "at_all_time_low": false,
@@ -5526,7 +5526,7 @@ window.RADAR_DATA = {
     ],
     [
      "2026-08-31",
-     135.12
+     130.33
     ]
    ]
   },
