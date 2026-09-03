@@ -1,7 +1,7 @@
 /* Generado automaticamente por: python -m src.main site — no editar a mano */
 window.RADAR_DATA = {
  "demo": false,
- "generated_at": "03/09/2026 09:07",
+ "generated_at": "03/09/2026 09:21",
  "currency_symbol": "$",
  "days_tracked": 40,
  "form_url": "https://docs.google.com/forms/d/e/1FAIpQLScsAHXrfNiu9z2OcQXF5wt-Rlc_yNwIxbiXjlQUrDPyGvlyAQ/viewform",
@@ -2642,6 +2642,117 @@ window.RADAR_DATA = {
     [
      "2026-09-03",
      104.0
+    ]
+   ]
+  },
+  {
+   "asin": "B08KTTQFBV",
+   "name": "Fossil Women's Watch, Scarlette Quartz Stainless Steel Three-Hand Watch for Women",
+   "url": "https://www.amazon.com/dp/B08KTTQFBV",
+   "category": "",
+   "image": "https://m.media-amazon.com/images/I/71GGKKgmRlL._AC_SX320_.jpg",
+   "variant": "32MM / Gold/Silver/Gold",
+   "price": 114.85,
+   "prev_price": 114.29,
+   "target_price": 90.0,
+   "min_7d": 114.29,
+   "min_7d_date": "2026-09-02",
+   "min_30d": 114.29,
+   "min_30d_date": "2026-08-24",
+   "min_all": 114.29,
+   "min_all_date": "2026-08-24",
+   "max_all": 129.98,
+   "median_all": 118.625,
+   "list_price": null,
+   "amazon_discount": null,
+   "pct_vs_prev": 0.4899816256890262,
+   "pct_vs_min_all": 0.4899816256890262,
+   "discount_vs_typical": 3.1822971548998997,
+   "weekly_change": -5.004135649296948,
+   "volatility_pct": 4.699333263914986,
+   "trend": "bajando (-5.0%/sem)",
+   "best_weekday": "-",
+   "history_days": 18,
+   "at_all_time_low": true,
+   "triggered": [
+    "min_7d",
+    "min_30d",
+    "min_all_time"
+   ],
+   "score": 97,
+   "recommendation": "COMPRAR AHORA",
+   "history": [
+    [
+     "2026-08-17",
+     129.98
+    ],
+    [
+     "2026-08-18",
+     129.98
+    ],
+    [
+     "2026-08-19",
+     127.75
+    ],
+    [
+     "2026-08-20",
+     129.98
+    ],
+    [
+     "2026-08-21",
+     120.22
+    ],
+    [
+     "2026-08-22",
+     120.9
+    ],
+    [
+     "2026-08-23",
+     120.9
+    ],
+    [
+     "2026-08-24",
+     114.29
+    ],
+    [
+     "2026-08-25",
+     114.29
+    ],
+    [
+     "2026-08-26",
+     114.29
+    ],
+    [
+     "2026-08-27",
+     120.9
+    ],
+    [
+     "2026-08-28",
+     120.9
+    ],
+    [
+     "2026-08-29",
+     114.85
+    ],
+    [
+     "2026-08-30",
+     117.02
+    ],
+    [
+     "2026-08-31",
+     117.03
+    ],
+    [
+     "2026-09-01",
+     117.03
+    ],
+    [
+     "2026-09-02",
+     114.29
+    ],
+    [
+     "2026-09-03",
+     114.85
     ]
    ]
   },
@@ -6667,113 +6778,6 @@ window.RADAR_DATA = {
     [
      "2026-09-03",
      199.0
-    ]
-   ]
-  },
-  {
-   "asin": "B08KTTQFBV",
-   "name": "Fossil Women's Watch, Scarlette Quartz Stainless Steel Three-Hand Watch for Women",
-   "url": "https://www.amazon.com/dp/B08KTTQFBV",
-   "category": "",
-   "image": "https://m.media-amazon.com/images/I/71GGKKgmRlL._AC_SX320_.jpg",
-   "variant": "32MM / Gold/Silver/Gold",
-   "price": 120.89,
-   "prev_price": 114.29,
-   "target_price": 90.0,
-   "min_7d": 114.29,
-   "min_7d_date": "2026-09-02",
-   "min_30d": 114.29,
-   "min_30d_date": "2026-08-24",
-   "min_all": 114.29,
-   "min_all_date": "2026-08-24",
-   "max_all": 129.98,
-   "median_all": 120.555,
-   "list_price": null,
-   "amazon_discount": null,
-   "pct_vs_prev": 5.774783445620784,
-   "pct_vs_min_all": 5.774783445620784,
-   "discount_vs_typical": -0.2778814648915381,
-   "weekly_change": -0.00827129859388347,
-   "volatility_pct": 4.572682586376598,
-   "trend": "bajando (-4.3%/sem)",
-   "best_weekday": "-",
-   "history_days": 18,
-   "at_all_time_low": false,
-   "triggered": [],
-   "score": 8,
-   "recommendation": "ESPERAR",
-   "history": [
-    [
-     "2026-08-17",
-     129.98
-    ],
-    [
-     "2026-08-18",
-     129.98
-    ],
-    [
-     "2026-08-19",
-     127.75
-    ],
-    [
-     "2026-08-20",
-     129.98
-    ],
-    [
-     "2026-08-21",
-     120.22
-    ],
-    [
-     "2026-08-22",
-     120.9
-    ],
-    [
-     "2026-08-23",
-     120.9
-    ],
-    [
-     "2026-08-24",
-     114.29
-    ],
-    [
-     "2026-08-25",
-     114.29
-    ],
-    [
-     "2026-08-26",
-     114.29
-    ],
-    [
-     "2026-08-27",
-     120.9
-    ],
-    [
-     "2026-08-28",
-     120.9
-    ],
-    [
-     "2026-08-29",
-     114.85
-    ],
-    [
-     "2026-08-30",
-     117.02
-    ],
-    [
-     "2026-08-31",
-     117.03
-    ],
-    [
-     "2026-09-01",
-     117.03
-    ],
-    [
-     "2026-09-02",
-     114.29
-    ],
-    [
-     "2026-09-03",
-     120.89
     ]
    ]
   },
