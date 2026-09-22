@@ -1,7 +1,7 @@
 /* Generado automaticamente por: python -m src.main site — no editar a mano */
 window.RADAR_DATA = {
  "demo": false,
- "generated_at": "22/09/2026 08:13",
+ "generated_at": "22/09/2026 08:15",
  "currency_symbol": "$",
  "days_tracked": 59,
  "form_url": "https://docs.google.com/forms/d/e/1FAIpQLScsAHXrfNiu9z2OcQXF5wt-Rlc_yNwIxbiXjlQUrDPyGvlyAQ/viewform",
@@ -3762,276 +3762,6 @@ window.RADAR_DATA = {
     [
      "2026-09-22",
      97.97
-    ]
-   ]
-  },
-  {
-   "asin": "B017SN1OI8",
-   "name": "Fossil Men's Watch, Grant Quartz Stainless Steel Chronograph Watch for Men",
-   "url": "https://www.amazon.com/dp/B017SN1OI8",
-   "category": "fossil",
-   "image": "https://m.media-amazon.com/images/I/818lBoWqXtL._AC_SX320_.jpg",
-   "variant": "Silver/Blue",
-   "price": 99.45,
-   "prev_price": 99.45,
-   "target_price": 80.0,
-   "min_7d": 99.45,
-   "min_7d_date": "2026-09-17",
-   "min_30d": 99.0,
-   "min_30d_date": "2026-08-24",
-   "min_all": 90.0,
-   "min_all_date": "2026-07-21",
-   "max_all": 144.0,
-   "median_all": 99.45,
-   "list_price": null,
-   "amazon_discount": null,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 10.500000000000004,
-   "discount_vs_typical": 0.0,
-   "weekly_change": -2.871374157632579,
-   "volatility_pct": 15.006243765447463,
-   "trend": "bajando (-7.7%/sem)",
-   "best_weekday": "Viernes",
-   "history_days": 58,
-   "at_all_time_low": false,
-   "triggered": [
-    "min_7d",
-    "min_30d"
-   ],
-   "score": 37,
-   "recommendation": "MONITOREAR",
-   "history": [
-    [
-     "2026-07-21",
-     90.0
-    ],
-    [
-     "2026-07-22",
-     90.0
-    ],
-    [
-     "2026-07-23",
-     90.0
-    ],
-    [
-     "2026-07-24",
-     90.0
-    ],
-    [
-     "2026-07-25",
-     90.0
-    ],
-    [
-     "2026-07-26",
-     90.0
-    ],
-    [
-     "2026-07-28",
-     139.85
-    ],
-    [
-     "2026-07-29",
-     108.0
-    ],
-    [
-     "2026-07-30",
-     108.0
-    ],
-    [
-     "2026-07-31",
-     108.0
-    ],
-    [
-     "2026-08-01",
-     108.0
-    ],
-    [
-     "2026-08-02",
-     108.0
-    ],
-    [
-     "2026-08-04",
-     125.22
-    ],
-    [
-     "2026-08-06",
-     125.22
-    ],
-    [
-     "2026-08-07",
-     125.22
-    ],
-    [
-     "2026-08-08",
-     125.22
-    ],
-    [
-     "2026-08-09",
-     125.22
-    ],
-    [
-     "2026-08-10",
-     125.22
-    ],
-    [
-     "2026-08-11",
-     125.22
-    ],
-    [
-     "2026-08-12",
-     125.22
-    ],
-    [
-     "2026-08-13",
-     144.0
-    ],
-    [
-     "2026-08-14",
-     99.0
-    ],
-    [
-     "2026-08-17",
-     99.0
-    ],
-    [
-     "2026-08-18",
-     99.0
-    ],
-    [
-     "2026-08-19",
-     99.0
-    ],
-    [
-     "2026-08-20",
-     99.0
-    ],
-    [
-     "2026-08-21",
-     99.0
-    ],
-    [
-     "2026-08-22",
-     99.0
-    ],
-    [
-     "2026-08-23",
-     99.0
-    ],
-    [
-     "2026-08-24",
-     99.0
-    ],
-    [
-     "2026-08-25",
-     99.0
-    ],
-    [
-     "2026-08-26",
-     139.34
-    ],
-    [
-     "2026-08-27",
-     139.34
-    ],
-    [
-     "2026-08-28",
-     139.34
-    ],
-    [
-     "2026-08-29",
-     139.34
-    ],
-    [
-     "2026-08-30",
-     139.34
-    ],
-    [
-     "2026-08-31",
-     139.34
-    ],
-    [
-     "2026-09-01",
-     139.34
-    ],
-    [
-     "2026-09-02",
-     99.0
-    ],
-    [
-     "2026-09-04",
-     99.0
-    ],
-    [
-     "2026-09-05",
-     99.0
-    ],
-    [
-     "2026-09-06",
-     99.0
-    ],
-    [
-     "2026-09-07",
-     99.0
-    ],
-    [
-     "2026-09-08",
-     102.39
-    ],
-    [
-     "2026-09-09",
-     102.39
-    ],
-    [
-     "2026-09-10",
-     102.4
-    ],
-    [
-     "2026-09-11",
-     99.0
-    ],
-    [
-     "2026-09-12",
-     99.0
-    ],
-    [
-     "2026-09-13",
-     99.0
-    ],
-    [
-     "2026-09-14",
-     99.0
-    ],
-    [
-     "2026-09-15",
-     102.39
-    ],
-    [
-     "2026-09-16",
-     102.4
-    ],
-    [
-     "2026-09-17",
-     99.45
-    ],
-    [
-     "2026-09-18",
-     99.45
-    ],
-    [
-     "2026-09-19",
-     99.45
-    ],
-    [
-     "2026-09-20",
-     99.45
-    ],
-    [
-     "2026-09-21",
-     99.45
-    ],
-    [
-     "2026-09-22",
-     99.45
     ]
    ]
   },
@@ -9355,6 +9085,351 @@ window.RADAR_DATA = {
     [
      "2026-09-22",
      173.95
+    ]
+   ]
+  },
+  {
+   "asin": "B003R7JYBY",
+   "name": "Fossil Men's Watch, Machine Stainless Steel Chronograph Watch for Men",
+   "url": "https://www.amazon.com/dp/B003R7JYBY",
+   "category": "",
+   "image": "https://m.media-amazon.com/images/I/71u-vxNaDlL._AC_SX320_.jpg",
+   "variant": "45MM / Black Bracelet",
+   "price": 109.99,
+   "prev_price": null,
+   "target_price": 60.0,
+   "min_7d": 109.99,
+   "min_7d_date": "2026-09-22",
+   "min_30d": 109.99,
+   "min_30d_date": "2026-09-22",
+   "min_all": 109.99,
+   "min_all_date": "2026-09-22",
+   "max_all": 109.99,
+   "median_all": 109.99,
+   "list_price": null,
+   "amazon_discount": null,
+   "pct_vs_prev": null,
+   "pct_vs_min_all": 0.0,
+   "discount_vs_typical": 0.0,
+   "weekly_change": null,
+   "volatility_pct": 0.0,
+   "trend": "sin datos suficientes",
+   "best_weekday": "-",
+   "history_days": 1,
+   "at_all_time_low": false,
+   "triggered": [],
+   "score": 9,
+   "recommendation": "ESPERAR",
+   "history": [
+    [
+     "2026-09-22",
+     109.99
+    ]
+   ]
+  },
+  {
+   "asin": "B079MGVL1T",
+   "name": "Citizen Quartz Mens Watch, Stainless Steel, Classic",
+   "url": "https://www.amazon.com/dp/B079MGVL1T",
+   "category": "",
+   "image": "https://m.media-amazon.com/images/I/71EkmrFl5jL._AC_SX320_.jpg",
+   "variant": "Black Bracelet & Black Dial",
+   "price": 173.95,
+   "prev_price": null,
+   "target_price": 120.0,
+   "min_7d": 173.95,
+   "min_7d_date": "2026-09-22",
+   "min_30d": 173.95,
+   "min_30d_date": "2026-09-22",
+   "min_all": 173.95,
+   "min_all_date": "2026-09-22",
+   "max_all": 173.95,
+   "median_all": 173.95,
+   "list_price": 240.0,
+   "amazon_discount": 28.0,
+   "pct_vs_prev": null,
+   "pct_vs_min_all": 0.0,
+   "discount_vs_typical": 0.0,
+   "weekly_change": null,
+   "volatility_pct": 0.0,
+   "trend": "sin datos suficientes",
+   "best_weekday": "-",
+   "history_days": 1,
+   "at_all_time_low": false,
+   "triggered": [],
+   "score": 9,
+   "recommendation": "ESPERAR",
+   "history": [
+    [
+     "2026-09-22",
+     173.95
+    ]
+   ]
+  },
+  {
+   "asin": "B017SN1OI8",
+   "name": "Fossil Men's Watch, Grant Quartz Stainless Steel Chronograph Watch for Men",
+   "url": "https://www.amazon.com/dp/B017SN1OI8",
+   "category": "fossil",
+   "image": "https://m.media-amazon.com/images/I/818lBoWqXtL._AC_SX320_.jpg",
+   "variant": "Silver/Blue",
+   "price": null,
+   "prev_price": 99.45,
+   "target_price": 80.0,
+   "min_7d": 99.45,
+   "min_7d_date": "2026-09-17",
+   "min_30d": 99.0,
+   "min_30d_date": "2026-08-24",
+   "min_all": 90.0,
+   "min_all_date": "2026-07-21",
+   "max_all": 144.0,
+   "median_all": 99.45,
+   "list_price": null,
+   "amazon_discount": null,
+   "pct_vs_prev": null,
+   "pct_vs_min_all": null,
+   "discount_vs_typical": null,
+   "weekly_change": -2.871374157632579,
+   "volatility_pct": 15.006243765447463,
+   "trend": "bajando (-7.7%/sem)",
+   "best_weekday": "Viernes",
+   "history_days": 58,
+   "at_all_time_low": false,
+   "triggered": [],
+   "score": 0,
+   "recommendation": "REVISAR MANUALMENTE",
+   "history": [
+    [
+     "2026-07-21",
+     90.0
+    ],
+    [
+     "2026-07-22",
+     90.0
+    ],
+    [
+     "2026-07-23",
+     90.0
+    ],
+    [
+     "2026-07-24",
+     90.0
+    ],
+    [
+     "2026-07-25",
+     90.0
+    ],
+    [
+     "2026-07-26",
+     90.0
+    ],
+    [
+     "2026-07-28",
+     139.85
+    ],
+    [
+     "2026-07-29",
+     108.0
+    ],
+    [
+     "2026-07-30",
+     108.0
+    ],
+    [
+     "2026-07-31",
+     108.0
+    ],
+    [
+     "2026-08-01",
+     108.0
+    ],
+    [
+     "2026-08-02",
+     108.0
+    ],
+    [
+     "2026-08-04",
+     125.22
+    ],
+    [
+     "2026-08-06",
+     125.22
+    ],
+    [
+     "2026-08-07",
+     125.22
+    ],
+    [
+     "2026-08-08",
+     125.22
+    ],
+    [
+     "2026-08-09",
+     125.22
+    ],
+    [
+     "2026-08-10",
+     125.22
+    ],
+    [
+     "2026-08-11",
+     125.22
+    ],
+    [
+     "2026-08-12",
+     125.22
+    ],
+    [
+     "2026-08-13",
+     144.0
+    ],
+    [
+     "2026-08-14",
+     99.0
+    ],
+    [
+     "2026-08-17",
+     99.0
+    ],
+    [
+     "2026-08-18",
+     99.0
+    ],
+    [
+     "2026-08-19",
+     99.0
+    ],
+    [
+     "2026-08-20",
+     99.0
+    ],
+    [
+     "2026-08-21",
+     99.0
+    ],
+    [
+     "2026-08-22",
+     99.0
+    ],
+    [
+     "2026-08-23",
+     99.0
+    ],
+    [
+     "2026-08-24",
+     99.0
+    ],
+    [
+     "2026-08-25",
+     99.0
+    ],
+    [
+     "2026-08-26",
+     139.34
+    ],
+    [
+     "2026-08-27",
+     139.34
+    ],
+    [
+     "2026-08-28",
+     139.34
+    ],
+    [
+     "2026-08-29",
+     139.34
+    ],
+    [
+     "2026-08-30",
+     139.34
+    ],
+    [
+     "2026-08-31",
+     139.34
+    ],
+    [
+     "2026-09-01",
+     139.34
+    ],
+    [
+     "2026-09-02",
+     99.0
+    ],
+    [
+     "2026-09-04",
+     99.0
+    ],
+    [
+     "2026-09-05",
+     99.0
+    ],
+    [
+     "2026-09-06",
+     99.0
+    ],
+    [
+     "2026-09-07",
+     99.0
+    ],
+    [
+     "2026-09-08",
+     102.39
+    ],
+    [
+     "2026-09-09",
+     102.39
+    ],
+    [
+     "2026-09-10",
+     102.4
+    ],
+    [
+     "2026-09-11",
+     99.0
+    ],
+    [
+     "2026-09-12",
+     99.0
+    ],
+    [
+     "2026-09-13",
+     99.0
+    ],
+    [
+     "2026-09-14",
+     99.0
+    ],
+    [
+     "2026-09-15",
+     102.39
+    ],
+    [
+     "2026-09-16",
+     102.4
+    ],
+    [
+     "2026-09-17",
+     99.45
+    ],
+    [
+     "2026-09-18",
+     99.45
+    ],
+    [
+     "2026-09-19",
+     99.45
+    ],
+    [
+     "2026-09-20",
+     99.45
+    ],
+    [
+     "2026-09-21",
+     99.45
+    ],
+    [
+     "2026-09-22",
+     99.45
     ]
    ]
   },
