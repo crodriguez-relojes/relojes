@@ -1,7 +1,7 @@
 /* Generado automaticamente por: python -m src.main site — no editar a mano */
 window.RADAR_DATA = {
  "demo": false,
- "generated_at": "24/09/2026 08:19",
+ "generated_at": "24/09/2026 08:21",
  "currency_symbol": "$",
  "days_tracked": 61,
  "form_url": "https://docs.google.com/forms/d/e/1FAIpQLScsAHXrfNiu9z2OcQXF5wt-Rlc_yNwIxbiXjlQUrDPyGvlyAQ/viewform",
@@ -9975,6 +9975,45 @@ window.RADAR_DATA = {
     [
      "2026-09-24",
      371.25
+    ]
+   ]
+  },
+  {
+   "asin": "B07ZXL3CYG",
+   "name": "Bannon Multifunction Stainless Steel Watch",
+   "url": "https://www.amazon.com/dp/B07ZXL3CYG",
+   "category": "",
+   "image": "https://m.media-amazon.com/images/I/51twF+AWe+L._AC_SX320_.jpg",
+   "variant": "",
+   "price": 99.0,
+   "prev_price": null,
+   "target_price": 80.0,
+   "min_7d": 99.0,
+   "min_7d_date": "2026-09-24",
+   "min_30d": 99.0,
+   "min_30d_date": "2026-09-24",
+   "min_all": 99.0,
+   "min_all_date": "2026-09-24",
+   "max_all": 99.0,
+   "median_all": 99.0,
+   "list_price": null,
+   "amazon_discount": null,
+   "pct_vs_prev": null,
+   "pct_vs_min_all": 0.0,
+   "discount_vs_typical": 0.0,
+   "weekly_change": null,
+   "volatility_pct": 0.0,
+   "trend": "sin datos suficientes",
+   "best_weekday": "-",
+   "history_days": 1,
+   "at_all_time_low": false,
+   "triggered": [],
+   "score": 9,
+   "recommendation": "ESPERAR",
+   "history": [
+    [
+     "2026-09-24",
+     99.0
     ]
    ]
   },
