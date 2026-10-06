@@ -1,7 +1,7 @@
 /* Generado automaticamente por: python -m src.main site — no editar a mano */
 window.RADAR_DATA = {
  "demo": false,
- "generated_at": "06/10/2026 08:13",
+ "generated_at": "06/10/2026 08:21",
  "currency_symbol": "$",
  "days_tracked": 71,
  "form_url": "https://docs.google.com/forms/d/e/1FAIpQLScsAHXrfNiu9z2OcQXF5wt-Rlc_yNwIxbiXjlQUrDPyGvlyAQ/viewform",
@@ -10539,7 +10539,7 @@ window.RADAR_DATA = {
    "category": "",
    "image": "https://m.media-amazon.com/images/I/81cfp4YcCtL._AC_SX320_.jpg",
    "variant": "Blue Leather/Black",
-   "price": 99.0,
+   "price": 99.34,
    "prev_price": 94.0,
    "target_price": 95.0,
    "min_7d": 94.0,
@@ -10552,11 +10552,11 @@ window.RADAR_DATA = {
    "median_all": 107.5,
    "list_price": 180.0,
    "amazon_discount": 45.0,
-   "pct_vs_prev": 5.319148936170213,
-   "pct_vs_min_all": 5.319148936170213,
-   "discount_vs_typical": 7.906976744186046,
-   "weekly_change": 0.010102030508137304,
-   "volatility_pct": 8.226906833993947,
+   "pct_vs_prev": 5.680851063829791,
+   "pct_vs_min_all": 5.680851063829791,
+   "discount_vs_typical": 7.590697674418602,
+   "weekly_change": 0.3535710677846333,
+   "volatility_pct": 8.221661433111143,
    "trend": "bajando (-1.9%/sem)",
    "best_weekday": "Lunes",
    "history_days": 62,
@@ -10811,7 +10811,7 @@ window.RADAR_DATA = {
     ],
     [
      "2026-10-06",
-     99.0
+     99.34
     ]
    ]
   },
