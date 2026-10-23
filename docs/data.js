@@ -1,7 +1,7 @@
 /* Generado automaticamente por: python -m src.main site — no editar a mano */
 window.RADAR_DATA = {
  "demo": false,
- "generated_at": "23/10/2026 09:05",
+ "generated_at": "23/10/2026 09:21",
  "currency_symbol": "$",
  "days_tracked": 83,
  "form_url": "https://docs.google.com/forms/d/e/1FAIpQLScsAHXrfNiu9z2OcQXF5wt-Rlc_yNwIxbiXjlQUrDPyGvlyAQ/viewform",
