@@ -1,7 +1,7 @@
 /* Generado automaticamente por: python -m src.main site — no editar a mano */
 window.RADAR_DATA = {
  "demo": false,
- "generated_at": "27/11/2026 18:51",
+ "generated_at": "27/11/2026 18:54",
  "currency_symbol": "$",
  "days_tracked": 102,
  "form_url": "https://docs.google.com/forms/d/e/1FAIpQLScsAHXrfNiu9z2OcQXF5wt-Rlc_yNwIxbiXjlQUrDPyGvlyAQ/viewform",
@@ -8762,84 +8762,6 @@ window.RADAR_DATA = {
    ]
   },
   {
-   "asin": "B0DSLHKP4L",
-   "name": "Casio Men's Classic Urban Utility Resin Band Alarm Chronograph G Shock Watch",
-   "url": "https://www.amazon.com/dp/B0DSLHKP4L",
-   "category": "",
-   "image": "https://m.media-amazon.com/images/I/718dMQBYK8L._AC_SX320_.jpg",
-   "variant": "Gray",
-   "price": 104.95,
-   "prev_price": 104.95,
-   "target_price": 90.0,
-   "min_7d": 104.95,
-   "min_7d_date": "2026-11-21",
-   "min_30d": 104.95,
-   "min_30d_date": "2026-11-13",
-   "min_all": 104.95,
-   "min_all_date": "2026-11-13",
-   "max_all": 104.95,
-   "median_all": 104.95,
-   "list_price": null,
-   "amazon_discount": null,
-   "pct_vs_prev": 0.0,
-   "pct_vs_min_all": 0.0,
-   "discount_vs_typical": 0.0,
-   "weekly_change": 0.0,
-   "volatility_pct": 0.0,
-   "trend": "estable",
-   "best_weekday": "-",
-   "history_days": 10,
-   "at_all_time_low": false,
-   "triggered": [
-    "min_7d",
-    "min_30d"
-   ],
-   "score": 52,
-   "recommendation": "MONITOREAR",
-   "history": [
-    [
-     "2026-11-13",
-     104.95
-    ],
-    [
-     "2026-11-14",
-     104.95
-    ],
-    [
-     "2026-11-16",
-     104.95
-    ],
-    [
-     "2026-11-20",
-     104.95
-    ],
-    [
-     "2026-11-21",
-     104.95
-    ],
-    [
-     "2026-11-22",
-     104.95
-    ],
-    [
-     "2026-11-24",
-     104.95
-    ],
-    [
-     "2026-11-25",
-     104.95
-    ],
-    [
-     "2026-11-26",
-     104.95
-    ],
-    [
-     "2026-11-27",
-     104.95
-    ]
-   ]
-  },
-  {
    "asin": "B0F258HGBZ",
    "name": "Fossil Men's Watch, Crosby Three-Hand Date Stainless Steel Watch for Men",
    "url": "https://www.amazon.com/dp/B0F258HGBZ",
@@ -15124,13 +15046,88 @@ window.RADAR_DATA = {
    ]
   },
   {
+   "asin": "B0DSLHKP4L",
+   "name": "Casio Men's Classic Urban Utility Resin Band Alarm Chronograph G Shock Watch",
+   "url": "https://www.amazon.com/dp/B0DSLHKP4L",
+   "category": "",
+   "image": "https://m.media-amazon.com/images/I/718dMQBYK8L._AC_SX320_.jpg",
+   "variant": "Gray",
+   "price": 111.95,
+   "prev_price": 104.95,
+   "target_price": 90.0,
+   "min_7d": 104.95,
+   "min_7d_date": "2026-11-21",
+   "min_30d": 104.95,
+   "min_30d_date": "2026-11-13",
+   "min_all": 104.95,
+   "min_all_date": "2026-11-13",
+   "max_all": 111.95,
+   "median_all": 104.95,
+   "list_price": null,
+   "amazon_discount": null,
+   "pct_vs_prev": 6.669842782277274,
+   "pct_vs_min_all": 6.669842782277274,
+   "discount_vs_typical": -6.669842782277274,
+   "weekly_change": 6.669842782277274,
+   "volatility_pct": 1.9876952200662565,
+   "trend": "subiendo (+2.5%/sem)",
+   "best_weekday": "-",
+   "history_days": 10,
+   "at_all_time_low": false,
+   "triggered": [],
+   "score": 8,
+   "recommendation": "ESPERAR",
+   "history": [
+    [
+     "2026-11-13",
+     104.95
+    ],
+    [
+     "2026-11-14",
+     104.95
+    ],
+    [
+     "2026-11-16",
+     104.95
+    ],
+    [
+     "2026-11-20",
+     104.95
+    ],
+    [
+     "2026-11-21",
+     104.95
+    ],
+    [
+     "2026-11-22",
+     104.95
+    ],
+    [
+     "2026-11-24",
+     104.95
+    ],
+    [
+     "2026-11-25",
+     104.95
+    ],
+    [
+     "2026-11-26",
+     104.95
+    ],
+    [
+     "2026-11-27",
+     111.95
+    ]
+   ]
+  },
+  {
    "asin": "B01HGWCNS6",
    "name": "Bulova Men's Classic Sutton 21-Jewel Automatic Watch, 42 Hour Power Reserve, Skeleton Dial",
    "url": "https://www.amazon.com/dp/B01HGWCNS6",
    "category": "",
    "image": "https://m.media-amazon.com/images/I/61Pw1MuskEL._AC_SX320_.jpg",
    "variant": "Stainless/ Blue Accents",
-   "price": 418.86,
+   "price": 415.0,
    "prev_price": 398.87,
    "target_price": 150.0,
    "min_7d": 398.87,
@@ -15143,11 +15140,11 @@ window.RADAR_DATA = {
    "median_all": 415.0,
    "list_price": 695.0,
    "amazon_discount": 40.0,
-   "pct_vs_prev": 5.011657933662599,
-   "pct_vs_min_all": 5.011657933662599,
-   "discount_vs_typical": -0.9301204819277141,
-   "weekly_change": 0.8644977966142586,
-   "volatility_pct": 1.467780162620928,
+   "pct_vs_prev": 4.043924085541653,
+   "pct_vs_min_all": 4.043924085541653,
+   "discount_vs_typical": 0.0,
+   "weekly_change": -0.06501794013532926,
+   "volatility_pct": 1.4361271668361844,
    "trend": "estable",
    "best_weekday": "-",
    "history_days": 10,
@@ -15194,7 +15191,7 @@ window.RADAR_DATA = {
     ],
     [
      "2026-11-27",
-     418.86
+     415.0
     ]
    ]
   },
